@@ -103,7 +103,7 @@ module.exports = class FacilityTypesController{
 	   return new Promise(function(resolve, reject) { 
        const  myFacilityTypesObject=new FacilityTypesModel();
         
-		var myFacilityTypesObjectPromise = myFacilityTypesObject.individual_facility_types_update(ColumnName,value_);
+		var myFacilityTypesObjectPromise = myFacilityTypesObject.individual_facility_types_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myFacilityTypesObjectPromise.then(function(result) {

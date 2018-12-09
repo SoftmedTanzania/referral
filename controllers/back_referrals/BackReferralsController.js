@@ -103,7 +103,7 @@ module.exports = class BackReferralsController{
 	   return new Promise(function(resolve, reject) { 
       const  myBackReferralsObject=new BackReferralsModel();
         
-		var myBackReferralsObjectPromise = myBackReferralsObject.individual_back_referrals_update(ColumnName,value_);
+		var myBackReferralsObjectPromise = myBackReferralsObject.individual_back_referrals_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myBackReferralsObjectPromise.then(function(result) {

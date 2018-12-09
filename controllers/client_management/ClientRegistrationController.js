@@ -103,7 +103,7 @@ module.exports = class ClientRegistrationController{
 	   return new Promise(function(resolve, reject) { 
        const  myClientRegistrationObject=new ClientRegistrationModel();
         
-		var myClientRegistrationObjectPromise = myClientRegistrationObject.individual_client_registration_update(ColumnName,value_);
+		var myClientRegistrationObjectPromise = myClientRegistrationObject.individual_client_registration_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myClientRegistrationObjectPromise.then(function(result) {

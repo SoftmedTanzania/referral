@@ -103,7 +103,7 @@ module.exports = class ClientEncountersController{
 	   return new Promise(function(resolve, reject) { 
        const  myClientEncountersModelObject=new ClientEncountersModel();
         
-		var myClientEncountersModelObjectPromise = myClientEncountersModelObject.individual_client_encounters_update(ColumnName,value_);
+		var myClientEncountersModelObjectPromise = myClientEncountersModelObject.individual_client_encounters_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myClientEncountersModelObjectPromise.then(function(result) {

@@ -103,7 +103,7 @@ module.exports = class VillagesController{
 	   return new Promise(function(resolve, reject) { 
        const  myVillagesObject=new VillagesModel();
         
-		var myVillagesObjectPromise = myVillagesObject.individual_villages_update(ColumnName,value_);
+		var myVillagesObjectPromise = myVillagesObject.individual_villages_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myVillagesObjectPromise.then(function(result) {

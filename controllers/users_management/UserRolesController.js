@@ -103,7 +103,7 @@ module.exports = class UserRolesController{
 	   return new Promise(function(resolve, reject) { 
        const  myUserRolesObject=new UserRolesModel();
         
-		var myUserRolesObjectPromise = myUserRolesObject.individual_user_roles_update(ColumnName,value_);
+		var myUserRolesObjectPromise = myUserRolesObject.individual_user_roles_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myUserRolesObjectPromise.then(function(result) {

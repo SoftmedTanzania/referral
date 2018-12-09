@@ -103,7 +103,7 @@ module.exports = class VillageExecutiveOfficersController{
 	   return new Promise(function(resolve, reject) { 
        const  myVillageExecutiveOfficersObject=new VillageExecutiveOfficersModel();
         
-		var myVillageExecutiveOfficersObjectPromise = myVillageExecutiveOfficersObject.individual_village_executive_officers_update(ColumnName,value_);
+		var myVillageExecutiveOfficersObjectPromise = myVillageExecutiveOfficersObject.individual_village_executive_officers_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myVillageExecutiveOfficersObjectPromise.then(function(result) {

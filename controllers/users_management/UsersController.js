@@ -203,7 +203,7 @@ module.exports = class UsersController{
 	   return new Promise(function(resolve, reject) { 
         const  myUsersObject=new UsersModel();
         
-		var myUsersObjectPromise = myUsersObject.individual_users_update(ColumnName,value_);
+		var myUsersObjectPromise = myUsersObject.individual_users_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myUsersObjectPromise.then(function(result) {

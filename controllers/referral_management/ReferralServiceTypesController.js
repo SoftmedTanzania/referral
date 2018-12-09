@@ -103,7 +103,7 @@ module.exports = class ReferralServiceTypesController{
 	   return new Promise(function(resolve, reject) { 
        const  myReferralServiceTypesObject=new ReferralServiceTypesModel();
         
-		var myReferralServiceTypesObjectPromise = myReferralServiceTypesObject.individual_referral_service_types_update(ColumnName,value_);
+		var myReferralServiceTypesObjectPromise = myReferralServiceTypesObject.individual_referral_service_types_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myReferralServiceTypesObjectPromise.then(function(result) {

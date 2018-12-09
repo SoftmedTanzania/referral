@@ -103,7 +103,7 @@ module.exports = class ReferralDangerSignsController{
 	   return new Promise(function(resolve, reject) { 
       const  myReferralDangerSignsObject=new ReferralDangerSignsModel();
         
-		var myReferralDangerSignsObjectPromise = myReferralDangerSignsObject.individual_referral_danger_signs_update(ColumnName,value_);
+		var myReferralDangerSignsObjectPromise = myReferralDangerSignsObject.individual_referral_danger_signs_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myReferralDangerSignsObjectPromise.then(function(result) {

@@ -103,7 +103,7 @@ module.exports = class WardsController{
 	   return new Promise(function(resolve, reject) { 
        const  myWardsObject=new WardsModel();
         
-		var myWardsObjectPromise = myWardsObject.individual_wards_update(ColumnName,value_);
+		var myWardsObjectPromise = myWardsObject.individual_wards_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myWardsObjectPromise.then(function(result) {

@@ -42,6 +42,7 @@ router.use(function timeLog(req, res, next) {
 			PhoneNumber:request.body.PhoneNumber,
 			PhysicalAddress:request.body.PhysicalAddress,
 			WardId:request.body.WardId,
+		    RoleId:request.body.RoleId,
 			Password:request.body.Password,
 			RegistrationDate:date
 		 

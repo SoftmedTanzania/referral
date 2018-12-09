@@ -103,7 +103,7 @@ module.exports = class FacilityStaffController{
 	   return new Promise(function(resolve, reject) { 
        const  myFacilityStaffObject=new FacilityStaffModel();
         
-		var myFacilityStaffObjectPromise = myFacilityStaffObject.individual_facility_staff_update(ColumnName,value_);
+		var myFacilityStaffObjectPromise = myFacilityStaffObject.individual_facility_staff_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myFacilityStaffObjectPromise.then(function(result) {

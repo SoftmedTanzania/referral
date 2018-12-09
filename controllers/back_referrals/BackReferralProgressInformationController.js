@@ -103,7 +103,7 @@ module.exports = class BackReferralProgressInformationController{
 	   return new Promise(function(resolve, reject) { 
       const  myBackReferralProgressInformationObject=new BackReferralProgressInformationModel();
         
-		var myBackReferralProgressInformationObjectPromise = myBackReferralProgressInformationObject.individual_back_referral_progress_information_update(ColumnName,value_);
+		var myBackReferralProgressInformationObjectPromise = myBackReferralProgressInformationObject.individual_back_referral_progress_information_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myBackReferralProgressInformationObjectPromise.then(function(result) {

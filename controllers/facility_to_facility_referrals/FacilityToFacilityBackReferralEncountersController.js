@@ -103,7 +103,7 @@ module.exports = class FacilityToFacilityBackReferralEncountersController{
 	   return new Promise(function(resolve, reject) { 
       const  myFacilityToFacilityBackReferralEncountersObject=new FacilityToFacilityBackReferralEncountersModel();
         
-		var myFacilityToFacilityBackReferralEncountersObjectPromise = myFacilityToFacilityBackReferralEncountersObject.individual_facility_to_facility_back_referral_encounters_update(ColumnName,value_);
+		var myFacilityToFacilityBackReferralEncountersObjectPromise = myFacilityToFacilityBackReferralEncountersObject.individual_facility_to_facility_back_referral_encounters_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myFacilityToFacilityBackReferralEncountersObjectPromise.then(function(result) {

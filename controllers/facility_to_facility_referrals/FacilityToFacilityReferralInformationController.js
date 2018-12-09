@@ -103,7 +103,7 @@ module.exports = class FacilityToFacilityReferralInformationController{
 	   return new Promise(function(resolve, reject) { 
       const  myFacilityToFacilityReferralInformationObject=new FacilityToFacilityReferralInformationModel();
         
-		var myFacilityToFacilityReferralInformationObjectPromise = myFacilityToFacilityReferralInformationObject.individual_facility_to_facility_referral_information_update(ColumnName,value_);
+		var myFacilityToFacilityReferralInformationObjectPromise = myFacilityToFacilityReferralInformationObject.individual_facility_to_facility_referral_information_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myFacilityToFacilityReferralInformationObjectPromise.then(function(result) {

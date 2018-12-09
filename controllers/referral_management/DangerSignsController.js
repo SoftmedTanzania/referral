@@ -103,7 +103,7 @@ module.exports = class DangerSignsController{
 	   return new Promise(function(resolve, reject) { 
       const  myDangerSignsObject=new DangerSignsModel();
         
-		var myDangerSignsObjectPromise = myDangerSignsObject.individual_danger_signs_update(ColumnName,value_);
+		var myDangerSignsObjectPromise = myDangerSignsObject.individual_danger_signs_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myDangerSignsObjectPromise.then(function(result) {

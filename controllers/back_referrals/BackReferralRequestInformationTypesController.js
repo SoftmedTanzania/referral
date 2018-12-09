@@ -103,7 +103,7 @@ module.exports = class BackReferralRequestInformationTypesController{
 	   return new Promise(function(resolve, reject) { 
       const  myBackReferralRequestInformationTypesObject=new BackReferralRequestInformationTypesModel();
         
-		var myBackReferralRequestInformationTypesObjectPromise = myBackReferralRequestInformationTypesObject.individual_back_referral_request_information_types_update(ColumnName,value_);
+		var myBackReferralRequestInformationTypesObjectPromise = myBackReferralRequestInformationTypesObject.individual_back_referral_request_information_types_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myBackReferralRequestInformationTypesObjectPromise.then(function(result) {

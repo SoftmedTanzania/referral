@@ -103,7 +103,7 @@ module.exports = class ChwJurisdictionFacilitiesController{
 	   return new Promise(function(resolve, reject) { 
        const  myChwJurisdictionFacilitiesObject=new ChwJurisdictionFacilitiesModel();
         
-		var myChwJurisdictionFacilitiesControllerObjectPromise = myChwJurisdictionFacilitiesControllerObject.individual_chw_jurisdiction_facilities_update(ColumnName,value_);
+		var myChwJurisdictionFacilitiesControllerObjectPromise = myChwJurisdictionFacilitiesControllerObject.individual_chw_jurisdiction_facilities_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myChwJurisdictionFacilitiesControllerObjectPromise.then(function(result) {

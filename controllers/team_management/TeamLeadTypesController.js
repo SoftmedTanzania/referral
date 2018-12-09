@@ -103,7 +103,7 @@ module.exports = class TeamLeadTypesController{
 	   return new Promise(function(resolve, reject) { 
        const  myTeamLeadTypesObject=new TeamLeadTypesModel();
         
-		var myTeamLeadTypesObjectPromise = myTeamLeadTypesObject.individual_team_lead_types_update(ColumnName,value_);
+		var myTeamLeadTypesObjectPromise = myTeamLeadTypesObject.individual_team_lead_types_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myTeamLeadTypesObjectPromise.then(function(result) {

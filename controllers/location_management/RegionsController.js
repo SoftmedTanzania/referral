@@ -103,7 +103,7 @@ module.exports = class RegionsController{
 	   return new Promise(function(resolve, reject) { 
         const  myRegionsObject=new RegionsModel();
         
-		var myRegionsObjectPromise = myRegionsObject.individual_regions_update(ColumnName,value_);
+		var myRegionsObjectPromise = myRegionsObject.individual_regions_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myRegionsObjectPromise.then(function(result) {

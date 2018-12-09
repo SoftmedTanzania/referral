@@ -103,7 +103,7 @@ module.exports = class DistrictsController{
 	   return new Promise(function(resolve, reject) { 
        const  myDistrictsObject=new DistrictsModel();
         
-		var myDistrictsObjectPromise = myDistrictsObject.individual_districts_update(ColumnName,value_);
+		var myDistrictsObjectPromise = myDistrictsObject.individual_districts_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myDistrictsObjectPromise.then(function(result) {

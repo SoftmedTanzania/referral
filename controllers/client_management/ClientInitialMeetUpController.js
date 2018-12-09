@@ -103,7 +103,7 @@ module.exports = class ClientInitialMeetUpController{
 	   return new Promise(function(resolve, reject) { 
        const  myClientInitialMeetUpObject=new ClientInitialMeetUpModel();
         
-		var myClientInitialMeetUpObjectPromise = myClientInitialMeetUpObject.individual_client_initial_meetup_update(ColumnName,value_);
+		var myClientInitialMeetUpObjectPromise = myClientInitialMeetUpObject.individual_client_initial_meetup_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myClientInitialMeetUpObjectPromise.then(function(result) {

@@ -103,7 +103,7 @@ module.exports = class CouncilsController{
 	   return new Promise(function(resolve, reject) { 
        const  myCouncilsObject=new CouncilsModel();
         
-		var myCouncilsObjectPromise = myCouncilsObject.individual_councils_update(ColumnName,value_);
+		var myCouncilsObjectPromise = myCouncilsObject.individual_councils_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myCouncilsObjectPromise.then(function(result) {

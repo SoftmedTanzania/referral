@@ -24,12 +24,12 @@ module.exports = class VillagesModel{
 	
 	
 	
-   insert_villages(jsonObject_){
+   static insert_villages(jsonObject_){
 	   return new Promise(function(resolve, reject) {
 	   
- 	   const  myModelMaster=new ModelMaster();
+ 	   
 
-       var myModelMasterPromise = myModelMaster.insert(TableName,jsonObject_);
+       var myModelMasterPromise = ModelMaster.insert(TableName,jsonObject_);
 		   
 		   
 		   myModelMasterPromise.then(function(result) {
@@ -49,11 +49,11 @@ module.exports = class VillagesModel{
 	
 	
 	
-   get_all_villages(){
+   static get_all_villages(){
 	   return new Promise(function(resolve, reject) {
-        const  myModelMaster=new ModelMaster();
+        
 
-        var myModelMasterPromise = myModelMaster.selectAll(TableName);
+        var myModelMasterPromise = ModelMaster.selectAll(TableName);
 		 myModelMasterPromise.then(function(result) {
         
            resolve(result);
@@ -72,12 +72,12 @@ module.exports = class VillagesModel{
 	
 	
 	
-   get_specific_villages(ColumnName,value_){
+   static get_specific_villages(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {
-        const  myModelMaster=new ModelMaster();
+        
 
 
-        var myModelMasterPromise = myModelMaster.selectSpecific(TableName,ColumnName,value_);
+        var myModelMasterPromise = ModelMaster.selectSpecific(TableName,ColumnName,value_);
 		   myModelMasterPromise.then(function(result) {
         
            resolve(result);
@@ -91,12 +91,12 @@ module.exports = class VillagesModel{
 	
 	
 	
-   batch_villages_update(jsonObject_){
+   static batch_villages_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {
-        const  myModelMaster=new ModelMaster();
+        
 
 
-        var myModelMasterPromise = myModelMaster.batch_update(TableName,jsonObject_);
+        var myModelMasterPromise = ModelMaster.batch_update(TableName,jsonObject_);
 		   myModelMasterPromise.then(function(result) {
         
            resolve(result);
@@ -110,12 +110,12 @@ module.exports = class VillagesModel{
 	
 	
 	
-   individual_villages_update(ColumnName,value_,jsonObject_){
+   static individual_villages_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) {
-        const  myModelMaster=new ModelMaster();
+        
 
         
-		var myModelMasterPromise = myModelMaster.individual_update(TableName,jsonObject_,ColumnName,value_);
+		var myModelMasterPromise = ModelMaster.individual_update(TableName,jsonObject_,ColumnName,value_);
 		   myModelMasterPromise.then(function(result) {
         
            resolve(result);
@@ -128,12 +128,12 @@ module.exports = class VillagesModel{
 	
 	
 	
-   delete_villages_record(ColumnName,value_){
+   static delete_villages_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {
-        const  myModelMaster=new ModelMaster();
+        
 
         
-		var myModelMasterPromise = myModelMaster.delete(TableName,ColumnName,value_);
+		var myModelMasterPromise = ModelMaster.delete(TableName,ColumnName,value_);
 		   myModelMasterPromise.then(function(result) {
         
            resolve(result);

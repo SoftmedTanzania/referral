@@ -40,7 +40,7 @@ with the key being the actual column name on the
 database.
 	
 */
-	insert(tableName, jsonObject_) {
+	static insert(tableName, jsonObject_) {
 
       return new Promise(function(resolve, reject) {
     	
@@ -69,7 +69,7 @@ table.Pass it the table name and a callback
 function to retrieve back your result
 
 */
-	selectAll(tableName) {
+	static selectAll(tableName) {
 
        return new Promise(function(resolve, reject) {
              con.query('SELECT * FROM ' + tableName + ';', function (err, result, fields) {
@@ -96,7 +96,7 @@ name and a callback function to retrieve back
 your result
 
 */
-	selectSpecific(tableName,ColumnName,value_) {
+	static selectSpecific(tableName,ColumnName,value_) {
 
      return new Promise(function(resolve, reject) {
         var sql = 'SELECT * FROM '+tableName+' WHERE '+ColumnName+' = '+ mysql.escape(value_);
@@ -124,7 +124,7 @@ table name and the key-value pair of the updates
 to make.
 
 */	
-	batch_update(tableName,jsonObject_) {
+	static batch_update(tableName,jsonObject_) {
 	return new Promise(function(resolve, reject) {	
 
         con.query('UPDATE ' + tableName + ' SET ?', jsonObject_, function (err, result) {
@@ -147,11 +147,11 @@ to make.
 individual_update() updates a specific record(s).
 
 */	
-	individual_update(tableName,jsonObject_,ColumnName,value_) {
+	static individual_update(tableName,jsonObject_,ColumnName,value_) {
 		
       return new Promise(function(resolve, reject) {
     	
-		var selectSpecificPromise = selectSpecific(tableName,ColumnName,value_);
+		var selectSpecificPromise = ModelMaster.selectSpecific(tableName,ColumnName,value_);
 		  
 		selectSpecificPromise.then(function(result) {
         
@@ -190,12 +190,12 @@ delete() deletes a specific record(s).
 
 */	
 	
-	delete(tableName,ColumnName,value_) {
+	static delete(tableName,ColumnName,value_) {
 		
 		
 		return new Promise(function(resolve, reject) {
     	
-		var selectSpecificPromise = selectSpecific(tableName,ColumnName,value_);
+		var selectSpecificPromise = ModelMaster.selectSpecific(tableName,ColumnName,value_);
 		  
 		selectSpecificPromise.then(function(result) {
         
@@ -234,7 +234,7 @@ batch_program() is a special function that handles batch jobs.
 
 */	
 	
-   batch_program(){
+   static batch_program(){
 	return new Promise(function(resolve, reject) {
 	if (err) {reject(err);}
        con.query("SELECT * FROM users", function (err, result, fields) {

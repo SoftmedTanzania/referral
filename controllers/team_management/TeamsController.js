@@ -103,7 +103,7 @@ module.exports = class TeamsController{
 	   return new Promise(function(resolve, reject) { 
        const  myTeamsObject=new TeamsModel();
         
-		var myTeamsObjectPromise = myTeamsObject.individual_teams_update(ColumnName,value_);
+		var myTeamsObjectPromise = myTeamsObject.individual_teams_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myTeamsObjectPromise.then(function(result) {

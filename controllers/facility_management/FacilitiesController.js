@@ -103,7 +103,7 @@ module.exports = class FacilitiesController{
 	   return new Promise(function(resolve, reject) { 
        const  myFacilitiesObject=new FacilitiesModel();
         
-		var myFacilitiesObjectPromise = myFacilitiesObject.individual_facilities_update(ColumnName,value_);
+		var myFacilitiesObjectPromise = myFacilitiesObject.individual_facilities_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myFacilitiesObjectPromise.then(function(result) {

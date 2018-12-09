@@ -24,12 +24,12 @@ module.exports = class UsersModel{
 	
 	
 	
-   insert_users(jsonObject_){
+   static insert_users(jsonObject_){
 	   return new Promise(function(resolve, reject) {
 	   
- 	   const  myModelMaster=new ModelMaster();
+ 	   
 
-       var myModelMasterPromise = myModelMaster.insert(TableName,jsonObject_);
+       var myModelMasterPromise = ModelMaster.insert(TableName,jsonObject_);
 		   
 		   
 		   myModelMasterPromise.then(function(result) {
@@ -49,11 +49,11 @@ module.exports = class UsersModel{
 	
 	
 	
-   get_all_users(){
+   static get_all_users(){
 	   return new Promise(function(resolve, reject) {
-        const  myModelMaster=new ModelMaster();
+        
 
-        var myModelMasterPromise = myModelMaster.selectAll(TableName);
+        var myModelMasterPromise = ModelMaster.selectAll(TableName);
 		 myModelMasterPromise.then(function(result) {
         
            resolve(result);
@@ -72,12 +72,12 @@ module.exports = class UsersModel{
 	
 	
 	
-   get_specific_users(ColumnName,value_){
+   static get_specific_users(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {
-        const  myModelMaster=new ModelMaster();
+        
 
 
-        var myModelMasterPromise = myModelMaster.selectSpecific(TableName,ColumnName,value_);
+        var myModelMasterPromise = ModelMaster.selectSpecific(TableName,ColumnName,value_);
 		   myModelMasterPromise.then(function(result) {
         
            resolve(result);
@@ -91,12 +91,12 @@ module.exports = class UsersModel{
 	
 	
 	
-   batch_users_update(jsonObject_){
+   static batch_users_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {
-        const  myModelMaster=new ModelMaster();
+        
 
 
-        var myModelMasterPromise = myModelMaster.batch_update(TableName,jsonObject_);
+        var myModelMasterPromise = ModelMaster.batch_update(TableName,jsonObject_);
 		   myModelMasterPromise.then(function(result) {
         
            resolve(result);
@@ -110,12 +110,12 @@ module.exports = class UsersModel{
 	
 	
 	
-   individual_users_update(ColumnName,value_,jsonObject_){
+   static individual_users_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) {
-        const  myModelMaster=new ModelMaster();
+        
 
         
-		var myModelMasterPromise = myModelMaster.individual_update(TableName,jsonObject_,ColumnName,value_);
+		var myModelMasterPromise = ModelMaster.individual_update(TableName,jsonObject_,ColumnName,value_);
 		   myModelMasterPromise.then(function(result) {
         
            resolve(result);
@@ -128,12 +128,12 @@ module.exports = class UsersModel{
 	
 	
 	
-   delete_users_record(ColumnName,value_){
+   static delete_users_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {
-        const  myModelMaster=new ModelMaster();
+        
 
         
-		var myModelMasterPromise = myModelMaster.delete(TableName,ColumnName,value_);
+		var myModelMasterPromise = ModelMaster.delete(TableName,ColumnName,value_);
 		   myModelMasterPromise.then(function(result) {
         
            resolve(result);
