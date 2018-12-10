@@ -42,8 +42,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myBackReferralProgressInformationTypesControllerObject=new BackReferralProgressInformationTypesController();
-          var myBackReferralProgressInformationTypesControllerObjectPromise = myBackReferralProgressInformationTypesControllerObject.insert_back_referral_progress_information_types(jsonObject_);
+	      
+          var myBackReferralProgressInformationTypesControllerObjectPromise = BackReferralProgressInformationTypesController.insert_back_referral_progress_information_types(jsonObject_);
 	          
 		   
 		   myBackReferralProgressInformationTypesControllerObjectPromise.then(function(result) {
@@ -62,8 +62,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_back_referral_progress_information_types',urlencodedParser,function(request,response){
-    var myBackReferralProgressInformationTypesControllerObject=new BackReferralProgressInformationTypesController();
-    var myBackReferralProgressInformationTypesControllerObjectPromise = myBackReferralProgressInformationTypesControllerObject.get_all_back_referral_progress_information_types();
+    
+    var myBackReferralProgressInformationTypesControllerObjectPromise = BackReferralProgressInformationTypesController.get_all_back_referral_progress_information_types();
 	      
 		   
 		   myBackReferralProgressInformationTypesControllerObjectPromise.then(function(result) {
@@ -92,8 +92,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myBackReferralProgressInformationTypesControllerObject=new BackReferralProgressInformationTypesController();
-     var myBackReferralProgressInformationTypesControllerObjectPromise = myBackReferralProgressInformationTypesControllerObject.batch_back_referral_progress_information_types_update(jsonObject_);
+     
+     var myBackReferralProgressInformationTypesControllerObjectPromise = BackReferralProgressInformationTypesController.batch_back_referral_progress_information_types_update(jsonObject_);
 	   
 		   
 		   myBackReferralProgressInformationTypesControllerObjectPromise.then(function(result) {
@@ -117,10 +117,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myBackReferralProgressInformationTypesControllerObject=new BackReferralProgressInformationTypesController();
+        
 
 
-        var myBackReferralProgressInformationTypesControllerObjectPromise = myBackReferralProgressInformationTypesControllerObject.get_specific_back_referral_progress_information_types(mKey,mValue);
+        var myBackReferralProgressInformationTypesControllerObjectPromise = BackReferralProgressInformationTypesController.get_specific_back_referral_progress_information_types(mKey,mValue);
 	        
 		   
 		   myBackReferralProgressInformationTypesControllerObjectPromise.then(function(result) {
@@ -153,8 +153,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-                var myBackReferralProgressInformationTypesControllerObject=new BackReferralProgressInformationTypesController();
-                var myBackReferralProgressInformationTypesControllerObjectPromise = myBackReferralProgressInformationTypesControllerObject.individual_back_referral_progress_information_types_update(column_name,value_,jsonObject_);
+                
+                var myBackReferralProgressInformationTypesControllerObjectPromise = BackReferralProgressInformationTypesController.individual_back_referral_progress_information_types_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myBackReferralProgressInformationTypesControllerObjectPromise.then(function(result) {
@@ -178,8 +178,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-    var myBackReferralProgressInformationTypesControllerObject=new BackReferralProgressInformationTypesController();
-    var myBackReferralProgressInformationTypesControllerObjectPromise = myBackReferralProgressInformationTypesControllerObject.delete_back_referral_progress_information_types_record(column_name,value_);
+    
+    var myBackReferralProgressInformationTypesControllerObjectPromise = BackReferralProgressInformationTypesController.delete_back_referral_progress_information_types_record(column_name,value_);
 	      	        
 		   
 		   myBackReferralProgressInformationTypesControllerObjectPromise.then(function(result) {

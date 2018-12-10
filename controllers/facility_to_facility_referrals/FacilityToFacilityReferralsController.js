@@ -20,10 +20,10 @@ module.exports = class FacilityToFacilityReferralsController{
 	
 	
 	
-   insert_facility_to_facility_referrals(jsonObject_){
+   static insert_facility_to_facility_referrals(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myFacilityToFacilityReferralsObject=new FacilityToFacilityReferralsModel();
-     var myFacilityToFacilityReferralsObjectPromise = myFacilityToFacilityReferralsObject.insert_facility_to_facility_referrals(jsonObject_);
+     
+     var myFacilityToFacilityReferralsObjectPromise = FacilityToFacilityReferralsModel.insert_facility_to_facility_referrals(jsonObject_);
 		  
 		   
 		   myFacilityToFacilityReferralsObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class FacilityToFacilityReferralsController{
 	
 	
 	
-   get_all_facility_to_facility_referrals(){
+   static get_all_facility_to_facility_referrals(){
 	   return new Promise(function(resolve, reject) {  
-        const  myFacilityToFacilityReferralsObject=new FacilityToFacilityReferralsModel();
-        var myFacilityToFacilityReferralsObjectPromise = myFacilityToFacilityReferralsObject.get_all_facility_to_facility_referrals();
+        
+        var myFacilityToFacilityReferralsObjectPromise = FacilityToFacilityReferralsModel.get_all_facility_to_facility_referrals();
 		   
 		   
 		   myFacilityToFacilityReferralsObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class FacilityToFacilityReferralsController{
 	
 	
 	
-   get_specific_facility_to_facility_referrals(ColumnName,value_){
+   static get_specific_facility_to_facility_referrals(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-       const  myFacilityToFacilityReferralsObject=new FacilityToFacilityReferralsModel();
-        var myFacilityToFacilityReferralsObjectPromise = myFacilityToFacilityReferralsObject.get_specific_facility_to_facility_referrals(ColumnName,value_);
+       
+        var myFacilityToFacilityReferralsObjectPromise = FacilityToFacilityReferralsModel.get_specific_facility_to_facility_referrals(ColumnName,value_);
 		   
 		   
 		   myFacilityToFacilityReferralsObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class FacilityToFacilityReferralsController{
 	
 	
 	
-   batch_facility_to_facility_referrals_update(jsonObject_){
+   static batch_facility_to_facility_referrals_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-        const  myFacilityToFacilityReferralsObject=new FacilityToFacilityReferralsModel();
         
-		var myFacilityToFacilityReferralsObjectPromise = myFacilityToFacilityReferralsObject.batch_facility_to_facility_referrals_update(jsonObject_);
+        
+		var myFacilityToFacilityReferralsObjectPromise = FacilityToFacilityReferralsModel.batch_facility_to_facility_referrals_update(jsonObject_);
 		   
 		   
 		   myFacilityToFacilityReferralsObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class FacilityToFacilityReferralsController{
 	
 	
 	
-   individual_facility_to_facility_referrals_update(ColumnName,value_,jsonObject_){
+   static individual_facility_to_facility_referrals_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-      const  myFacilityToFacilityReferralsObject=new FacilityToFacilityReferralsModel();
+      
         
-		var myFacilityToFacilityReferralsObjectPromise = myFacilityToFacilityReferralsObject.individual_facility_to_facility_referrals_update(ColumnName,value_,jsonObject_);
+		var myFacilityToFacilityReferralsObjectPromise = FacilityToFacilityReferralsModel.individual_facility_to_facility_referrals_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myFacilityToFacilityReferralsObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class FacilityToFacilityReferralsController{
 	
 	
 	
-   delete_facility_to_facility_referrals_record(ColumnName,value_){
+   static delete_facility_to_facility_referrals_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myFacilityToFacilityReferralsObject=new FacilityToFacilityReferralsModel();
         
-		var myFacilityToFacilityReferralsObjectPromise = myFacilityToFacilityReferralsObject.delete_facility_to_facility_referrals_record(ColumnName,value_);
+        
+		var myFacilityToFacilityReferralsObjectPromise = FacilityToFacilityReferralsModel.delete_facility_to_facility_referrals_record(ColumnName,value_);
 		    
 		   
 		   myFacilityToFacilityReferralsObjectPromise.then(function(result) {

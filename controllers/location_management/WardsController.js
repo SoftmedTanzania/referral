@@ -20,10 +20,10 @@ module.exports = class WardsController{
 	
 	
 	
-   insert_wards(jsonObject_){
+   static insert_wards(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myWardsObject=new WardsModel();
-     var myWardsObjectPromise = myWardsObject.insert_wards(jsonObject_);
+     
+     var myWardsObjectPromise = WardsModel.insert_wards(jsonObject_);
 		  
 		   
 		   myWardsObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class WardsController{
 	
 	
 	
-   get_all_wards(){
+   static get_all_wards(){
 	   return new Promise(function(resolve, reject) {  
-        const  myWardsObject=new WardsModel();
-        var myWardsObjectPromise = myWardsObject.get_all_wards();
+        
+        var myWardsObjectPromise = WardsModel.get_all_wards();
 		   
 		   
 		   myWardsObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class WardsController{
 	
 	
 	
-   get_specific_wards(ColumnName,value_){
+   static get_specific_wards(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-        const  myWardsObject=new WardsModel();
-        var myWardsObjectPromise = myWardsObject.get_specific_wards(ColumnName,value_);
+        
+        var myWardsObjectPromise = WardsModel.get_specific_wards(ColumnName,value_);
 		   
 		   
 		   myWardsObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class WardsController{
 	
 	
 	
-   batch_wards_update(jsonObject_){
+   static batch_wards_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-       const  myWardsObject=new WardsModel();
+       
         
-		var myWardsObjectPromise = myWardsObject.batch_wards_update(jsonObject_);
+		var myWardsObjectPromise = WardsModel.batch_wards_update(jsonObject_);
 		   
 		   
 		   myWardsObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class WardsController{
 	
 	
 	
-   individual_wards_update(ColumnName,value_,jsonObject_){
+   static individual_wards_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-       const  myWardsObject=new WardsModel();
+       
         
-		var myWardsObjectPromise = myWardsObject.individual_wards_update(ColumnName,value_,jsonObject_);
+		var myWardsObjectPromise = WardsModel.individual_wards_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myWardsObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class WardsController{
 	
 	
 	
-   delete_wards_record(ColumnName,value_){
+   static delete_wards_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myWardsObject=new WardsModel();
         
-		var myWardsObjectPromise = myWardsObject.delete_wards_record(ColumnName,value_);
+        
+		var myWardsObjectPromise = WardsModel.delete_wards_record(ColumnName,value_);
 		    
 		   
 		   myWardsObjectPromise.then(function(result) {

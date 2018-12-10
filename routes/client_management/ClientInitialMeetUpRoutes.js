@@ -49,8 +49,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myClientInitialMeetUpControllerObject=new ClientInitialMeetUpController();
-          var myClientInitialMeetUpControllerObjectPromise = myClientInitialMeetUpControllerObject.insert_client_initial_meetup(jsonObject_);
+	      
+          var myClientInitialMeetUpControllerObjectPromise = ClientInitialMeetUpController.insert_client_initial_meetup(jsonObject_);
 	          
 		   
 		   myClientInitialMeetUpControllerObjectPromise.then(function(result) {
@@ -69,8 +69,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_client_initial_meetup',urlencodedParser,function(request,response){
-    var myClientInitialMeetUpControllerObject=new ClientInitialMeetUpController();
-    var myClientInitialMeetUpControllerObjectPromise = myClientInitialMeetUpControllerObject.get_all_client_initial_meetup();
+    
+    var myClientInitialMeetUpControllerObjectPromise = ClientInitialMeetUpController.get_all_client_initial_meetup();
 	      
 		   
 		   myClientInitialMeetUpControllerObjectPromise.then(function(result) {
@@ -105,8 +105,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myClientInitialMeetUpControllerObject=new ClientInitialMeetUpController();
-     var myClientInitialMeetUpControllerObjectPromise = myClientInitialMeetUpControllerObject.batch_client_initial_meetup_update(jsonObject_);
+     
+     var myClientInitialMeetUpControllerObjectPromise = ClientInitialMeetUpController.batch_client_initial_meetup_update(jsonObject_);
 	   
 		   
 		   myClientInitialMeetUpControllerObjectPromise.then(function(result) {
@@ -130,10 +130,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myClientInitialMeetUpControllerObject=new ClientInitialMeetUpController();
+        
 
 
-        var myClientInitialMeetUpControllerObjectPromise = myClientInitialMeetUpControllerObject.get_specific_client_initial_meetup(mKey,mValue);
+        var myClientInitialMeetUpControllerObjectPromise = ClientInitialMeetUpController.get_specific_client_initial_meetup(mKey,mValue);
 	        
 		   
 		   myClientInitialMeetUpControllerObjectPromise.then(function(result) {
@@ -172,8 +172,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-                var myClientInitialMeetUpControllerObject=new ClientInitialMeetUpController();
-                var myClientInitialMeetUpControllerObjectPromise = myClientInitialMeetUpControllerObject.individual_client_initial_meetup_update(column_name,value_,jsonObject_);
+                
+                var myClientInitialMeetUpControllerObjectPromise = ClientInitialMeetUpController.individual_client_initial_meetup_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myClientInitialMeetUpControllerObjectPromise.then(function(result) {
@@ -197,8 +197,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-    var myClientInitialMeetUpControllerObject=new ClientInitialMeetUpController();
-    var myClientInitialMeetUpControllerObjectPromise = myClientInitialMeetUpControllerObject.delete_client_initial_meetup_record(column_name,value_);
+    
+    var myClientInitialMeetUpControllerObjectPromise = ClientInitialMeetUpController.delete_client_initial_meetup_record(column_name,value_);
 	      	        
 		   
 		   myClientInitialMeetUpControllerObjectPromise.then(function(result) {

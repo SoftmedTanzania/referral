@@ -43,8 +43,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myFacilityTypesControllerObject=new FacilityTypesController();
-          var myFacilityTypesControllerObjectPromise = myFacilityTypesControllerObject.insert_facility_types(jsonObject_);
+	      
+          var myFacilityTypesControllerObjectPromise = FacilityTypesController.insert_facility_types(jsonObject_);
 	          
 		   
 		   myFacilityTypesControllerObjectPromise.then(function(result) {
@@ -63,8 +63,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_facility_types',urlencodedParser,function(request,response){
-    var myFacilityTypesControllerObject=new FacilityTypesController();
-    var myFacilityTypesControllerObjectPromise = myFacilityTypesControllerObject.get_all_facility_types();
+    
+    var myFacilityTypesControllerObjectPromise = FacilityTypesController.get_all_facility_types();
 	      
 		   
 		   myFacilityTypesControllerObjectPromise.then(function(result) {
@@ -95,8 +95,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myFacilityTypesControllerObject=new FacilityTypesController();
-     var myFacilityTypesControllerObjectPromise = myFacilityTypesControllerObject.batch_facility_types_update(jsonObject_);
+     
+     var myFacilityTypesControllerObjectPromise = FacilityTypesController.batch_facility_types_update(jsonObject_);
 	   
 		   
 		   myFacilityTypesControllerObjectPromise.then(function(result) {
@@ -120,10 +120,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myFacilityTypesControllerObject=new FacilityTypesController();
+        
 
 
-        var myFacilityTypesControllerObjectPromise = myFacilityTypesControllerObject.get_specific_facility_types(mKey,mValue);
+        var myFacilityTypesControllerObjectPromise = FacilityTypesController.get_specific_facility_types(mKey,mValue);
 	        
 		   
 		   myFacilityTypesControllerObjectPromise.then(function(result) {
@@ -157,8 +157,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-        var myFacilityTypesControllerObject=new FacilityTypesController();
-         var myFacilityTypesControllerObjectPromise = myFacilityTypesControllerObject.individual_facility_types_update(column_name,value_,jsonObject_);
+       
+         var myFacilityTypesControllerObjectPromise = FacilityTypesController.individual_facility_types_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myFacilityTypesControllerObjectPromise.then(function(result) {
@@ -182,8 +182,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-   var myFacilityTypesControllerObject=new FacilityTypesController();
-    var myFacilityTypesControllerObjectPromise = myFacilityTypesControllerObject.delete_facility_types_record(column_name,value_);
+   
+    var myFacilityTypesControllerObjectPromise = FacilityTypesController.delete_facility_types_record(column_name,value_);
 	      	        
 		   
 		   myFacilityTypesControllerObjectPromise.then(function(result) {

@@ -41,8 +41,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myDangerSignsControllerObject=new DangerSignsController();
-          var myDangerSignsControllerObjectPromise = myDangerSignsControllerObject.insert_danger_signs(jsonObject_);
+	      
+          var myDangerSignsControllerObjectPromise = DangerSignsController.insert_danger_signs(jsonObject_);
 	          
 		   
 		   myDangerSignsControllerObjectPromise.then(function(result) {
@@ -61,8 +61,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_danger_signs',urlencodedParser,function(request,response){
-    var myDangerSignsControllerObject=new DangerSignsController();
-    var myDangerSignsControllerObjectPromise = myDangerSignsControllerObject.get_all_danger_signs();
+    
+    var myDangerSignsControllerObjectPromise = DangerSignsController.get_all_danger_signs();
 	      
 		   
 		   myDangerSignsControllerObjectPromise.then(function(result) {
@@ -92,8 +92,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myDangerSignsControllerObject=new DangerSignsController();
-     var myDangerSignsControllerObjectPromise = myDangerSignsControllerObject.batch_danger_signs_update(jsonObject_);
+     
+     var myDangerSignsControllerObjectPromise = DangerSignsController.batch_danger_signs_update(jsonObject_);
 	   
 		   
 		   myDangerSignsControllerObjectPromise.then(function(result) {
@@ -117,10 +117,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myDangerSignsControllerObject=new DangerSignsController();
+        
 
 
-        var myDangerSignsControllerObjectPromise = myDangerSignsControllerObject.get_specific_danger_signs(mKey,mValue);
+        var myDangerSignsControllerObjectPromise = DangerSignsController.get_specific_danger_signs(mKey,mValue);
 	        
 		   
 		   myDangerSignsControllerObjectPromise.then(function(result) {
@@ -154,8 +154,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-                 var myDangerSignsControllerObject=new DangerSignsController();
-                var myDangerSignsControllerObjectPromise = myDangerSignsControllerObject.individual_danger_signs_update(column_name,value_,jsonObject_);
+                
+                var myDangerSignsControllerObjectPromise = DangerSignsController.individual_danger_signs_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myDangerSignsControllerObjectPromise.then(function(result) {
@@ -179,8 +179,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-   var myDangerSignsControllerObject=new DangerSignsController();
-    var myDangerSignsControllerObjectPromise = myDangerSignsControllerObject.delete_danger_signs_record(column_name,value_);
+  
+    var myDangerSignsControllerObjectPromise = DangerSignsController.delete_danger_signs_record(column_name,value_);
 	      	        
 		   
 		   myDangerSignsControllerObjectPromise.then(function(result) {

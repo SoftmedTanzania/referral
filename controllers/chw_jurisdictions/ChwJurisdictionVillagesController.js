@@ -20,10 +20,10 @@ module.exports = class ChwJurisdictionVillagesController{
 	
 	
 	
-   insert_chw_jurisdiction_villages(jsonObject_){
+   static insert_chw_jurisdiction_villages(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myChwJurisdictionVillagesObject=new ChwJurisdictionVillagesModel();
-     var myChwJurisdictionVillagesObjectPromise = myChwJurisdictionVillagesObject.insert_chw_jurisdiction_villages(jsonObject_);
+     
+     var myChwJurisdictionVillagesObjectPromise = ChwJurisdictionVillagesModel.insert_chw_jurisdiction_villages(jsonObject_);
 		  
 		   
 		   myChwJurisdictionVillagesObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class ChwJurisdictionVillagesController{
 	
 	
 	
-   get_all_chw_jurisdiction_villages(){
+   static get_all_chw_jurisdiction_villages(){
 	   return new Promise(function(resolve, reject) {  
-       const  myChwJurisdictionVillagesObject=new ChwJurisdictionVillagesModel();
-        var myChwJurisdictionVillagesObjectPromise = myChwJurisdictionVillagesObject.get_all_chw_jurisdiction_villages();
+       
+        var myChwJurisdictionVillagesObjectPromise = ChwJurisdictionVillagesModel.get_all_chw_jurisdiction_villages();
 		   
 		   
 		   myChwJurisdictionVillagesObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class ChwJurisdictionVillagesController{
 	
 	
 	
-   get_specific_chw_jurisdiction_villages(ColumnName,value_){
+   static get_specific_chw_jurisdiction_villages(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-        const  myChwJurisdictionVillagesObject=new ChwJurisdictionVillagesModel();
-        var myChwJurisdictionVillagesObjectPromise = myChwJurisdictionVillagesObject.get_specific_chw_jurisdiction_villages(ColumnName,value_);
+        
+        var myChwJurisdictionVillagesObjectPromise = ChwJurisdictionVillagesModel.get_specific_chw_jurisdiction_villages(ColumnName,value_);
 		   
 		   
 		   myChwJurisdictionVillagesObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class ChwJurisdictionVillagesController{
 	
 	
 	
-   batch_chw_jurisdiction_villages_update(jsonObject_){
+   static batch_chw_jurisdiction_villages_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-       const  myChwJurisdictionVillagesObject=new ChwJurisdictionVillagesModel();
+       
         
-		var myChwJurisdictionVillagesObjectPromise = myChwJurisdictionVillagesObject.batch_chw_jurisdiction_villages_update(jsonObject_);
+		var myChwJurisdictionVillagesObjectPromise = ChwJurisdictionVillagesModel.batch_chw_jurisdiction_villages_update(jsonObject_);
 		   
 		   
 		   myChwJurisdictionVillagesObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class ChwJurisdictionVillagesController{
 	
 	
 	
-   individual_chw_jurisdiction_villages_update(ColumnName,value_,jsonObject_){
+   static individual_chw_jurisdiction_villages_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-       const  myChwJurisdictionVillagesObject=new ChwJurisdictionVillagesModel();
+       
         
-		var myChwJurisdictionVillagesObjectPromise = myChwJurisdictionVillagesObject.individual_chw_jurisdiction_villages_update(ColumnName,value_,jsonObject_);
+		var myChwJurisdictionVillagesObjectPromise = ChwJurisdictionVillagesModel.individual_chw_jurisdiction_villages_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myChwJurisdictionVillagesObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class ChwJurisdictionVillagesController{
 	
 	
 	
-   delete_chw_jurisdiction_villages_record(ColumnName,value_){
+   static delete_chw_jurisdiction_villages_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myChwJurisdictionVillagesObject=new ChwJurisdictionVillagesModel();
         
-		var myChwJurisdictionVillagesObjectPromise = myChwJurisdictionVillagesObject.delete_chw_jurisdiction_villages_record(ColumnName,value_);
+        
+		var myChwJurisdictionVillagesObjectPromise = ChwJurisdictionVillagesModel.delete_chw_jurisdiction_villages_record(ColumnName,value_);
 		    
 		   
 		   myChwJurisdictionVillagesObjectPromise.then(function(result) {

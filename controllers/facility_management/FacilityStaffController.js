@@ -20,10 +20,10 @@ module.exports = class FacilityStaffController{
 	
 	
 	
-   insert_facility_staff(jsonObject_){
+   static insert_facility_staff(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myFacilityStaffObject=new FacilityStaffModel();
-     var myFacilityStaffObjectPromise = myFacilityStaffObject.insert_facility_staff(jsonObject_);
+     
+     var myFacilityStaffObjectPromise = FacilityStaffModel.insert_facility_staff(jsonObject_);
 		  
 		   
 		   myFacilityStaffObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class FacilityStaffController{
 	
 	
 	
-   get_all_facility_staff(){
+   static get_all_facility_staff(){
 	   return new Promise(function(resolve, reject) {  
-        const  myFacilityStaffObject=new FacilityStaffModel();
-        var myFacilityStaffObjectPromise = myFacilityStaffObject.get_all_facility_staff();
+        
+        var myFacilityStaffObjectPromise = FacilityStaffModel.get_all_facility_staff();
 		   
 		   
 		   myFacilityStaffObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class FacilityStaffController{
 	
 	
 	
-   get_specific_facility_staff(ColumnName,value_){
+   static get_specific_facility_staff(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-       const  myFacilityStaffObject=new FacilityStaffModel();
-        var myFacilityStaffObjectPromise = myFacilityStaffObject.get_specific_facility_staff(ColumnName,value_);
+       
+        var myFacilityStaffObjectPromise = FacilityStaffModel.get_specific_facility_staff(ColumnName,value_);
 		   
 		   
 		   myFacilityStaffObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class FacilityStaffController{
 	
 	
 	
-   batch_facility_staff_update(jsonObject_){
+   static batch_facility_staff_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-       const  myFacilityStaffObject=new FacilityStaffModel();
+       
         
-		var myFacilityStaffObjectPromise = myFacilityStaffObject.batch_facility_staff_update(jsonObject_);
+		var myFacilityStaffObjectPromise = FacilityStaffModel.batch_facility_staff_update(jsonObject_);
 		   
 		   
 		   myFacilityStaffObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class FacilityStaffController{
 	
 	
 	
-   individual_facility_staff_update(ColumnName,value_,jsonObject_){
+   static individual_facility_staff_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-       const  myFacilityStaffObject=new FacilityStaffModel();
+       
         
-		var myFacilityStaffObjectPromise = myFacilityStaffObject.individual_facility_staff_update(ColumnName,value_,jsonObject_);
+		var myFacilityStaffObjectPromise = FacilityStaffModel.individual_facility_staff_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myFacilityStaffObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class FacilityStaffController{
 	
 	
 	
-   delete_facility_staff_record(ColumnName,value_){
+   static delete_facility_staff_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-         const  myFacilityStaffObject=new FacilityStaffModel();
+         
         
-		var myFacilityStaffObjectPromise = myFacilityStaffObject.delete_facility_staff_record(ColumnName,value_);
+		var myFacilityStaffObjectPromise = FacilityStaffModel.delete_facility_staff_record(ColumnName,value_);
 		    
 		   
 		   myFacilityStaffObjectPromise.then(function(result) {

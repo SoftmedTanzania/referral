@@ -45,8 +45,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myTeamLeadsControllerObject=new TeamLeadsController();
-          var myTeamLeadsControllerObjectPromise = myTeamLeadsControllerObject.insert_team_leads(jsonObject_);
+	      
+          var myTeamLeadsControllerObjectPromise = TeamLeadsController.insert_team_leads(jsonObject_);
 	          
 		   
 		   myTeamLeadsControllerObjectPromise.then(function(result) {
@@ -65,8 +65,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_team_leads',urlencodedParser,function(request,response){
-    var myTeamLeadsControllerObject=new TeamLeadsController();
-    var myTeamLeadsControllerObjectPromise = myTeamLeadsControllerObject.get_all_team_leads();
+    
+    var myTeamLeadsControllerObjectPromise = TeamLeadsController.get_all_team_leads();
 	      
 		   
 		   myTeamLeadsControllerObjectPromise.then(function(result) {
@@ -99,8 +99,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myTeamLeadsControllerObject=new TeamLeadsController();
-     var myTeamLeadsControllerObjectPromise = myTeamLeadsControllerObject.batch_team_leads_update(jsonObject_);
+     
+     var myTeamLeadsControllerObjectPromise = TeamLeadsController.batch_team_leads_update(jsonObject_);
 	   
 		   
 		   myTeamLeadsControllerObjectPromise.then(function(result) {
@@ -124,10 +124,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myTeamLeadsControllerObject=new TeamLeadsController();
+        
 
 
-        var myTeamLeadsControllerObjectPromise = myTeamLeadsControllerObject.get_specific_team_leads(mKey,mValue);
+        var myTeamLeadsControllerObjectPromise = TeamLeadsController.get_specific_team_leads(mKey,mValue);
 	        
 		   
 		   myTeamLeadsControllerObjectPromise.then(function(result) {
@@ -164,8 +164,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-         var myTeamLeadsControllerObject=new TeamLeadsController();
-         var myTeamLeadsControllerObjectPromise = myTeamLeadsControllerObject.individual_team_leads_update(column_name,value_,jsonObject_);
+         
+         var myTeamLeadsControllerObjectPromise = TeamLeadsController.individual_team_leads_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myTeamLeadsControllerObjectPromise.then(function(result) {
@@ -189,8 +189,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-   var myTeamLeadsControllerObject=new TeamLeadsController();
-    var myTeamLeadsControllerObjectPromise = myTeamLeadsControllerObject.delete_team_leads_record(column_name,value_);
+   
+    var myTeamLeadsControllerObjectPromise = TeamLeadsController.delete_team_leads_record(column_name,value_);
 	      	        
 		   
 		   myTeamLeadsControllerObjectPromise.then(function(result) {

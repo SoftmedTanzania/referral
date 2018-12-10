@@ -41,8 +41,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myVillagesControllerObject=new VillagesController();
-          var myVillagesControllerObjectPromise = myVillagesControllerObject.insert_villages(jsonObject_);
+	      
+          var myVillagesControllerObjectPromise = VillagesController.insert_villages(jsonObject_);
 	          
 		   
 		   myVillagesControllerObjectPromise.then(function(result) {
@@ -61,8 +61,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_villages',urlencodedParser,function(request,response){
-    var myVillagesControllerObject=new VillagesController();
-    var myVillagesControllerObjectPromise = myVillagesControllerObject.get_all_villages();
+    
+    var myVillagesControllerObjectPromise = VillagesController.get_all_villages();
 	      
 		   
 		   myVillagesControllerObjectPromise.then(function(result) {
@@ -93,8 +93,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-    var myVillagesControllerObject=new VillagesController();
-    var myVillagesControllerObjectPromise = myVillagesControllerObject.batch_villages_update(jsonObject_);
+    
+    var myVillagesControllerObjectPromise = VillagesController.batch_villages_update(jsonObject_);
 	   
 		   
 		   myVillagesControllerObjectPromise.then(function(result) {
@@ -118,10 +118,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myVillagesControllerObject=new VillagesController();
+        
 
 
-        var myVillagesControllerObjectPromise = myVillagesControllerObject.get_specific_villages(mKey,mValue);
+        var myVillagesControllerObjectPromise = VillagesController.get_specific_villages(mKey,mValue);
 	        
 		   
 		   myVillagesControllerObjectPromise.then(function(result) {
@@ -156,8 +156,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-         var myVillagesControllerObject=new VillagesController();
-         var myVillagesControllerObjectPromise = myVillagesControllerObject.individual_villages_update(column_name,value_,jsonObject_);
+         
+         var myVillagesControllerObjectPromise = VillagesController.individual_villages_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myVillagesControllerObjectPromise.then(function(result) {
@@ -181,8 +181,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-    var myVillagesControllerObject=new VillagesController();
-    var myVillagesControllerObjectPromise = myVillagesControllerObject.delete_villages_record(column_name,value_);
+    
+    var myVillagesControllerObjectPromise = VillagesController.delete_villages_record(column_name,value_);
 	      	        
 		   
 		   myVillagesControllerObjectPromise.then(function(result) {

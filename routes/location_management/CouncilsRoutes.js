@@ -41,8 +41,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myCouncilsControllerObject=new CouncilsController();
-          var myCouncilsControllerObjectPromise = myCouncilsControllerObject.insert_councils(jsonObject_);
+	      
+          var myCouncilsControllerObjectPromise = CouncilsController.insert_councils(jsonObject_);
 	          
 		   
 		   myCouncilsControllerObjectPromise.then(function(result) {
@@ -61,8 +61,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_councils',urlencodedParser,function(request,response){
-    var myCouncilsControllerObject=new CouncilsController();
-    var myCouncilsControllerObjectPromise = myCouncilsControllerObject.get_all_councils();
+    
+    var myCouncilsControllerObjectPromise = CouncilsController.get_all_councils();
 	      
 		   
 		   myCouncilsControllerObjectPromise.then(function(result) {
@@ -93,8 +93,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-    var myCouncilsControllerObject=new CouncilsController();
-    var myCouncilsControllerObjectPromise = myCouncilsControllerObject.batch_councils_update(jsonObject_);
+    
+    var myCouncilsControllerObjectPromise = CouncilsController.batch_councils_update(jsonObject_);
 	   
 		   
 		   myCouncilsControllerObjectPromise.then(function(result) {
@@ -118,10 +118,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myCouncilsControllerObject=new CouncilsController();
+        
 
 
-        var myCouncilsControllerObjectPromise = myCouncilsControllerObject.get_specific_councils(mKey,mValue);
+        var myCouncilsControllerObjectPromise = CouncilsController.get_specific_councils(mKey,mValue);
 	        
 		   
 		   myCouncilsControllerObjectPromise.then(function(result) {
@@ -156,8 +156,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-         var myCouncilsControllerObject=new CouncilsController();
-         var myCouncilsControllerObjectPromise = myCouncilsControllerObject.individual_councils_update(column_name,value_,jsonObject_);
+         
+         var myCouncilsControllerObjectPromise = CouncilsController.individual_councils_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myCouncilsControllerObjectPromise.then(function(result) {
@@ -181,8 +181,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-    var myCouncilsControllerObject=new CouncilsController();
-    var myCouncilsControllerObjectPromise = myCouncilsControllerObject.delete_councils_record(column_name,value_);
+    
+    var myCouncilsControllerObjectPromise = CouncilsController.delete_councils_record(column_name,value_);
 	      	        
 		   
 		   myCouncilsControllerObjectPromise.then(function(result) {

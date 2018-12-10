@@ -20,10 +20,10 @@ module.exports = class ReferralDangerSignsController{
 	
 	
 	
-   insert_referral_danger_signs(jsonObject_){
+   static insert_referral_danger_signs(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myReferralDangerSignsObject=new ReferralDangerSignsModel();
-     var myReferralDangerSignsObjectPromise = myReferralDangerSignsObject.insert_referral_danger_signs(jsonObject_);
+    
+     var myReferralDangerSignsObjectPromise = ReferralDangerSignsModel.insert_referral_danger_signs(jsonObject_);
 		  
 		   
 		   myReferralDangerSignsObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class ReferralDangerSignsController{
 	
 	
 	
-   get_all_referral_danger_signs(){
+   static get_all_referral_danger_signs(){
 	   return new Promise(function(resolve, reject) {  
-        const  myReferralDangerSignsObject=new ReferralDangerSignsModel();
-        var myReferralDangerSignsObjectPromise = myReferralDangerSignsObject.get_all_referral_danger_signs();
+       
+        var myReferralDangerSignsObjectPromise = ReferralDangerSignsModel.get_all_referral_danger_signs();
 		   
 		   
 		   myReferralDangerSignsObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class ReferralDangerSignsController{
 	
 	
 	
-   get_specific_referral_danger_signs(ColumnName,value_){
+   static get_specific_referral_danger_signs(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-       const  myReferralDangerSignsObject=new ReferralDangerSignsModel();
-        var myReferralDangerSignsObjectPromise = myReferralDangerSignsObject.get_specific_referral_danger_signs(ColumnName,value_);
+       
+        var myReferralDangerSignsObjectPromise = ReferralDangerSignsModel.get_specific_referral_danger_signs(ColumnName,value_);
 		   
 		   
 		   myReferralDangerSignsObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class ReferralDangerSignsController{
 	
 	
 	
-   batch_referral_danger_signs_update(jsonObject_){
+   static batch_referral_danger_signs_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-        const  myReferralDangerSignsObject=new ReferralDangerSignsModel();
         
-		var myReferralDangerSignsObjectPromise = myReferralDangerSignsObject.batch_referral_danger_signs_update(jsonObject_);
+        
+		var myReferralDangerSignsObjectPromise = ReferralDangerSignsModel.batch_referral_danger_signs_update(jsonObject_);
 		   
 		   
 		   myReferralDangerSignsObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class ReferralDangerSignsController{
 	
 	
 	
-   individual_referral_danger_signs_update(ColumnName,value_,jsonObject_){
+   static individual_referral_danger_signs_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-      const  myReferralDangerSignsObject=new ReferralDangerSignsModel();
+      
         
-		var myReferralDangerSignsObjectPromise = myReferralDangerSignsObject.individual_referral_danger_signs_update(ColumnName,value_,jsonObject_);
+		var myReferralDangerSignsObjectPromise = ReferralDangerSignsModel.individual_referral_danger_signs_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myReferralDangerSignsObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class ReferralDangerSignsController{
 	
 	
 	
-   delete_referral_danger_signs_record(ColumnName,value_){
+   static delete_referral_danger_signs_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myReferralDangerSignsObject=new ReferralDangerSignsModel();
         
-		var myReferralDangerSignsObjectPromise = myReferralDangerSignsObject.delete_referral_danger_signs_record(ColumnName,value_);
+        
+		var myReferralDangerSignsObjectPromise = ReferralDangerSignsModel.delete_referral_danger_signs_record(ColumnName,value_);
 		    
 		   
 		   myReferralDangerSignsObjectPromise.then(function(result) {

@@ -42,8 +42,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myTeamsControllerObject=new TeamsController();
-          var myTeamsControllerObjectPromise = myTeamsControllerObject.insert_teams(jsonObject_);
+	      
+          var myTeamsControllerObjectPromise = TeamsController.insert_teams(jsonObject_);
 	          
 		   
 		   myTeamsControllerObjectPromise.then(function(result) {
@@ -62,8 +62,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_teams',urlencodedParser,function(request,response){
-    var myTeamsControllerObject=new TeamsController();
-    var myTeamsControllerObjectPromise = myTeamsControllerObject.get_all_teams();
+    
+    var myTeamsControllerObjectPromise = TeamsController.get_all_teams();
 	      
 		   
 		   myTeamsControllerObjectPromise.then(function(result) {
@@ -94,8 +94,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myTeamsControllerObject=new TeamsController();
-     var myTeamsControllerObjectPromise = myTeamsControllerObject.batch_teams_update(jsonObject_);
+     
+     var myTeamsControllerObjectPromise = TeamsController.batch_teams_update(jsonObject_);
 	   
 		   
 		   myTeamsControllerObjectPromise.then(function(result) {
@@ -119,10 +119,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-         var myTeamsControllerObject=new TeamsController();
+         
 
 
-        var myTeamsControllerObjectPromise = myTeamsControllerObject.get_specific_teams(mKey,mValue);
+        var myTeamsControllerObjectPromise = TeamsController.get_specific_teams(mKey,mValue);
 	        
 		   
 		   myTeamsControllerObjectPromise.then(function(result) {
@@ -157,8 +157,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-         var myTeamsControllerObject=new TeamsController();
-         var myTeamsControllerObjectPromise = myTeamsControllerObject.individual_teams_update(column_name,value_,jsonObject_);
+         
+         var myTeamsControllerObjectPromise = TeamsController.individual_teams_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myTeamsControllerObjectPromise.then(function(result) {
@@ -182,8 +182,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-    var myTeamsControllerObject=new TeamsController();
-    var myTeamsControllerObjectPromise = myTeamsControllerObject.delete_teams_record(column_name,value_);
+    
+    var myTeamsControllerObjectPromise = TeamsController.delete_teams_record(column_name,value_);
 	      	        
 		   
 		   myTeamsControllerObjectPromise.then(function(result) {

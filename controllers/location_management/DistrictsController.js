@@ -20,10 +20,10 @@ module.exports = class DistrictsController{
 	
 	
 	
-   insert_districts(jsonObject_){
+   static insert_districts(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myDistrictsObject=new DistrictsModel();
-     var myDistrictsObjectPromise = myDistrictsObject.insert_districts(jsonObject_);
+     
+     var myDistrictsObjectPromise = DistrictsModel.insert_districts(jsonObject_);
 		  
 		   
 		   myDistrictsObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class DistrictsController{
 	
 	
 	
-   get_all_districts(){
+   static get_all_districts(){
 	   return new Promise(function(resolve, reject) {  
-        const  myDistrictsObject=new DistrictsModel();
-        var myDistrictsObjectPromise = myDistrictsObject.get_all_districts();
+        
+        var myDistrictsObjectPromise = DistrictsModel.get_all_districts();
 		   
 		   
 		   myDistrictsObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class DistrictsController{
 	
 	
 	
-   get_specific_districts(ColumnName,value_){
+   static get_specific_districts(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-         const  myDistrictsObject=new DistrictsModel();
-        var myDistrictsObjectPromise = myDistrictsObject.get_specific_districts(ColumnName,value_);
+         
+        var myDistrictsObjectPromise = DistrictsModel.get_specific_districts(ColumnName,value_);
 		   
 		   
 		   myDistrictsObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class DistrictsController{
 	
 	
 	
-   batch_districts_update(jsonObject_){
+   static batch_districts_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-       const  myDistrictsObject=new DistrictsModel();
+       
         
-		var myDistrictsObjectPromise = myDistrictsObject.batch_districts_update(jsonObject_);
+		var myDistrictsObjectPromise = DistrictsModel.batch_districts_update(jsonObject_);
 		   
 		   
 		   myDistrictsObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class DistrictsController{
 	
 	
 	
-   individual_districts_update(ColumnName,value_,jsonObject_){
+   static individual_districts_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-       const  myDistrictsObject=new DistrictsModel();
+       
         
-		var myDistrictsObjectPromise = myDistrictsObject.individual_districts_update(ColumnName,value_,jsonObject_);
+		var myDistrictsObjectPromise = DistrictsModel.individual_districts_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myDistrictsObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class DistrictsController{
 	
 	
 	
-   delete_districts_record(ColumnName,value_){
+   static delete_districts_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myDistrictsObject=new DistrictsModel();
         
-		var myDistrictsObjectPromise = myDistrictsObject.delete_districts_record(ColumnName,value_);
+        
+		var myDistrictsObjectPromise = DistrictsModel.delete_districts_record(ColumnName,value_);
 		    
 		   
 		   myDistrictsObjectPromise.then(function(result) {

@@ -44,8 +44,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myFacilityToFacilityBackReferralEncountersControllerObject=new FacilityToFacilityBackReferralEncountersController();
-          var myFacilityToFacilityBackReferralEncountersControllerObjectPromise = myFacilityToFacilityBackReferralEncountersControllerObject.insert_facility_to_facility_back_referral_encounters(jsonObject_);
+	      
+          var myFacilityToFacilityBackReferralEncountersControllerObjectPromise = FacilityToFacilityBackReferralEncountersController.insert_facility_to_facility_back_referral_encounters(jsonObject_);
 	          
 		   
 		   myFacilityToFacilityBackReferralEncountersControllerObjectPromise.then(function(result) {
@@ -64,8 +64,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_facility_to_facility_back_referral_encounters',urlencodedParser,function(request,response){
-    var myFacilityToFacilityBackReferralEncountersControllerObject=new FacilityToFacilityBackReferralEncountersController();
-    var myFacilityToFacilityBackReferralEncountersControllerObjectPromise = myFacilityToFacilityBackReferralEncountersControllerObject.get_all_facility_to_facility_back_referral_encounters();
+    
+    var myFacilityToFacilityBackReferralEncountersControllerObjectPromise = FacilityToFacilityBackReferralEncountersController.get_all_facility_to_facility_back_referral_encounters();
 	      
 		   
 		   myFacilityToFacilityBackReferralEncountersControllerObjectPromise.then(function(result) {
@@ -95,8 +95,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-      var myFacilityToFacilityBackReferralEncountersControllerObject=new FacilityToFacilityBackReferralEncountersController();
-      var myFacilityToFacilityBackReferralEncountersControllerObjectPromise = myFacilityToFacilityBackReferralEncountersControllerObject.batch_facility_to_facility_back_referral_encounters_update(jsonObject_);
+      
+      var myFacilityToFacilityBackReferralEncountersControllerObjectPromise = FacilityToFacilityBackReferralEncountersController.batch_facility_to_facility_back_referral_encounters_update(jsonObject_);
 	   
 		   
 		   myFacilityToFacilityBackReferralEncountersControllerObjectPromise.then(function(result) {
@@ -120,10 +120,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myFacilityToFacilityBackReferralEncountersControllerObject=new FacilityToFacilityBackReferralEncountersController();
+        
 
 
-        var myFacilityToFacilityBackReferralEncountersControllerObjectPromise = myFacilityToFacilityBackReferralEncountersControllerObject.get_specific_facility_to_facility_back_referral_encounters(mKey,mValue);
+        var myFacilityToFacilityBackReferralEncountersControllerObjectPromise = FacilityToFacilityBackReferralEncountersController.get_specific_facility_to_facility_back_referral_encounters(mKey,mValue);
 	        
 		   
 		   myFacilityToFacilityBackReferralEncountersControllerObjectPromise.then(function(result) {
@@ -157,8 +157,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-                var myFacilityToFacilityBackReferralEncountersControllerObject=new FacilityToFacilityBackReferralEncountersController();
-                var myFacilityToFacilityBackReferralEncountersControllerObjectPromise = myFacilityToFacilityBackReferralEncountersControllerObject.individual_facility_to_facility_back_referral_encounters_update(column_name,value_,jsonObject_);
+                
+                var myFacilityToFacilityBackReferralEncountersControllerObjectPromise = FacilityToFacilityBackReferralEncountersController.individual_facility_to_facility_back_referral_encounters_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myFacilityToFacilityBackReferralEncountersControllerObjectPromise.then(function(result) {
@@ -182,8 +182,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-    var myFacilityToFacilityBackReferralEncountersControllerObject=new FacilityToFacilityBackReferralEncountersController();
-    var myFacilityToFacilityBackReferralEncountersControllerObjectPromise = myFacilityToFacilityBackReferralEncountersControllerObject.delete_facility_to_facility_back_referral_encounters_record(column_name,value_);
+    
+    var myFacilityToFacilityBackReferralEncountersControllerObjectPromise = FacilityToFacilityBackReferralEncountersController.delete_facility_to_facility_back_referral_encounters_record(column_name,value_);
 	      	        
 		   
 		   myFacilityToFacilityBackReferralEncountersControllerObjectPromise.then(function(result) {

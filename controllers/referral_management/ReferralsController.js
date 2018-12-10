@@ -20,10 +20,10 @@ module.exports = class ReferralsController{
 	
 	
 	
-   insert_referrals(jsonObject_){
+   static insert_referrals(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myReferralsObject=new ReferralsModel();
-     var myReferralsObjectPromise = myReferralsObject.insert_referrals(jsonObject_);
+     
+     var myReferralsObjectPromise = ReferralsModel.insert_referrals(jsonObject_);
 		  
 		   
 		   myReferralsObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class ReferralsController{
 	
 	
 	
-   get_all_referrals(){
+   static get_all_referrals(){
 	   return new Promise(function(resolve, reject) {  
-        const  myReferralsObject=new ReferralsModel();
-        var myReferralsObjectPromise = myReferralsObject.get_all_referrals();
+        
+        var myReferralsObjectPromise = ReferralsModel.get_all_referrals();
 		   
 		   
 		   myReferralsObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class ReferralsController{
 	
 	
 	
-   get_specific_referrals(ColumnName,value_){
+   static get_specific_referrals(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-       const  myReferralsObject=new ReferralsModel();
-        var myReferralsObjectPromise = myReferralsObject.get_specific_referrals(ColumnName,value_);
+       
+        var myReferralsObjectPromise = ReferralsModel.get_specific_referrals(ColumnName,value_);
 		   
 		   
 		   myReferralsObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class ReferralsController{
 	
 	
 	
-   batch_referrals_update(jsonObject_){
+   static batch_referrals_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-        const  myReferralsObject=new ReferralsModel();
         
-		var myReferralsObjectPromise = myReferralsObject.batch_referrals_update(jsonObject_);
+        
+		var myReferralsObjectPromise = ReferralsModel.batch_referrals_update(jsonObject_);
 		   
 		   
 		   myReferralsObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class ReferralsController{
 	
 	
 	
-   individual_referrals_update(ColumnName,value_,jsonObject_){
+   static individual_referrals_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-      const  myReferralsObject=new ReferralsModel();
+      
         
-		var myReferralsObjectPromise = myReferralsObject.individual_referrals_update(ColumnName,value_,jsonObject_);
+		var myReferralsObjectPromise = ReferralsModel.individual_referrals_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myReferralsObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class ReferralsController{
 	
 	
 	
-   delete_referrals_record(ColumnName,value_){
+   static delete_referrals_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myReferralsObject=new ReferralsModel();
         
-		var myReferralsObjectPromise = myReferralsObject.delete_referrals_record(ColumnName,value_);
+        
+		var myReferralsObjectPromise = ReferralsModel.delete_referrals_record(ColumnName,value_);
 		    
 		   
 		   myReferralsObjectPromise.then(function(result) {

@@ -20,10 +20,10 @@ module.exports = class VillagesController{
 	
 	
 	
-   insert_villages(jsonObject_){
+   static insert_villages(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myVillagesObject=new VillagesModel();
-     var myVillagesObjectPromise = myVillagesObject.insert_villages(jsonObject_);
+     
+     var myVillagesObjectPromise = VillagesModel.insert_villages(jsonObject_);
 		  
 		   
 		   myVillagesObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class VillagesController{
 	
 	
 	
-   get_all_villages(){
+   static get_all_villages(){
 	   return new Promise(function(resolve, reject) {  
-        const  myVillagesObject=new VillagesModel();
-        var myVillagesObjectPromise = myVillagesObject.get_all_villages();
+        
+        var myVillagesObjectPromise = VillagesModel.get_all_villages();
 		   
 		   
 		   myVillagesObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class VillagesController{
 	
 	
 	
-   get_specific_villages(ColumnName,value_){
+   static get_specific_villages(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-        const  myVillagesObject=new VillagesModel();
-        var myVillagesObjectPromise = myVillagesObject.get_specific_villages(ColumnName,value_);
+        
+        var myVillagesObjectPromise = VillagesModel.get_specific_villages(ColumnName,value_);
 		   
 		   
 		   myVillagesObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class VillagesController{
 	
 	
 	
-   batch_villages_update(jsonObject_){
+   static batch_villages_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-       const  myVillagesObject=new VillagesModel();
+       
         
-		var myVillagesObjectPromise = myVillagesObject.batch_villages_update(jsonObject_);
+		var myVillagesObjectPromise = VillagesModel.batch_villages_update(jsonObject_);
 		   
 		   
 		   myVillagesObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class VillagesController{
 	
 	
 	
-   individual_villages_update(ColumnName,value_,jsonObject_){
+   static individual_villages_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-       const  myVillagesObject=new VillagesModel();
+       
         
-		var myVillagesObjectPromise = myVillagesObject.individual_villages_update(ColumnName,value_,jsonObject_);
+		var myVillagesObjectPromise = VillagesModel.individual_villages_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myVillagesObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class VillagesController{
 	
 	
 	
-   delete_villages_record(ColumnName,value_){
+   static delete_villages_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myVillagesObject=new VillagesModel();
         
-		var myVillagesObjectPromise = myVillagesObject.delete_villages_record(ColumnName,value_);
+        
+		var myVillagesObjectPromise = VillagesModel.delete_villages_record(ColumnName,value_);
 		    
 		   
 		   myVillagesObjectPromise.then(function(result) {

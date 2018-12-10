@@ -20,10 +20,10 @@ module.exports = class BackReferralRequestInformationController{
 	
 	
 	
-   insert_back_referral_request_information(jsonObject_){
+   static insert_back_referral_request_information(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myBackReferralRequestInformationObject=new BackReferralRequestInformationModel();
-     var myBackReferralRequestInformationObjectPromise = myBackReferralRequestInformationObject.insert_back_referral_request_information(jsonObject_);
+     
+     var myBackReferralRequestInformationObjectPromise = BackReferralRequestInformationModel.insert_back_referral_request_information(jsonObject_);
 		  
 		   
 		   myBackReferralRequestInformationObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class BackReferralRequestInformationController{
 	
 	
 	
-   get_all_back_referral_request_information(){
+   static get_all_back_referral_request_information(){
 	   return new Promise(function(resolve, reject) {  
-        const  myBackReferralRequestInformationObject=new BackReferralRequestInformationModel();
-        var myBackReferralRequestInformationObjectPromise = myBackReferralRequestInformationObject.get_all_back_referral_request_information();
+        
+        var myBackReferralRequestInformationObjectPromise = BackReferralRequestInformationModel.get_all_back_referral_request_information();
 		   
 		   
 		   myBackReferralRequestInformationObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class BackReferralRequestInformationController{
 	
 	
 	
-   get_specific_back_referral_request_information(ColumnName,value_){
+   static get_specific_back_referral_request_information(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-       const  myBackReferralRequestInformationObject=new BackReferralRequestInformationModel();
-        var myBackReferralRequestInformationObjectPromise = myBackReferralRequestInformationObject.get_specific_back_referral_request_information(ColumnName,value_);
+      
+        var myBackReferralRequestInformationObjectPromise = BackReferralRequestInformationModel.get_specific_back_referral_request_information(ColumnName,value_);
 		   
 		   
 		   myBackReferralRequestInformationObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class BackReferralRequestInformationController{
 	
 	
 	
-   batch_back_referral_request_information_update(jsonObject_){
+   static batch_back_referral_request_information_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-        const  myBackReferralRequestInformationObject=new BackReferralRequestInformationModel();
         
-		var myBackReferralRequestInformationObjectPromise = myBackReferralRequestInformationObject.batch_back_referral_request_information_update(jsonObject_);
+        
+		var myBackReferralRequestInformationObjectPromise = BackReferralRequestInformationModel.batch_back_referral_request_information_update(jsonObject_);
 		   
 		   
 		   myBackReferralRequestInformationObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class BackReferralRequestInformationController{
 	
 	
 	
-   individual_back_referral_request_information_update(ColumnName,value_,jsonObject_){
+   static individual_back_referral_request_information_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-      const  myBackReferralRequestInformationObject=new BackReferralRequestInformationModel();
+      
         
-		var myBackReferralRequestInformationObjectPromise = myBackReferralRequestInformationObject.individual_back_referral_request_information_update(ColumnName,value_,jsonObject_);
+		var myBackReferralRequestInformationObjectPromise = BackReferralRequestInformationModel.individual_back_referral_request_information_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myBackReferralRequestInformationObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class BackReferralRequestInformationController{
 	
 	
 	
-   delete_back_referral_request_information_record(ColumnName,value_){
+   static delete_back_referral_request_information_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myBackReferralRequestInformationObject=new BackReferralRequestInformationModel();
         
-		var myBackReferralRequestInformationObjectPromise = myBackReferralRequestInformationObject.delete_back_referral_request_information_record(ColumnName,value_);
+        
+		var myBackReferralRequestInformationObjectPromise = BackReferralRequestInformationModel.delete_back_referral_request_information_record(ColumnName,value_);
 		    
 		   
 		   myBackReferralRequestInformationObjectPromise.then(function(result) {

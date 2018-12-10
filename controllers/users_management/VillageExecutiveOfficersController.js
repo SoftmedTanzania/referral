@@ -20,10 +20,10 @@ module.exports = class VillageExecutiveOfficersController{
 	
 	
 	
-   insert_village_executive_officers(jsonObject_){
+   static insert_village_executive_officers(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myVillageExecutiveOfficersObject=new VillageExecutiveOfficersModel();
-     var myVillageExecutiveOfficersObjectPromise = myVillageExecutiveOfficersObject.insert_village_executive_officers(jsonObject_);
+     
+     var myVillageExecutiveOfficersObjectPromise = VillageExecutiveOfficersModel.insert_village_executive_officers(jsonObject_);
 		  
 		   
 		   myVillageExecutiveOfficersObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class VillageExecutiveOfficersController{
 	
 	
 	
-   get_all_village_executive_officers(){
+   static get_all_village_executive_officers(){
 	   return new Promise(function(resolve, reject) {  
-        const  myVillageExecutiveOfficersObject=new VillageExecutiveOfficersModel();
-        var myVillageExecutiveOfficersObjectPromise = myVillageExecutiveOfficersObject.get_all_village_executive_officers();
+        
+        var myVillageExecutiveOfficersObjectPromise = VillageExecutiveOfficersModel.get_all_village_executive_officers();
 		   
 		   
 		   myVillageExecutiveOfficersObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class VillageExecutiveOfficersController{
 	
 	
 	
-   get_specific_village_executive_officers(ColumnName,value_){
+   static get_specific_village_executive_officers(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-        const  myVillageExecutiveOfficersObject=new VillageExecutiveOfficersModel();
-        var myVillageExecutiveOfficersObjectPromise = myVillageExecutiveOfficersObject.get_specific_village_executive_officers(ColumnName,value_);
+        
+        var myVillageExecutiveOfficersObjectPromise = VillageExecutiveOfficersModel.get_specific_village_executive_officers(ColumnName,value_);
 		   
 		   
 		   myVillageExecutiveOfficersObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class VillageExecutiveOfficersController{
 	
 	
 	
-   batch_village_executive_officers_update(jsonObject_){
+   static batch_village_executive_officers_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-       const  myVillageExecutiveOfficersObject=new VillageExecutiveOfficersModel();
+       
         
-		var myVillageExecutiveOfficersObjectPromise = myVillageExecutiveOfficersObject.batch_village_executive_officers_update(jsonObject_);
+		var myVillageExecutiveOfficersObjectPromise = VillageExecutiveOfficersModel.batch_village_executive_officers_update(jsonObject_);
 		   
 		   
 		   myVillageExecutiveOfficersObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class VillageExecutiveOfficersController{
 	
 	
 	
-   individual_village_executive_officers_update(ColumnName,value_,jsonObject_){
+   static individual_village_executive_officers_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-       const  myVillageExecutiveOfficersObject=new VillageExecutiveOfficersModel();
+       
         
-		var myVillageExecutiveOfficersObjectPromise = myVillageExecutiveOfficersObject.individual_village_executive_officers_update(ColumnName,value_,jsonObject_);
+		var myVillageExecutiveOfficersObjectPromise = VillageExecutiveOfficersModel.individual_village_executive_officers_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myVillageExecutiveOfficersObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class VillageExecutiveOfficersController{
 	
 	
 	
-   delete_village_executive_officers_record(ColumnName,value_){
+   static delete_village_executive_officers_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myVillageExecutiveOfficersObject=new VillageExecutiveOfficersModel();
         
-		var myVillageExecutiveOfficersObjectPromise = myVillageExecutiveOfficersObject.delete_village_executive_officers_record(ColumnName,value_);
+        
+		var myVillageExecutiveOfficersObjectPromise = VillageExecutiveOfficersModel.delete_village_executive_officers_record(ColumnName,value_);
 		    
 		   
 		   myVillageExecutiveOfficersObjectPromise.then(function(result) {

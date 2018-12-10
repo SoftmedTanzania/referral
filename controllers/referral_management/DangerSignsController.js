@@ -20,10 +20,10 @@ module.exports = class DangerSignsController{
 	
 	
 	
-   insert_danger_signs(jsonObject_){
+   static insert_danger_signs(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myDangerSignsObject=new DangerSignsModel();
-     var myDangerSignsObjectPromise = myDangerSignsObject.insert_danger_signs(jsonObject_);
+     
+     var myDangerSignsObjectPromise = DangerSignsModel.insert_danger_signs(jsonObject_);
 		  
 		   
 		   myDangerSignsObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class DangerSignsController{
 	
 	
 	
-   get_all_danger_signs(){
+   static get_all_danger_signs(){
 	   return new Promise(function(resolve, reject) {  
-        const  myDangerSignsObject=new DangerSignsModel();
-        var myDangerSignsObjectPromise = myDangerSignsObject.get_all_danger_signs();
+        
+        var myDangerSignsObjectPromise = DangerSignsModel.get_all_danger_signs();
 		   
 		   
 		   myDangerSignsObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class DangerSignsController{
 	
 	
 	
-   get_specific_danger_signs(ColumnName,value_){
+   static get_specific_danger_signs(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-       const  myDangerSignsObject=new DangerSignsModel();
-        var myDangerSignsObjectPromise = myDangerSignsObject.get_specific_danger_signs(ColumnName,value_);
+      
+        var myDangerSignsObjectPromise = DangerSignsModel.get_specific_danger_signs(ColumnName,value_);
 		   
 		   
 		   myDangerSignsObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class DangerSignsController{
 	
 	
 	
-   batch_danger_signs_update(jsonObject_){
+   static batch_danger_signs_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-        const  myDangerSignsObject=new DangerSignsModel();
         
-		var myDangerSignsObjectPromise = myDangerSignsObject.batch_danger_signs_update(jsonObject_);
+        
+		var myDangerSignsObjectPromise = DangerSignsModel.batch_danger_signs_update(jsonObject_);
 		   
 		   
 		   myDangerSignsObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class DangerSignsController{
 	
 	
 	
-   individual_danger_signs_update(ColumnName,value_,jsonObject_){
+   static individual_danger_signs_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-      const  myDangerSignsObject=new DangerSignsModel();
+      
         
-		var myDangerSignsObjectPromise = myDangerSignsObject.individual_danger_signs_update(ColumnName,value_,jsonObject_);
+		var myDangerSignsObjectPromise = DangerSignsModel.individual_danger_signs_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myDangerSignsObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class DangerSignsController{
 	
 	
 	
-   delete_danger_signs_record(ColumnName,value_){
+   static delete_danger_signs_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myDangerSignsObject=new DangerSignsModel();
         
-		var myDangerSignsObjectPromise = myDangerSignsObject.delete_danger_signs_record(ColumnName,value_);
+        
+		var myDangerSignsObjectPromise = DangerSignsModel.delete_danger_signs_record(ColumnName,value_);
 		    
 		   
 		   myDangerSignsObjectPromise.then(function(result) {

@@ -20,10 +20,10 @@ module.exports = class TeamLeadTypesController{
 	
 	
 	
-   insert_team_lead_types(jsonObject_){
+   static insert_team_lead_types(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myTeamLeadTypesObject=new TeamLeadTypesModel();
-     var myTeamLeadTypesObjectPromise = myTeamLeadTypesObject.insert_team_lead_types(jsonObject_);
+     
+     var myTeamLeadTypesObjectPromise = TeamLeadTypesModel.insert_team_lead_types(jsonObject_);
 		  
 		   
 		   myTeamLeadTypesObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class TeamLeadTypesController{
 	
 	
 	
-   get_all_team_lead_types(){
+   static get_all_team_lead_types(){
 	   return new Promise(function(resolve, reject) {  
-       const  myTeamLeadTypesObject=new TeamLeadTypesModel();
-        var myTeamLeadTypesObjectPromise = myTeamLeadTypesObject.get_all_team_lead_types();
+       
+        var myTeamLeadTypesObjectPromise = TeamLeadTypesModel.get_all_team_lead_types();
 		   
 		   
 		   myTeamLeadTypesObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class TeamLeadTypesController{
 	
 	
 	
-   get_specific_team_lead_types(ColumnName,value_){
+   static get_specific_team_lead_types(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-        const  myTeamLeadTypesObject=new TeamLeadTypesModel();
-        var myTeamLeadTypesObjectPromise = myTeamLeadTypesObject.get_specific_team_lead_types(ColumnName,value_);
+        
+        var myTeamLeadTypesObjectPromise = TeamLeadTypesModel.get_specific_team_lead_types(ColumnName,value_);
 		   
 		   
 		   myTeamLeadTypesObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class TeamLeadTypesController{
 	
 	
 	
-   batch_team_lead_types_update(jsonObject_){
+   static batch_team_lead_types_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-        const  myTeamLeadTypesObject=new TeamLeadTypesModel();
+       
         
-		var myTeamLeadTypesObjectPromise = myTeamLeadTypesObject.batch_team_lead_types_update(jsonObject_);
+		var myTeamLeadTypesObjectPromise = TeamLeadTypesModel.batch_team_lead_types_update(jsonObject_);
 		   
 		   
 		   myTeamLeadTypesObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class TeamLeadTypesController{
 	
 	
 	
-   individual_team_lead_types_update(ColumnName,value_,jsonObject_){
+   static individual_team_lead_types_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-       const  myTeamLeadTypesObject=new TeamLeadTypesModel();
+       
         
-		var myTeamLeadTypesObjectPromise = myTeamLeadTypesObject.individual_team_lead_types_update(ColumnName,value_,jsonObject_);
+		var myTeamLeadTypesObjectPromise = TeamLeadTypesModel.individual_team_lead_types_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myTeamLeadTypesObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class TeamLeadTypesController{
 	
 	
 	
-   delete_team_lead_types_record(ColumnName,value_){
+   static delete_team_lead_types_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myTeamLeadTypesObject=new TeamLeadTypesModel();
         
-		var myTeamLeadTypesObjectPromise = myTeamLeadTypesObject.delete_team_lead_types_record(ColumnName,value_);
+        
+		var myTeamLeadTypesObjectPromise = TeamLeadTypesModel.delete_team_lead_types_record(ColumnName,value_);
 		    
 		   
 		   myTeamLeadTypesObjectPromise.then(function(result) {

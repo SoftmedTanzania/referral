@@ -20,10 +20,10 @@ module.exports = class ClientInitialMeetUpController{
 	
 	
 	
-   insert_client_initial_meetup(jsonObject_){
+   static insert_client_initial_meetup(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myClientInitialMeetUpObject=new ClientInitialMeetUpModel();
-     var myClientInitialMeetUpObjectPromise = myClientInitialMeetUpObject.insert_client_initial_meetup(jsonObject_);
+     
+     var myClientInitialMeetUpObjectPromise = ClientInitialMeetUpModel.insert_client_initial_meetup(jsonObject_);
 		  
 		   
 		   myClientInitialMeetUpObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class ClientInitialMeetUpController{
 	
 	
 	
-   get_all_client_initial_meetup(){
+   static get_all_client_initial_meetup(){
 	   return new Promise(function(resolve, reject) {  
-        const  myClientInitialMeetUpObject=new ClientInitialMeetUpModel();
-        var myClientInitialMeetUpObjectPromise = myClientInitialMeetUpObject.get_all_client_initial_meetup();
+       
+        var myClientInitialMeetUpObjectPromise = ClientInitialMeetUpModel.get_all_client_initial_meetup();
 		   
 		   
 		   myClientInitialMeetUpObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class ClientInitialMeetUpController{
 	
 	
 	
-   get_specific_client_initial_meetup(ColumnName,value_){
+   static get_specific_client_initial_meetup(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-       const  myClientInitialMeetUpObject=new ClientInitialMeetUpModel();
-        var myClientInitialMeetUpObjectPromise = myClientInitialMeetUpObject.get_specific_client_initial_meetup(ColumnName,value_);
+       
+        var myClientInitialMeetUpObjectPromise = ClientInitialMeetUpModel.get_specific_client_initial_meetup(ColumnName,value_);
 		   
 		   
 		   myClientInitialMeetUpObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class ClientInitialMeetUpController{
 	
 	
 	
-   batch_client_initial_meetup_update(jsonObject_){
+   static batch_client_initial_meetup_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-        const  myClientInitialMeetUpObject=new ClientInitialMeetUpModel();
         
-		var myClientInitialMeetUpObjectPromise = myClientInitialMeetUpObject.batch_client_initial_meetup_update(jsonObject_);
+        
+		var myClientInitialMeetUpObjectPromise = ClientInitialMeetUpModel.batch_client_initial_meetup_update(jsonObject_);
 		   
 		   
 		   myClientInitialMeetUpObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class ClientInitialMeetUpController{
 	
 	
 	
-   individual_client_initial_meetup_update(ColumnName,value_,jsonObject_){
+   static individual_client_initial_meetup_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-       const  myClientInitialMeetUpObject=new ClientInitialMeetUpModel();
+       
         
-		var myClientInitialMeetUpObjectPromise = myClientInitialMeetUpObject.individual_client_initial_meetup_update(ColumnName,value_,jsonObject_);
+		var myClientInitialMeetUpObjectPromise = ClientInitialMeetUpModel.individual_client_initial_meetup_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myClientInitialMeetUpObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class ClientInitialMeetUpController{
 	
 	
 	
-   delete_client_initial_meetup_record(ColumnName,value_){
+   static delete_client_initial_meetup_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-         const  myClientInitialMeetUpObject=new ClientInitialMeetUpModel();
+         
         
-		var myClientInitialMeetUpObjectPromise = myClientInitialMeetUpObject.delete_client_initial_meetup_record(ColumnName,value_);
+		var myClientInitialMeetUpObjectPromise = ClientInitialMeetUpModel.delete_client_initial_meetup_record(ColumnName,value_);
 		    
 		   
 		   myClientInitialMeetUpObjectPromise.then(function(result) {

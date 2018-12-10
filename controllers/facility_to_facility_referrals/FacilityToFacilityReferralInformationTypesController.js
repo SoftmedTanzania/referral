@@ -20,10 +20,10 @@ module.exports = class FacilityToFacilityReferralInformationTypesController{
 	
 	
 	
-   insert_facility_to_facility_referral_information_types(jsonObject_){
+   static insert_facility_to_facility_referral_information_types(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myFacilityToFacilityReferralInformationTypesObject=new FacilityToFacilityReferralInformationTypesModel();
-     var myFacilityToFacilityReferralInformationTypesObjectPromise = myFacilityToFacilityReferralInformationTypesObject.insert_facility_to_facility_referral_information_types(jsonObject_);
+     
+     var myFacilityToFacilityReferralInformationTypesObjectPromise = FacilityToFacilityReferralInformationTypesModel.insert_facility_to_facility_referral_information_types(jsonObject_);
 		  
 		   
 		   myFacilityToFacilityReferralInformationTypesObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class FacilityToFacilityReferralInformationTypesController{
 	
 	
 	
-   get_all_facility_to_facility_referral_information_types(){
+   static get_all_facility_to_facility_referral_information_types(){
 	   return new Promise(function(resolve, reject) {  
-        const  myFacilityToFacilityReferralInformationTypesObject=new FacilityToFacilityReferralInformationTypesModel();
-        var myFacilityToFacilityReferralInformationTypesObjectPromise = myFacilityToFacilityReferralInformationTypesObject.get_all_facility_to_facility_referral_information_types();
+        
+        var myFacilityToFacilityReferralInformationTypesObjectPromise = FacilityToFacilityReferralInformationTypesModel.get_all_facility_to_facility_referral_information_types();
 		   
 		   
 		   myFacilityToFacilityReferralInformationTypesObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class FacilityToFacilityReferralInformationTypesController{
 	
 	
 	
-   get_specific_facility_to_facility_referral_information_types(ColumnName,value_){
+   static get_specific_facility_to_facility_referral_information_types(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-       const  myFacilityToFacilityReferralInformationTypesObject=new FacilityToFacilityReferralInformationTypesModel();
-        var myFacilityToFacilityReferralInformationTypesObjectPromise = myFacilityToFacilityReferralInformationTypesObject.get_specific_facility_to_facility_referral_information_types(ColumnName,value_);
+       
+        var myFacilityToFacilityReferralInformationTypesObjectPromise = FacilityToFacilityReferralInformationTypesModel.get_specific_facility_to_facility_referral_information_types(ColumnName,value_);
 		   
 		   
 		   myFacilityToFacilityReferralInformationTypesObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class FacilityToFacilityReferralInformationTypesController{
 	
 	
 	
-   batch_facility_to_facility_referral_information_types_update(jsonObject_){
+   static batch_facility_to_facility_referral_information_types_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-        const  myFacilityToFacilityReferralInformationTypesObject=new FacilityToFacilityReferralInformationTypesModel();
         
-		var myFacilityToFacilityReferralInformationTypesObjectPromise = myFacilityToFacilityReferralInformationTypesObject.batch_facility_to_facility_referral_information_types_update(jsonObject_);
+        
+		var myFacilityToFacilityReferralInformationTypesObjectPromise = FacilityToFacilityReferralInformationTypesModel.batch_facility_to_facility_referral_information_types_update(jsonObject_);
 		   
 		   
 		   myFacilityToFacilityReferralInformationTypesObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class FacilityToFacilityReferralInformationTypesController{
 	
 	
 	
-   individual_facility_to_facility_referral_information_types_update(ColumnName,value_,jsonObject_){
+   static individual_facility_to_facility_referral_information_types_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-      const  myFacilityToFacilityReferralInformationTypesObject=new FacilityToFacilityReferralInformationTypesModel();
+      
         
-		var myFacilityToFacilityReferralInformationTypesObjectPromise = myFacilityToFacilityReferralInformationTypesObject.individual_facility_to_facility_referral_information_types_update(ColumnName,value_,jsonObject_);
+		var myFacilityToFacilityReferralInformationTypesObjectPromise = FacilityToFacilityReferralInformationTypesModel.individual_facility_to_facility_referral_information_types_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myFacilityToFacilityReferralInformationTypesObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class FacilityToFacilityReferralInformationTypesController{
 	
 	
 	
-   delete_facility_to_facility_referral_information_types_record(ColumnName,value_){
+   static delete_facility_to_facility_referral_information_types_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myFacilityToFacilityReferralInformationTypesObject=new FacilityToFacilityReferralInformationTypesModel();
         
-		var myFacilityToFacilityReferralInformationTypesObjectPromise = myFacilityToFacilityReferralInformationTypesObject.delete_facility_to_facility_referral_information_types_record(ColumnName,value_);
+        
+		var myFacilityToFacilityReferralInformationTypesObjectPromise = FacilityToFacilityReferralInformationTypesModel.delete_facility_to_facility_referral_information_types_record(ColumnName,value_);
 		    
 		   
 		   myFacilityToFacilityReferralInformationTypesObjectPromise.then(function(result) {

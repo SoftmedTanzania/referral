@@ -50,8 +50,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myUsersControllerObject=new UsersController();
-          var myUsersControllerObjectPromise = myUsersControllerObject.insert_users(jsonObject_);
+	     
+          var myUsersControllerObjectPromise = UsersController.insert_users(jsonObject_);
 	          
 		   
 		   myUsersControllerObjectPromise.then(function(result) {
@@ -86,8 +86,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myUsersControllerObject=new UsersController();
-          var myUsersControllerObjectPromise = myUsersControllerObject.user_login(jsonObject_);
+	      
+          var myUsersControllerObjectPromise = UsersController.user_login(jsonObject_);
 	          
 		   
 		   myUsersControllerObjectPromise.then(function(result) {
@@ -106,8 +106,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_users',urlencodedParser,function(request,response){
-    var myUsersControllerObject=new UsersController();
-    var myUsersControllerObjectPromise = myUsersControllerObject.get_all_users();
+    
+    var myUsersControllerObjectPromise = UsersController.get_all_users();
 	      
 		   
 		   myUsersControllerObjectPromise.then(function(result) {
@@ -148,8 +148,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-    var myUsersControllerObject=new UsersController();
-    var myUsersControllerObjectPromise = myUsersControllerObject.batch_users_update(jsonObject_);
+    
+    var myUsersControllerObjectPromise = UsersController.batch_users_update(jsonObject_);
 	   
 		   
 		   myUsersControllerObjectPromise.then(function(result) {
@@ -173,10 +173,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myUsersControllerObject=new UsersController();
+        
 
 
-        var myUsersControllerObjectPromise = myUsersControllerObject.get_specific_users(mKey,mValue);
+        var myUsersControllerObjectPromise = UsersController.get_specific_users(mKey,mValue);
 	        
 		   
 		   myUsersControllerObjectPromise.then(function(result) {
@@ -221,8 +221,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-         var myUsersControllerObject=new UsersController();
-         var myUsersControllerObjectPromise = myUsersControllerObject.individual_users_update(column_name,value_,jsonObject_);
+         
+         var myUsersControllerObjectPromise = UsersController.individual_users_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myUsersControllerObjectPromise.then(function(result) {
@@ -246,8 +246,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-    var myUsersControllerObject=new UsersController();
-    var myUsersControllerObjectPromise = myUsersControllerObject.delete_users_record(column_name,value_);
+    
+    var myUsersControllerObjectPromise = UsersController.delete_users_record(column_name,value_);
 	      	        
 		   
 		   myUsersControllerObjectPromise.then(function(result) {

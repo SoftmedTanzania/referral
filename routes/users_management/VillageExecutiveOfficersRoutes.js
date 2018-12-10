@@ -47,8 +47,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myVillageExecutiveOfficersControllerObject=new VillageExecutiveOfficersController();
-          var myVillageExecutiveOfficersControllerObjectPromise = myVillageExecutiveOfficersControllerObject.insert_village_executive_officers(jsonObject_);
+	      
+          var myVillageExecutiveOfficersControllerObjectPromise = VillageExecutiveOfficersController.insert_village_executive_officers(jsonObject_);
 	          
 		   
 		   myVillageExecutiveOfficersControllerObjectPromise.then(function(result) {
@@ -67,8 +67,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_village_executive_officers',urlencodedParser,function(request,response){
-    var myVillageExecutiveOfficersControllerObject=new VillageExecutiveOfficersController();
-    var myVillageExecutiveOfficersControllerObjectPromise = myVillageExecutiveOfficersControllerObject.get_all_village_executive_officers();
+    
+    var myVillageExecutiveOfficersControllerObjectPromise = VillageExecutiveOfficersController.get_all_village_executive_officers();
 	      
 		   
 		   myVillageExecutiveOfficersControllerObjectPromise.then(function(result) {
@@ -105,8 +105,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myVillageExecutiveOfficersControllerObject=new VillageExecutiveOfficersController();
-    var myVillageExecutiveOfficersControllerObjectPromise = myVillageExecutiveOfficersControllerObject.batch_village_executive_officers_update(jsonObject_);
+     
+    var myVillageExecutiveOfficersControllerObjectPromise = VillageExecutiveOfficersController.batch_village_executive_officers_update(jsonObject_);
 	   
 		   
 		   myVillageExecutiveOfficersControllerObjectPromise.then(function(result) {
@@ -130,10 +130,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myVillageExecutiveOfficersControllerObject=new VillageExecutiveOfficersController();
+        
 
 
-        var myVillageExecutiveOfficersControllerObjectPromise = myVillageExecutiveOfficersControllerObject.get_specific_village_executive_officers(mKey,mValue);
+        var myVillageExecutiveOfficersControllerObjectPromise = VillageExecutiveOfficersController.get_specific_village_executive_officers(mKey,mValue);
 	        
 		   
 		   myVillageExecutiveOfficersControllerObjectPromise.then(function(result) {
@@ -174,8 +174,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-         var myVillageExecutiveOfficersControllerObject=new VillageExecutiveOfficersController();
-         var myVillageExecutiveOfficersControllerObjectPromise = myVillageExecutiveOfficersControllerObject.individual_village_executive_officers_update(column_name,value_,jsonObject_);
+         
+         var myVillageExecutiveOfficersControllerObjectPromise = VillageExecutiveOfficersController.individual_village_executive_officers_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myVillageExecutiveOfficersControllerObjectPromise.then(function(result) {
@@ -199,8 +199,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-    var myVillageExecutiveOfficersControllerObject=new VillageExecutiveOfficersController();
-    var myVillageExecutiveOfficersControllerObjectPromise = myVillageExecutiveOfficersControllerObject.delete_village_executive_officers_record(column_name,value_);
+    
+    var myVillageExecutiveOfficersControllerObjectPromise = VillageExecutiveOfficersController.delete_village_executive_officers_record(column_name,value_);
 	      	        
 		   
 		   myVillageExecutiveOfficersControllerObjectPromise.then(function(result) {

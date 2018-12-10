@@ -44,8 +44,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myBackReferralsControllerObject=new BackReferralsController();
-          var myBackReferralsControllerObjectPromise = myBackReferralsControllerObject.insert_back_referrals(jsonObject_);
+	      
+          var myBackReferralsControllerObjectPromise = BackReferralsController.insert_back_referrals(jsonObject_);
 	          
 		   
 		   myBackReferralsControllerObjectPromise.then(function(result) {
@@ -64,8 +64,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_back_referrals',urlencodedParser,function(request,response){
-    var myBackReferralsControllerObject=new BackReferralsController();
-    var myBackReferralsControllerObjectPromise = myBackReferralsControllerObject.get_all_back_referrals();
+    
+    var myBackReferralsControllerObjectPromise = BackReferralsController.get_all_back_referrals();
 	      
 		   
 		   myBackReferralsControllerObjectPromise.then(function(result) {
@@ -97,8 +97,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myBackReferralsControllerObject=new BackReferralsController();
-     var myBackReferralsControllerObjectPromise = myBackReferralsControllerObject.batch_back_referrals_update(jsonObject_);
+     
+     var myBackReferralsControllerObjectPromise = BackReferralsController.batch_back_referrals_update(jsonObject_);
 	   
 		   
 		   myBackReferralsControllerObjectPromise.then(function(result) {
@@ -122,10 +122,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myBackReferralsControllerObject=new BackReferralsController();
+        
 
 
-        var myBackReferralsControllerObjectPromise = myBackReferralsControllerObject.get_specific_back_referrals(mKey,mValue);
+        var myBackReferralsControllerObjectPromise = BackReferralsController.get_specific_back_referrals(mKey,mValue);
 	        
 		   
 		   myBackReferralsControllerObjectPromise.then(function(result) {
@@ -162,8 +162,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-                var myBackReferralsControllerObject=new BackReferralsController();
-                var myBackReferralsControllerObjectPromise = myBackReferralsControllerObject.individual_back_referrals_update(column_name,value_,jsonObject_);
+                
+                var myBackReferralsControllerObjectPromise = BackReferralsController.individual_back_referrals_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myBackReferralsControllerObjectPromise.then(function(result) {
@@ -187,8 +187,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-    var myBackReferralsControllerObject=new BackReferralsController();
-    var myBackReferralsControllerObjectPromise = myBackReferralsControllerObject.delete_back_referrals_record(column_name,value_);
+    
+    var myBackReferralsControllerObjectPromise = BackReferralsController.delete_back_referrals_record(column_name,value_);
 	      	        
 		   
 		   myBackReferralsControllerObjectPromise.then(function(result) {

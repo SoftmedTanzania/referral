@@ -41,8 +41,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myReferralDangerSignsControllerObject=new ReferralDangerSignsController();
-          var myReferralDangerSignsControllerObjectPromise = myReferralDangerSignsControllerObject.insert_referral_danger_signs(jsonObject_);
+	      
+          var myReferralDangerSignsControllerObjectPromise = ReferralDangerSignsController.insert_referral_danger_signs(jsonObject_);
 	          
 		   
 		   myReferralDangerSignsControllerObjectPromise.then(function(result) {
@@ -61,8 +61,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_referral_danger_signs',urlencodedParser,function(request,response){
-    var myReferralDangerSignsControllerObject=new ReferralDangerSignsController();
-    var myReferralDangerSignsControllerObjectPromise = myReferralDangerSignsControllerObject.get_all_referral_danger_signs();
+    
+    var myReferralDangerSignsControllerObjectPromise = ReferralDangerSignsController.get_all_referral_danger_signs();
 	      
 		   
 		   myReferralDangerSignsControllerObjectPromise.then(function(result) {
@@ -92,8 +92,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myReferralDangerSignsControllerObject=new ReferralDangerSignsController();
-     var myReferralDangerSignsControllerObjectPromise = myReferralDangerSignsControllerObject.batch_referral_danger_signs_update(jsonObject_);
+     
+     var myReferralDangerSignsControllerObjectPromise = ReferralDangerSignsController.batch_referral_danger_signs_update(jsonObject_);
 	   
 		   
 		   myReferralDangerSignsControllerObjectPromise.then(function(result) {
@@ -117,10 +117,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myReferralDangerSignsControllerObject=new ReferralDangerSignsController();
+        
 
 
-        var myReferralDangerSignsControllerObjectPromise = myReferralDangerSignsControllerObject.get_specific_referral_danger_signs(mKey,mValue);
+        var myReferralDangerSignsControllerObjectPromise = ReferralDangerSignsController.get_specific_referral_danger_signs(mKey,mValue);
 	        
 		   
 		   myReferralDangerSignsControllerObjectPromise.then(function(result) {
@@ -154,8 +154,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-                var myReferralDangerSignsControllerObject=new ReferralDangerSignsController();
-                var myReferralDangerSignsControllerObjectPromise = myReferralDangerSignsControllerObject.individual_referral_danger_signs_update(column_name,value_,jsonObject_);
+                
+                var myReferralDangerSignsControllerObjectPromise = ReferralDangerSignsController.individual_referral_danger_signs_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myDangerSignsControllerObjectPromise.then(function(result) {
@@ -179,8 +179,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-   var myReferralDangerSignsControllerObject=new ReferralDangerSignsController();
-    var myReferralDangerSignsControllerObjectPromise = myReferralDangerSignsControllerObject.delete_referral_danger_signs_record(column_name,value_);
+  
+    var myReferralDangerSignsControllerObjectPromise = ReferralDangerSignsController.delete_referral_danger_signs_record(column_name,value_);
 	      	        
 		   
 		   myReferralDangerSignsControllerObjectPromise.then(function(result) {

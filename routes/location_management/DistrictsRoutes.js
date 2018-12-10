@@ -41,8 +41,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myDistrictsControllerObject=new DistrictsController();
-          var myDistrictsControllerObjectPromise = myDistrictsControllerObject.insert_districts(jsonObject_);
+	      
+          var myDistrictsControllerObjectPromise = DistrictsController.insert_districts(jsonObject_);
 	          
 		   
 		   myDistrictsControllerObjectPromise.then(function(result) {
@@ -61,8 +61,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_districts',urlencodedParser,function(request,response){
-    var myDistrictsControllerObject=new DistrictsController();
-    var myDistrictsControllerObjectPromise = myDistrictsControllerObject.get_all_districts();
+    
+    var myDistrictsControllerObjectPromise = DistrictsController.get_all_districts();
 	      
 		   
 		   myDistrictsControllerObjectPromise.then(function(result) {
@@ -93,8 +93,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-    var myDistrictsControllerObject=new DistrictsController();
-    var myDistrictsControllerObjectPromise = myDistrictsControllerObject.batch_districts_update(jsonObject_);
+    
+    var myDistrictsControllerObjectPromise = DistrictsController.batch_districts_update(jsonObject_);
 	   
 		   
 		   myDistrictsControllerObjectPromise.then(function(result) {
@@ -118,10 +118,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myDistrictsControllerObject=new DistrictsController();
+        
 
 
-        var myDistrictsControllerObjectPromise = myDistrictsControllerObject.get_specific_districts(mKey,mValue);
+        var myDistrictsControllerObjectPromise = DistrictsController.get_specific_districts(mKey,mValue);
 	        
 		   
 		   myDistrictsControllerObjectPromise.then(function(result) {
@@ -156,8 +156,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-         var myDistrictsControllerObject=new DistrictsController();
-         var myDistrictsControllerObjectPromise = myDistrictsControllerObject.individual_districts_update(column_name,value_,jsonObject_);
+         
+         var myDistrictsControllerObjectPromise = DistrictsController.individual_districts_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myDistrictsControllerObjectPromise.then(function(result) {
@@ -181,8 +181,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-    var myDistrictsControllerObject=new DistrictsController();
-    var myDistrictsControllerObjectPromise = myDistrictsControllerObject.delete_districts_record(column_name,value_);
+    
+    var myDistrictsControllerObjectPromise = DistrictsController.delete_districts_record(column_name,value_);
 	      	        
 		   
 		   myDistrictsControllerObjectPromise.then(function(result) {

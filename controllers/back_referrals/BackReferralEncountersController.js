@@ -20,10 +20,10 @@ module.exports = class BackReferralEncountersController{
 	
 	
 	
-   insert_back_referral_encounters(jsonObject_){
+   static insert_back_referral_encounters(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myBackReferralEncountersObject=new BackReferralEncountersModel();
-     var myBackReferralEncountersObjectPromise = myBackReferralEncountersObject.insert_back_referral_encounters(jsonObject_);
+     
+     var myBackReferralEncountersObjectPromise = BackReferralEncountersModel.insert_back_referral_encounters(jsonObject_);
 		  
 		   
 		   myBackReferralEncountersObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class BackReferralEncountersController{
 	
 	
 	
-   get_all_back_referral_encounters(){
+   static get_all_back_referral_encounters(){
 	   return new Promise(function(resolve, reject) {  
-        const  myBackReferralEncountersObject=new BackReferralEncountersModel();
-        var myBackReferralEncountersObjectPromise = myBackReferralEncountersObject.get_all_back_referral_encounters();
+        
+        var myBackReferralEncountersObjectPromise = BackReferralEncountersModel.get_all_back_referral_encounters();
 		   
 		   
 		   myBackReferralEncountersObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class BackReferralEncountersController{
 	
 	
 	
-   get_specific_back_referral_encounters(ColumnName,value_){
+   static get_specific_back_referral_encounters(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-       const  myBackReferralEncountersObject=new BackReferralEncountersModel();
-        var myBackReferralEncountersObjectPromise = myBackReferralEncountersObject.get_specific_back_referral_encounters(ColumnName,value_);
+       
+        var myBackReferralEncountersObjectPromise = BackReferralEncountersModel.get_specific_back_referral_encounters(ColumnName,value_);
 		   
 		   
 		   myBackReferralEncountersObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class BackReferralEncountersController{
 	
 	
 	
-   batch_back_referral_encounters_update(jsonObject_){
+   static batch_back_referral_encounters_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-        const  myBackReferralEncountersObject=new BackReferralEncountersModel();
         
-		var myBackReferralEncountersObjectPromise = myBackReferralEncountersObject.batch_back_referral_encounters_update(jsonObject_);
+        
+		var myBackReferralEncountersObjectPromise = BackReferralEncountersModel.batch_back_referral_encounters_update(jsonObject_);
 		   
 		   
 		   myBackReferralEncountersObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class BackReferralEncountersController{
 	
 	
 	
-   individual_back_referral_encounters_update(ColumnName,value_,jsonObject_){
+   static individual_back_referral_encounters_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-      const  myBackReferralEncountersObject=new BackReferralEncountersModel();
+      
         
-		var myBackReferralEncountersObjectPromise = myBackReferralEncountersObject.individual_back_referral_encounters_update(ColumnName,value_,jsonObject_);
+		var myBackReferralEncountersObjectPromise = BackReferralEncountersModel.individual_back_referral_encounters_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myBackReferralEncountersObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class BackReferralEncountersController{
 	
 	
 	
-   delete_back_referral_encounters_record(ColumnName,value_){
+   static delete_back_referral_encounters_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myBackReferralEncountersObject=new BackReferralEncountersModel();
         
-		var myBackReferralEncountersObjectPromise = myBackReferralEncountersObject.delete_back_referral_encounters_record(ColumnName,value_);
+        
+		var myBackReferralEncountersObjectPromise = BackReferralEncountersModel.delete_back_referral_encounters_record(ColumnName,value_);
 		    
 		   
 		   myBackReferralEncountersObjectPromise.then(function(result) {

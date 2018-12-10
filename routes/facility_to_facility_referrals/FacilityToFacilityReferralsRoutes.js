@@ -46,8 +46,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myFacilityToFacilityReferralsControllerObject=new FacilityToFacilityReferralsController();
-          var myFacilityToFacilityReferralsControllerObjectPromise = myFacilityToFacilityReferralsControllerObject.insert_facility_to_facility_referrals(jsonObject_);
+	      
+          var myFacilityToFacilityReferralsControllerObjectPromise = FacilityToFacilityReferralsController.insert_facility_to_facility_referrals(jsonObject_);
 	          
 		   
 		   myFacilityToFacilityReferralsControllerObjectPromise.then(function(result) {
@@ -66,8 +66,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_facility_to_facility_referrals',urlencodedParser,function(request,response){
-   var myFacilityToFacilityReferralsControllerObject=new FacilityToFacilityReferralsController();
-    var myFacilityToFacilityReferralsControllerObjectPromise = myFacilityToFacilityReferralsControllerObject.get_all_facility_to_facility_referrals();
+  
+    var myFacilityToFacilityReferralsControllerObjectPromise = FacilityToFacilityReferralsController.get_all_facility_to_facility_referrals();
 	      
 		   
 		   myFacilityToFacilityReferralsControllerObjectPromise.then(function(result) {
@@ -100,8 +100,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myFacilityToFacilityReferralsControllerObject=new FacilityToFacilityReferralsController();
-     var myFacilityToFacilityReferralsControllerObjectPromise = myFacilityToFacilityReferralsControllerObject.batch_facility_to_facility_referrals_update(jsonObject_);
+     
+     var myFacilityToFacilityReferralsControllerObjectPromise = FacilityToFacilityReferralsController.batch_facility_to_facility_referrals_update(jsonObject_);
 	   
 		   
 		   myFacilityToFacilityReferralsControllerObjectPromise.then(function(result) {
@@ -125,10 +125,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myFacilityToFacilityReferralsControllerObject=new FacilityToFacilityReferralsController();
+        
 
 
-        var myFacilityToFacilityReferralsControllerObjectPromise = myFacilityToFacilityReferralsControllerObject.get_specific_facility_to_facility_referrals(mKey,mValue);
+        var myFacilityToFacilityReferralsControllerObjectPromise = FacilityToFacilityReferralsController.get_specific_facility_to_facility_referrals(mKey,mValue);
 	        
 		   
 		   myFacilityToFacilityReferralsControllerObjectPromise.then(function(result) {
@@ -165,8 +165,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-                var myFacilityToFacilityReferralsControllerObject=new FacilityToFacilityReferralsController();
-                var myFacilityToFacilityReferralsControllerObjectPromise = myFacilityToFacilityReferralsControllerObject.individual_facility_to_facility_referrals_update(column_name,value_,jsonObject_);
+                
+                var myFacilityToFacilityReferralsControllerObjectPromise = FacilityToFacilityReferralsController.individual_facility_to_facility_referrals_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myFacilityToFacilityReferralsControllerObjectPromise.then(function(result) {
@@ -190,8 +190,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-    var myFacilityToFacilityReferralsControllerObject=new FacilityToFacilityReferralsController();
-    var myFacilityToFacilityReferralsControllerObjectObjectPromise = myFacilityToFacilityReferralsControllerObject.delete_back_referral_progress_information_record(column_name,value_);
+    
+    var myFacilityToFacilityReferralsControllerObjectObjectPromise = FacilityToFacilityReferralsController.delete_back_referral_progress_information_record(column_name,value_);
 	      	        
 		   
 		   myFacilityToFacilityReferralsControllerObjectObjectPromise.then(function(result) {

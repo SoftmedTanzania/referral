@@ -20,10 +20,10 @@ module.exports = class BackReferralsController{
 	
 	
 	
-   insert_back_referrals(jsonObject_){
+   static insert_back_referrals(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myBackReferralsObject=new BackReferralsModel();
-     var myBackReferralsObjectPromise = myBackReferralsObject.insert_back_referrals(jsonObject_);
+     
+     var myBackReferralsObjectPromise = BackReferralsModel.insert_back_referrals(jsonObject_);
 		  
 		   
 		   myBackReferralsObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class BackReferralsController{
 	
 	
 	
-   get_all_back_referrals(){
+   static get_all_back_referrals(){
 	   return new Promise(function(resolve, reject) {  
-        const  myBackReferralsObject=new BackReferralsModel();
-        var myBackReferralsObjectPromise = myBackReferralsObject.get_all_back_referrals();
+        
+        var myBackReferralsObjectPromise = BackReferralsModel.get_all_back_referrals();
 		   
 		   
 		   myBackReferralsObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class BackReferralsController{
 	
 	
 	
-   get_specific_back_referrals(ColumnName,value_){
+   static get_specific_back_referrals(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-       const  myBackReferralsObject=new BackReferralsModel();
-        var myBackReferralsObjectPromise = myBackReferralsObject.get_specific_back_referrals(ColumnName,value_);
+       
+        var myBackReferralsObjectPromise = BackReferralsModel.get_specific_back_referrals(ColumnName,value_);
 		   
 		   
 		   myBackReferralsObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class BackReferralsController{
 	
 	
 	
-   batch_back_referrals_update(jsonObject_){
+   static batch_back_referrals_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-        const  myBackReferralsObject=new BackReferralsModel();
         
-		var myBackReferralsObjectPromise = myBackReferralsObject.batch_back_referrals_update(jsonObject_);
+        
+		var myBackReferralsObjectPromise = BackReferralsModel.batch_back_referrals_update(jsonObject_);
 		   
 		   
 		   myBackReferralsObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class BackReferralsController{
 	
 	
 	
-   individual_back_referrals_update(ColumnName,value_,jsonObject_){
+   static individual_back_referrals_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-      const  myBackReferralsObject=new BackReferralsModel();
+      
         
-		var myBackReferralsObjectPromise = myBackReferralsObject.individual_back_referrals_update(ColumnName,value_,jsonObject_);
+		var myBackReferralsObjectPromise = BackReferralsModel.individual_back_referrals_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myBackReferralsObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class BackReferralsController{
 	
 	
 	
-   delete_back_referrals_record(ColumnName,value_){
+   static delete_back_referrals_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myBackReferralsObject=new BackReferralsModel();
         
-		var myBackReferralsObjectPromise = myBackReferralsObject.delete_back_referrals_record(ColumnName,value_);
+        
+		var myBackReferralsObjectPromise = BackReferralsModel.delete_back_referrals_record(ColumnName,value_);
 		    
 		   
 		   myBackReferralsObjectPromise.then(function(result) {

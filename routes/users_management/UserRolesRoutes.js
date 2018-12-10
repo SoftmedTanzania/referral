@@ -41,8 +41,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myUserRolesControllerObject=new UserRolesController();
-          var myUserRolesControllerObjectPromise = myUserRolesControllerObject.insert_user_roles(jsonObject_);
+	      
+          var myUserRolesControllerObjectPromise = UserRolesController.insert_user_roles(jsonObject_);
 	          
 		   
 		   myUserRolesControllerObjectPromise.then(function(result) {
@@ -61,8 +61,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_user_roles',urlencodedParser,function(request,response){
-    var myUserRolesControllerObject=new UserRolesController();
-    var myUserRolesControllerObjectPromise = myUserRolesControllerObject.get_all_user_roles();
+    
+    var myUserRolesControllerObjectPromise = UserRolesController.get_all_user_roles();
 	      
 		   
 		   myUserRolesControllerObjectPromise.then(function(result) {
@@ -92,8 +92,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myUserRolesControllerObject=new UserRolesController();
-     var myUserRolesControllerObjectPromise = myUserRolesControllerObject.batch_user_roles_update(jsonObject_);
+     
+     var myUserRolesControllerObjectPromise = UserRolesController.batch_user_roles_update(jsonObject_);
 	   
 		   
 		   myUserRolesControllerObjectPromise.then(function(result) {
@@ -117,10 +117,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-         var myUserRolesControllerObject=new UserRolesController();
+        
 
 
-        var myUserRolesControllerObjectPromise = myUserRolesControllerObject.get_specific_user_roles(mKey,mValue);
+        var myUserRolesControllerObjectPromise = UserRolesController.get_specific_user_roles(mKey,mValue);
 	        
 		   
 		   myUserRolesControllerObjectPromise.then(function(result) {
@@ -154,8 +154,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-         var myUserRolesControllerObject=new UserRolesController();
-         var myUserRolesControllerObjectPromise = myUserRolesControllerObject.individual_user_roles_update(column_name,value_,jsonObject_);
+         
+         var myUserRolesControllerObjectPromise = UserRolesController.individual_user_roles_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myUserRolesControllerObjectPromise.then(function(result) {
@@ -179,8 +179,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-    var myUserRolesControllerObject=new UserRolesController();
-    var myUserRolesControllerObjectPromise = myUserRolesControllerObject.delete_user_roles_record(column_name,value_);
+    
+    var myUserRolesControllerObjectPromise = UserRolesController.delete_user_roles_record(column_name,value_);
 	      	        
 		   
 		   myUserRolesControllerObjectPromise.then(function(result) {

@@ -40,8 +40,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myReferralServiceTypesControllerObject=new ReferralServiceTypesController();
-          var myReferralServiceTypesControllerObjectPromise = myReferralServiceTypesControllerObject.insert_referral_service_types(jsonObject_);
+	      
+          var myReferralServiceTypesControllerObjectPromise = ReferralServiceTypesController.insert_referral_service_types(jsonObject_);
 	          
 		   
 		   myReferralServiceTypesControllerObjectPromise.then(function(result) {
@@ -60,8 +60,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_referral_service_types',urlencodedParser,function(request,response){
-    var myReferralServiceTypesControllerObject=new ReferralServiceTypesController();
-    var myReferralServiceTypesControllerObjectPromise = myReferralServiceTypesControllerObject.get_all_referral_service_types();
+    
+    var myReferralServiceTypesControllerObjectPromise = ReferralServiceTypesController.get_all_referral_service_types();
 	      
 		   
 		   myReferralServiceTypesControllerObjectPromise.then(function(result) {
@@ -90,8 +90,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myReferralServiceTypesControllerObject=new ReferralServiceTypesController();
-     var myReferralServiceTypesControllerObjectPromise = myReferralServiceTypesControllerObject.batch_referral_service_types_update(jsonObject_);
+    
+     var myReferralServiceTypesControllerObjectPromise = ReferralServiceTypesController.batch_referral_service_types_update(jsonObject_);
 	   
 		   
 		   myReferralServiceTypesControllerObjectPromise.then(function(result) {
@@ -115,10 +115,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myReferralServiceTypesControllerObject=new ReferralServiceTypesController();
+        
 
 
-        var myReferralServiceTypesControllerObjectPromise = myReferralServiceTypesControllerObject.get_specific_client_encounters(mKey,mValue);
+        var myReferralServiceTypesControllerObjectPromise = ReferralServiceTypesController.get_specific_client_encounters(mKey,mValue);
 	        
 		   
 		   myReferralServiceTypesControllerObjectPromise.then(function(result) {
@@ -151,8 +151,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-                var myReferralServiceTypesControllerObject=new ReferralServiceTypesController();
-                var myReferralServiceTypesControllerObjectPromise = myReferralServiceTypesControllerObject.individual_referral_service_types_update(column_name,value_,jsonObject_);
+               
+                var myReferralServiceTypesControllerObjectPromise = ReferralServiceTypesController.individual_referral_service_types_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myReferralServiceTypesControllerObjectPromise.then(function(result) {
@@ -176,8 +176,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-   var myReferralServiceTypesControllerObject=new ReferralServiceTypesController();
-    var myReferralServiceTypesControllerObjectPromise = myReferralServiceTypesControllerObject.delete_client_encounters_record(column_name,value_);
+   
+    var myReferralServiceTypesControllerObjectPromise = ReferralServiceTypesController.delete_client_encounters_record(column_name,value_);
 	      	        
 		   
 		   myReferralServiceTypesControllerObjectPromise.then(function(result) {

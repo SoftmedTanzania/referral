@@ -44,8 +44,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myFacilityStaffControllerObject=new FacilityStaffController();
-          var myFacilityStaffControllerObjectPromise = myFacilityStaffControllerObject.insert_facility_staff(jsonObject_);
+	      
+          var myFacilityStaffControllerObjectPromise = FacilityStaffController.insert_facility_staff(jsonObject_);
 	          
 		   
 		   myFacilityStaffControllerObjectPromise.then(function(result) {
@@ -64,8 +64,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_facility_staff',urlencodedParser,function(request,response){
-    var myFacilityStaffControllerObject=new FacilityStaffController();
-    var myFacilityStaffControllerObjectPromise = myFacilityStaffControllerObject.get_all_facility_staff();
+   
+    var myFacilityStaffControllerObjectPromise = FacilityStaffController.get_all_facility_staff();
 	      
 		   
 		   myFacilityStaffControllerObjectPromise.then(function(result) {
@@ -95,8 +95,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myFacilityStaffControllerObject=new FacilityStaffController();
-     var myFacilityStaffControllerObjectPromise = myFacilityStaffControllerObject.batch_facility_staff_update(jsonObject_);
+     
+     var myFacilityStaffControllerObjectPromise = FacilityStaffController.batch_facility_staff_update(jsonObject_);
 	   
 		   
 		   myFacilityStaffControllerObjectPromise.then(function(result) {
@@ -120,10 +120,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myFacilityStaffControllerObject=new FacilityStaffController();
+        
 
 
-        var myFacilityStaffControllerObjectPromise = myFacilityStaffControllerObject.get_specific_facility_staff(mKey,mValue);
+        var myFacilityStaffControllerObjectPromise = FacilityStaffController.get_specific_facility_staff(mKey,mValue);
 	        
 		   
 		   myFacilityStaffControllerObjectPromise.then(function(result) {
@@ -157,8 +157,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-                var myFacilityStaffControllerObject=new FacilityStaffController();
-                var myFacilityStaffControllerObjectPromise = myFacilityStaffControllerObject.individual_facility_staff_update(column_name,value_,jsonObject_);
+                
+                var myFacilityStaffControllerObjectPromise = FacilityStaffController.individual_facility_staff_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myFacilityStaffControllerObjectPromise.then(function(result) {
@@ -182,8 +182,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-   var myFacilityStaffControllerObject=new FacilityStaffController();
-    var myFacilityStaffControllerObjectPromise = myFacilityStaffControllerObject.delete_facility_staff_record(column_name,value_);
+   
+    var myFacilityStaffControllerObjectPromise = FacilityStaffController.delete_facility_staff_record(column_name,value_);
 	      	        
 		   
 		   myFacilityStaffControllerObjectPromise.then(function(result) {

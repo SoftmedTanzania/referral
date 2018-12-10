@@ -20,10 +20,10 @@ module.exports = class ChwJurisdictionFacilitiesController{
 	
 	
 	
-   insert_chw_jurisdiction_facilities(jsonObject_){
+   static insert_chw_jurisdiction_facilities(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myChwJurisdictionFacilitiesObject=new ChwJurisdictionFacilitiesModel();
-     var myChwJurisdictionFacilitiesControllerObjectPromise = myChwJurisdictionFacilitiesControllerObject.insert_chw_jurisdiction_facilities(jsonObject_);
+     
+     var myChwJurisdictionFacilitiesControllerObjectPromise = ChwJurisdictionFacilitiesModel.insert_chw_jurisdiction_facilities(jsonObject_);
 		  
 		   
 		   myChwJurisdictionFacilitiesControllerObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class ChwJurisdictionFacilitiesController{
 	
 	
 	
-   get_all_chw_jurisdiction_facilities(){
+   static get_all_chw_jurisdiction_facilities(){
 	   return new Promise(function(resolve, reject) {  
-       const  myChwJurisdictionFacilitiesObject=new ChwJurisdictionFacilitiesModel();
-        var myChwJurisdictionFacilitiesControllerObjectPromise = myChwJurisdictionFacilitiesControllerObject.get_all_chw_jurisdiction_facilities();
+       
+        var myChwJurisdictionFacilitiesControllerObjectPromise = ChwJurisdictionFacilitiesModel.get_all_chw_jurisdiction_facilities();
 		   
 		   
 		   myChwJurisdictionFacilitiesControllerObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class ChwJurisdictionFacilitiesController{
 	
 	
 	
-   get_specific_chw_jurisdiction_facilities(ColumnName,value_){
+   static get_specific_chw_jurisdiction_facilities(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
         const  myChwJurisdictionFacilitiesObject=new ChwJurisdictionFacilitiesModel();
-        var myChwJurisdictionFacilitiesControllerObjectPromise = myChwJurisdictionFacilitiesControllerObject.get_specific_chw_jurisdiction_facilities(ColumnName,value_);
+        var myChwJurisdictionFacilitiesControllerObjectPromise = ChwJurisdictionFacilitiesModel.get_specific_chw_jurisdiction_facilities(ColumnName,value_);
 		   
 		   
 		   myChwJurisdictionFacilitiesControllerObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class ChwJurisdictionFacilitiesController{
 	
 	
 	
-   batch_chw_jurisdiction_facilities_update(jsonObject_){
+   static batch_chw_jurisdiction_facilities_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
        const  myChwJurisdictionFacilitiesObject=new ChwJurisdictionFacilitiesModel();
         
-		var myChwJurisdictionFacilitiesControllerObjectPromise = myChwJurisdictionFacilitiesControllerObject.batch_chw_jurisdiction_facilities_update(jsonObject_);
+		var myChwJurisdictionFacilitiesControllerObjectPromise = ChwJurisdictionFacilitiesModel.batch_chw_jurisdiction_facilities_update(jsonObject_);
 		   
 		   
 		   myChwJurisdictionFacilitiesControllerObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class ChwJurisdictionFacilitiesController{
 	
 	
 	
-   individual_chw_jurisdiction_facilities_update(ColumnName,value_,jsonObject_){
+   static individual_chw_jurisdiction_facilities_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-       const  myChwJurisdictionFacilitiesObject=new ChwJurisdictionFacilitiesModel();
+       
         
-		var myChwJurisdictionFacilitiesControllerObjectPromise = myChwJurisdictionFacilitiesControllerObject.individual_chw_jurisdiction_facilities_update(ColumnName,value_,jsonObject_);
+		var myChwJurisdictionFacilitiesControllerObjectPromise = ChwJurisdictionFacilitiesModel.individual_chw_jurisdiction_facilities_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myChwJurisdictionFacilitiesControllerObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class ChwJurisdictionFacilitiesController{
 	
 	
 	
-   delete_chw_jurisdiction_facilities_record(ColumnName,value_){
+   static delete_chw_jurisdiction_facilities_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myChwJurisdictionFacilitiesObject=new ChwJurisdictionFacilitiesModel();
         
-		var myChwJurisdictionFacilitiesControllerObjectPromise = myChwJurisdictionFacilitiesControllerObject.delete_chw_jurisdiction_facilities_record(ColumnName,value_);
+        
+		var myChwJurisdictionFacilitiesControllerObjectPromise = ChwJurisdictionFacilitiesModel.delete_chw_jurisdiction_facilities_record(ColumnName,value_);
 		    
 		   
 		   myChwJurisdictionFacilitiesControllerObjectPromise.then(function(result) {

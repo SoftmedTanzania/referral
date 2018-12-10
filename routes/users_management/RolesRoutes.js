@@ -40,8 +40,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myRolesControllerObject=new RolesController();
-          var myRolesControllerObjectPromise = myRolesControllerObject.insert_roles(jsonObject_);
+	      
+          var myRolesControllerObjectPromise = RolesController.insert_roles(jsonObject_);
 	          
 		   
 		   myRolesControllerObjectPromise.then(function(result) {
@@ -60,8 +60,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_roles',urlencodedParser,function(request,response){
-    var myRolesControllerObject=new RolesController();
-    var myRolesControllerObjectPromise = myRolesControllerObject.get_all_roles();
+    
+    var myRolesControllerObjectPromise = RolesController.get_all_roles();
 	      
 		   
 		   myRolesControllerObjectPromise.then(function(result) {
@@ -90,8 +90,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myRolesControllerObject=new RolesController();
-     var myRolesControllerObjectPromise = myRolesControllerObject.batch_roles_update(jsonObject_);
+     
+     var myRolesControllerObjectPromise = RolesController.batch_roles_update(jsonObject_);
 	   
 		   
 		   myRolesControllerObjectPromise.then(function(result) {
@@ -115,10 +115,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-         var myRolesControllerObject=new RolesController();
+         
 
 
-        var myRolesControllerObjectPromise = myRolesControllerObject.get_specific_roles(mKey,mValue);
+        var myRolesControllerObjectPromise = RolesController.get_specific_roles(mKey,mValue);
 	        
 		   
 		   myRolesControllerObjectPromise.then(function(result) {
@@ -151,8 +151,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-         var myRolesControllerObject=new RolesController();
-         var myRolesControllerObjectPromise = myRolesControllerObject.individual_roles_update(column_name,value_,jsonObject_);
+         
+         var myRolesControllerObjectPromise = RolesController.individual_roles_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myRolesControllerObjectPromise.then(function(result) {
@@ -176,8 +176,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-    var myRolesControllerObject=new RolesController();
-    var myRolesControllerObjectPromise = myRolesControllerObject.delete_roles_record(column_name,value_);
+    
+    var myRolesControllerObjectPromise = RolesController.delete_roles_record(column_name,value_);
 	      	        
 		   
 		   myRolesControllerObjectPromise.then(function(result) {

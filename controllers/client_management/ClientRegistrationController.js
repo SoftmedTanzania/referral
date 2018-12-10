@@ -20,10 +20,10 @@ module.exports = class ClientRegistrationController{
 	
 	
 	
-   insert_client_registration(jsonObject_){
+   static insert_client_registration(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myClientRegistrationObject=new ClientRegistrationModel();
-     var myClientRegistrationObjectPromise = myClientRegistrationObject.insert_client_registration(jsonObject_);
+     
+     var myClientRegistrationObjectPromise = ClientRegistrationModel.insert_client_registration(jsonObject_);
 		  
 		   
 		   myClientRegistrationObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class ClientRegistrationController{
 	
 	
 	
-   get_all_client_registration(){
+   static get_all_client_registration(){
 	   return new Promise(function(resolve, reject) {  
-        const  myClientRegistrationObject=new ClientRegistrationModel();
-        var myClientRegistrationObjectPromise = myClientRegistrationObject.get_all_client_registration();
+        
+        var myClientRegistrationObjectPromise = ClientRegistrationModel.get_all_client_registration();
 		   
 		   
 		   myClientRegistrationObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class ClientRegistrationController{
 	
 	
 	
-   get_specific_client_registration(ColumnName,value_){
+   static get_specific_client_registration(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-       const  myClientRegistrationObject=new ClientRegistrationModel();
-        var myClientRegistrationObjectPromise = myClientRegistrationObject.get_specific_client_registration(ColumnName,value_);
+       
+        var myClientRegistrationObjectPromise = ClientRegistrationModel.get_specific_client_registration(ColumnName,value_);
 		   
 		   
 		   myClientRegistrationObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class ClientRegistrationController{
 	
 	
 	
-   batch_client_registration_update(jsonObject_){
+   static batch_client_registration_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-        const  myClientRegistrationObject=new ClientRegistrationModel();
         
-		var myClientRegistrationObjectPromise = myClientRegistrationObject.batch_client_registration_update(jsonObject_);
+        
+		var myClientRegistrationObjectPromise = ClientRegistrationModel.batch_client_registration_update(jsonObject_);
 		   
 		   
 		   myClientRegistrationObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class ClientRegistrationController{
 	
 	
 	
-   individual_client_registration_update(ColumnName,value_,jsonObject_){
+   static individual_client_registration_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-       const  myClientRegistrationObject=new ClientRegistrationModel();
+       
         
-		var myClientRegistrationObjectPromise = myClientRegistrationObject.individual_client_registration_update(ColumnName,value_,jsonObject_);
+		var myClientRegistrationObjectPromise = ClientRegistrationModel.individual_client_registration_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myClientRegistrationObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class ClientRegistrationController{
 	
 	
 	
-   delete_client_registration_record(ColumnName,value_){
+   static delete_client_registration_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-         const  myClientRegistrationObject=new ClientRegistrationModel();
+         
         
-		var myClientRegistrationObjectPromise = myClientRegistrationObject.delete_client_registration_record(ColumnName,value_);
+		var myClientRegistrationObjectPromise = ClientRegistrationModel.delete_client_registration_record(ColumnName,value_);
 		    
 		   
 		   myClientRegistrationObjectPromise.then(function(result) {

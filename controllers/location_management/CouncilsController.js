@@ -20,10 +20,10 @@ module.exports = class CouncilsController{
 	
 	
 	
-   insert_councils(jsonObject_){
+   static insert_councils(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myCouncilsObject=new CouncilsModel();
-     var myCouncilsObjectPromise = myCouncilsObject.insert_councils(jsonObject_);
+     
+     var myCouncilsObjectPromise = CouncilsModel.insert_councils(jsonObject_);
 		  
 		   
 		   myCouncilsObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class CouncilsController{
 	
 	
 	
-   get_all_councils(){
+   static get_all_councils(){
 	   return new Promise(function(resolve, reject) {  
-        const  myCouncilsObject=new CouncilsModel();
-        var myCouncilsObjectPromise = myCouncilsObject.get_all_councils();
+        
+        var myCouncilsObjectPromise = CouncilsModel.get_all_councils();
 		   
 		   
 		   myCouncilsObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class CouncilsController{
 	
 	
 	
-   get_specific_councils(ColumnName,value_){
+   static get_specific_councils(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-         const  myCouncilsObject=new CouncilsModel();
-        var myCouncilsObjectPromise = myCouncilsObject.get_specific_councils(ColumnName,value_);
+         
+        var myCouncilsObjectPromise = CouncilsModel.get_specific_councils(ColumnName,value_);
 		   
 		   
 		   myCouncilsObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class CouncilsController{
 	
 	
 	
-   batch_councils_update(jsonObject_){
+   static batch_councils_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-       const  myCouncilsObject=new CouncilsModel();
+       
         
-		var myCouncilsObjectPromise = myCouncilsObject.batch_councils_update(jsonObject_);
+		var myCouncilsObjectPromise = CouncilsModel.batch_councils_update(jsonObject_);
 		   
 		   
 		   myCouncilsObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class CouncilsController{
 	
 	
 	
-   individual_councils_update(ColumnName,value_,jsonObject_){
+   static individual_councils_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-       const  myCouncilsObject=new CouncilsModel();
+       
         
-		var myCouncilsObjectPromise = myCouncilsObject.individual_councils_update(ColumnName,value_,jsonObject_);
+		var myCouncilsObjectPromise = CouncilsModel.individual_councils_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myCouncilsObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class CouncilsController{
 	
 	
 	
-   delete_councils_record(ColumnName,value_){
+   static delete_councils_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myCouncilsObject=new CouncilsModel();
         
-		var myCouncilsObjectPromise = myCouncilsObject.delete_councils_record(ColumnName,value_);
+        
+		var myCouncilsObjectPromise = CouncilsModel.delete_councils_record(ColumnName,value_);
 		    
 		   
 		   myCouncilsObjectPromise.then(function(result) {

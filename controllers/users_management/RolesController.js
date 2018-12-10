@@ -20,10 +20,10 @@ module.exports = class RolesController{
 	
 	
 	
-   insert_roles(jsonObject_){
+   static insert_roles(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myRolesObject=new RolesModel();
-     var myRolesObjectPromise = myRolesObject.insert_roles(jsonObject_);
+     
+     var myRolesObjectPromise = RolesModel.insert_roles(jsonObject_);
 		  
 		   
 		   myRolesObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class RolesController{
 	
 	
 	
-   get_all_roles(){
+   static get_all_roles(){
 	   return new Promise(function(resolve, reject) {  
-        const  myRolesObject=new RolesModel();
-        var myRolesObjectPromise = myRolesObject.get_all_roles();
+        
+        var myRolesObjectPromise = RolesModel.get_all_roles();
 		   
 		   
 		   myRolesObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class RolesController{
 	
 	
 	
-   get_specific_roles(ColumnName,value_){
+   static get_specific_roles(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-        const  myRolesObject=new RolesModel();
-        var myRolesObjectPromise = myRolesObject.get_specific_roles(ColumnName,value_);
+        
+        var myRolesObjectPromise = RolesModel.get_specific_roles(ColumnName,value_);
 		   
 		   
 		   myRolesObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class RolesController{
 	
 	
 	
-   batch_roles_update(jsonObject_){
+   static batch_roles_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-       const  myRolesObject=new RolesModel();
+       
         
-		var myRolesObjectPromise = myRolesObject.batch_roles_update(jsonObject_);
+		var myRolesObjectPromise = RolesModel.batch_roles_update(jsonObject_);
 		   
 		   
 		   myRolesObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class RolesController{
 	
 	
 	
-   individual_roles_update(ColumnName,value_,jsonObject_){
+   static individual_roles_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-       const  myRolesObject=new RolesModel();
+       
         
-		var myRolesObjectPromise = myRolesObject.individual_roles_update(ColumnName,value_,jsonObject_);
+		var myRolesObjectPromise = RolesModel.individual_roles_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myRolesObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class RolesController{
 	
 	
 	
-   delete_roles_record(ColumnName,value_){
+   static delete_roles_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myRolesObject=new RolesModel();
         
-		var myRolesObjectPromise = myRolesObject.delete_roles_record(ColumnName,value_);
+        
+		var myRolesObjectPromise = RolesModel.delete_roles_record(ColumnName,value_);
 		    
 		   
 		   myRolesObjectPromise.then(function(result) {

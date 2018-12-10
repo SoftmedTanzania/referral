@@ -40,8 +40,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myRegionsControllerObject=new RegionsController();
-          var myRegionsControllerObjectPromise = myRegionsControllerObject.insert_regions(jsonObject_);
+	      
+          var myRegionsControllerObjectPromise = RegionsController.insert_regions(jsonObject_);
 	          
 		   
 		   myRegionsControllerObjectPromise.then(function(result) {
@@ -60,8 +60,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_regions',urlencodedParser,function(request,response){
-    var myRegionsControllerObject=new RegionsController();
-    var myRegionsControllerObjectPromise = myRegionsControllerObject.get_all_regions();
+   
+    var myRegionsControllerObjectPromise = RegionsController.get_all_regions();
 	      
 		   
 		   myRegionsControllerObjectPromise.then(function(result) {
@@ -91,8 +91,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-    var myRegionsControllerObject=new RegionsController();
-    var myRegionsControllerObjectPromise = myRegionsControllerObject.batch_regions_update(jsonObject_);
+    
+    var myRegionsControllerObjectPromise = RegionsController.batch_regions_update(jsonObject_);
 	   
 		   
 		   myRegionsControllerObjectPromise.then(function(result) {
@@ -116,10 +116,9 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myRegionsControllerObject=new RegionsController();
+        
 
-
-        var myRegionsControllerObjectPromise = myRegionsControllerObject.get_specific_regions(mKey,mValue);
+        var myRegionsControllerObjectPromise = RegionsController.get_specific_regions(mKey,mValue);
 	        
 		   
 		   myRegionsControllerObjectPromise.then(function(result) {
@@ -153,8 +152,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-         var myRegionsControllerObject=new RegionsController();
-         var myRegionsControllerObjectPromise = myRegionsControllerObject.individual_regions_update(column_name,value_,jsonObject_);
+        
+         var myRegionsControllerObjectPromise = RegionsController.individual_regions_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myRegionsControllerObjectPromise.then(function(result) {
@@ -178,8 +177,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-    var myRegionsControllerObject=new RegionsController();
-    var myRegionsControllerObjectPromise = myRegionsControllerObject.delete_regions_record(column_name,value_);
+    
+    var myRegionsControllerObjectPromise = RegionsController.delete_regions_record(column_name,value_);
 	      	        
 		   
 		   myRegionsControllerObjectPromise.then(function(result) {

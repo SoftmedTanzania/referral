@@ -48,8 +48,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myFacilitiesControllerObject=new FacilitiesController();
-          var myFacilitiesControllerObjectPromise = myFacilitiesControllerObject.insert_facilities(jsonObject_);
+	      
+          var myFacilitiesControllerObjectPromise = FacilitiesController.insert_facilities(jsonObject_);
 	          
 		   
 		   myFacilitiesControllerObjectPromise.then(function(result) {
@@ -68,8 +68,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_facilities',urlencodedParser,function(request,response){
-    var myFacilitiesControllerObject=new FacilitiesController();
-    var myFacilitiesControllerObjectPromise = myFacilitiesControllerObject.get_all_facilities();
+    
+    var myFacilitiesControllerObjectPromise = FacilitiesController.get_all_facilities();
 	      
 		   
 		   myFacilitiesControllerObjectPromise.then(function(result) {
@@ -104,8 +104,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myFacilitiesControllerObject=new FacilitiesController();
-     var myFacilitiesControllerObjectPromise = myFacilitiesControllerObject.batch_facilities_update(jsonObject_);
+     
+     var myFacilitiesControllerObjectPromise = FacilitiesController.batch_facilities_update(jsonObject_);
 	   
 		   
 		   myFacilitiesControllerObjectPromise.then(function(result) {
@@ -129,10 +129,9 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myFacilitiesControllerObject=new FacilitiesController();
+        
 
-
-        var myFacilitiesControllerObjectPromise = myFacilitiesControllerObject.get_specific_facilities(mKey,mValue);
+        var myFacilitiesControllerObjectPromise = FacilitiesController.get_specific_facilities(mKey,mValue);
 	        
 		   
 		   myFacilitiesControllerObjectPromise.then(function(result) {
@@ -171,8 +170,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-                var myFacilitiesControllerObject=new FacilitiesController();
-                var myFacilitiesControllerObjectPromise = myFacilitiesControllerObject.individual_facilities_update(column_name,value_,jsonObject_);
+                
+                var myFacilitiesControllerObjectPromise = FacilitiesController.individual_facilities_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myFacilitiesControllerObjectPromise.then(function(result) {
@@ -196,8 +195,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-   var myFacilitiesControllerObject=new FacilitiesController();
-    var myFacilitiesControllerObjectPromise = myFacilitiesControllerObject.delete_facilities_record(column_name,value_);
+   
+    var myFacilitiesControllerObjectPromise = FacilitiesController.delete_facilities_record(column_name,value_);
 	      	        
 		   
 		   myFacilitiesControllerObjectPromise.then(function(result) {

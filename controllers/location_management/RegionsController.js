@@ -20,10 +20,10 @@ module.exports = class RegionsController{
 	
 	
 	
-   insert_regions(jsonObject_){
+   static insert_regions(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myRegionsObject=new RegionsModel();
-     var myRegionsObjectPromise = myRegionsObject.insert_regions(jsonObject_);
+     
+     var myRegionsObjectPromise = RegionsModel.insert_regions(jsonObject_);
 		  
 		   
 		   myRegionsObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class RegionsController{
 	
 	
 	
-   get_all_regions(){
+   static get_all_regions(){
 	   return new Promise(function(resolve, reject) {  
-        const  myRegionsObject=new RegionsModel();
-        var myRegionsObjectPromise = myRegionsObject.get_all_regions();
+        
+        var myRegionsObjectPromise = RegionsModel.get_all_regions();
 		   
 		   
 		   myRegionsObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class RegionsController{
 	
 	
 	
-   get_specific_regions(ColumnName,value_){
+   static get_specific_regions(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-         const  myRegionsObject=new RegionsModel();
-        var myRegionsObjectPromise = myRegionsObject.get_specific_regions(ColumnName,value_);
+         
+        var myRegionsObjectPromise = RegionsModel.get_specific_regions(ColumnName,value_);
 		   
 		   
 		   myRegionsObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class RegionsController{
 	
 	
 	
-   batch_regions_update(jsonObject_){
+   static batch_regions_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-       const  myRegionsObject=new RegionsModel();
+       
         
-		var myRegionsObjectPromise = myRegionsObject.batch_regions_update(jsonObject_);
+		var myRegionsObjectPromise = RegionsModel.batch_regions_update(jsonObject_);
 		   
 		   
 		   myRegionsObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class RegionsController{
 	
 	
 	
-   individual_regions_update(ColumnName,value_,jsonObject_){
+   static individual_regions_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-        const  myRegionsObject=new RegionsModel();
         
-		var myRegionsObjectPromise = myRegionsObject.individual_regions_update(ColumnName,value_,jsonObject_);
+        
+		var myRegionsObjectPromise = RegionsModel.individual_regions_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myRegionsObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class RegionsController{
 	
 	
 	
-   delete_regions_record(ColumnName,value_){
+   static delete_regions_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myRegionsObject=new RegionsModel();
         
-		var myRegionsObjectPromise = myRegionsObject.delete_regions_record(ColumnName,value_);
+        
+		var myRegionsObjectPromise = RegionsModel.delete_regions_record(ColumnName,value_);
 		    
 		   
 		   myRegionsObjectPromise.then(function(result) {

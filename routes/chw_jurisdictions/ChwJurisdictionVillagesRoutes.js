@@ -44,8 +44,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myChwJurisdictionVillagesControllerObject=new ChwJurisdictionVillagesController();
-          var myChwJurisdictionVillagesControllerObjectPromise = myChwJurisdictionVillagesControllerObject.insert_chw_jurisdiction_villages(jsonObject_);
+	      
+          var myChwJurisdictionVillagesControllerObjectPromise = ChwJurisdictionVillagesController.insert_chw_jurisdiction_villages(jsonObject_);
 	          
 		   
 		   myChwJurisdictionVillagesControllerObjectPromise.then(function(result) {
@@ -64,8 +64,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_chw_jurisdiction_villages',urlencodedParser,function(request,response){
-    var myChwJurisdictionVillagesControllerObject=new ChwJurisdictionVillagesController();
-    var myChwJurisdictionVillagesControllerObjectPromise = myChwJurisdictionVillagesControllerObject.get_all_chw_jurisdiction_villages();
+    
+    var myChwJurisdictionVillagesControllerObjectPromise = ChwJurisdictionVillagesController.get_all_chw_jurisdiction_villages();
 	      
 		   
 		   myChwJurisdictionVillagesControllerObjectPromise.then(function(result) {
@@ -97,8 +97,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myChwJurisdictionVillagesControllerObject=new ChwJurisdictionVillagesController();
-     var myChwJurisdictionVillagesControllerObjectPromise = myChwJurisdictionVillagesControllerObject.batch_chw_jurisdiction_villages_update(jsonObject_);
+     
+     var myChwJurisdictionVillagesControllerObjectPromise = ChwJurisdictionVillagesController.batch_chw_jurisdiction_villages_update(jsonObject_);
 	   
 		   
 		   myChwJurisdictionVillagesControllerObjectPromise.then(function(result) {
@@ -122,10 +122,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myChwJurisdictionVillagesControllerObject=new ChwJurisdictionVillagesController();
+        
 
 
-        var myChwJurisdictionVillagesControllerObjectPromise = myChwJurisdictionVillagesControllerObject.get_specific_chw_jurisdiction_villages(mKey,mValue);
+        var myChwJurisdictionVillagesControllerObjectPromise = ChwJurisdictionVillagesController.get_specific_chw_jurisdiction_villages(mKey,mValue);
 	        
 		   
 		   myChwJurisdictionVillagesControllerObjectPromise.then(function(result) {
@@ -160,8 +160,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-         var myChwJurisdictionVillagesControllerObject=new ChwJurisdictionVillagesController();
-         var myChwJurisdictionVillagesControllerObjectPromise = myChwJurisdictionVillagesControllerObject.individual_chw_jurisdiction_villages_update(column_name,value_,jsonObject_);
+         
+         var myChwJurisdictionVillagesControllerObjectPromise = ChwJurisdictionVillagesController.individual_chw_jurisdiction_villages_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myChwJurisdictionVillagesControllerObjectPromise.then(function(result) {
@@ -185,8 +185,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-   var myChwJurisdictionVillagesControllerObject=new ChwJurisdictionVillagesController();
-    var myChwJurisdictionVillagesControllerObjectPromise = myChwJurisdictionVillagesControllerObject.delete_chw_jurisdiction_villages_record(column_name,value_);
+   
+    var myChwJurisdictionVillagesControllerObjectPromise = ChwJurisdictionVillagesController.delete_chw_jurisdiction_villages_record(column_name,value_);
 	      	        
 		   
 		   myChwJurisdictionVillagesControllerObjectPromise.then(function(result) {

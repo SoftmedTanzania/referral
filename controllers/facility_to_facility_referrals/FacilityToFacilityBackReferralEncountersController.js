@@ -20,10 +20,10 @@ module.exports = class FacilityToFacilityBackReferralEncountersController{
 	
 	
 	
-   insert_facility_to_facility_back_referral_encounters(jsonObject_){
+   static insert_facility_to_facility_back_referral_encounters(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myFacilityToFacilityBackReferralEncountersObject=new FacilityToFacilityBackReferralEncountersModel();
-     var myFacilityToFacilityBackReferralEncountersObjectPromise = myFacilityToFacilityBackReferralEncountersObject.insert_facility_to_facility_back_referral_encounters(jsonObject_);
+     
+     var myFacilityToFacilityBackReferralEncountersObjectPromise = FacilityToFacilityBackReferralEncountersModel.insert_facility_to_facility_back_referral_encounters(jsonObject_);
 		  
 		   
 		   myFacilityToFacilityBackReferralEncountersObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class FacilityToFacilityBackReferralEncountersController{
 	
 	
 	
-   get_all_facility_to_facility_back_referral_encounters(){
+   static get_all_facility_to_facility_back_referral_encounters(){
 	   return new Promise(function(resolve, reject) {  
-        const  myFacilityToFacilityBackReferralEncountersObject=new FacilityToFacilityBackReferralEncountersModel();
-        var myFacilityToFacilityBackReferralEncountersObjectPromise = myFacilityToFacilityBackReferralEncountersObject.get_all_facility_to_facility_back_referral_encounters();
+       
+        var myFacilityToFacilityBackReferralEncountersObjectPromise = FacilityToFacilityBackReferralEncountersModel.get_all_facility_to_facility_back_referral_encounters();
 		   
 		   
 		   myFacilityToFacilityBackReferralEncountersObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class FacilityToFacilityBackReferralEncountersController{
 	
 	
 	
-   get_specific_facility_to_facility_back_referral_encounters(ColumnName,value_){
+   static get_specific_facility_to_facility_back_referral_encounters(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-       const  myFacilityToFacilityBackReferralEncountersObject=new FacilityToFacilityBackReferralEncountersModel();
-        var myFacilityToFacilityBackReferralEncountersObjectPromise = myFacilityToFacilityBackReferralEncountersObject.get_specific_facility_to_facility_back_referral_encounters(ColumnName,value_);
+       
+        var myFacilityToFacilityBackReferralEncountersObjectPromise = FacilityToFacilityBackReferralEncountersModel.get_specific_facility_to_facility_back_referral_encounters(ColumnName,value_);
 		   
 		   
 		   myFacilityToFacilityBackReferralEncountersObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class FacilityToFacilityBackReferralEncountersController{
 	
 	
 	
-   batch_facility_to_facility_back_referral_encounters_update(jsonObject_){
+   static batch_facility_to_facility_back_referral_encounters_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-        const  myFacilityToFacilityBackReferralEncountersObject=new FacilityToFacilityBackReferralEncountersModel();
         
-		var myFacilityToFacilityBackReferralEncountersObjectPromise = myFacilityToFacilityBackReferralEncountersObject.batch_facility_to_facility_back_referral_encounters_update(jsonObject_);
+        
+		var myFacilityToFacilityBackReferralEncountersObjectPromise = FacilityToFacilityBackReferralEncountersModel.batch_facility_to_facility_back_referral_encounters_update(jsonObject_);
 		   
 		   
 		   myFacilityToFacilityBackReferralEncountersObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class FacilityToFacilityBackReferralEncountersController{
 	
 	
 	
-   individual_facility_to_facility_back_referral_encounters_update(ColumnName,value_,jsonObject_){
+   static individual_facility_to_facility_back_referral_encounters_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-      const  myFacilityToFacilityBackReferralEncountersObject=new FacilityToFacilityBackReferralEncountersModel();
+      
         
-		var myFacilityToFacilityBackReferralEncountersObjectPromise = myFacilityToFacilityBackReferralEncountersObject.individual_facility_to_facility_back_referral_encounters_update(ColumnName,value_,jsonObject_);
+		var myFacilityToFacilityBackReferralEncountersObjectPromise = FacilityToFacilityBackReferralEncountersModel.individual_facility_to_facility_back_referral_encounters_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myFacilityToFacilityBackReferralEncountersObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class FacilityToFacilityBackReferralEncountersController{
 	
 	
 	
-   delete_facility_to_facility_back_referral_encounters_record(ColumnName,value_){
+   static delete_facility_to_facility_back_referral_encounters_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myFacilityToFacilityBackReferralEncountersObject=new FacilityToFacilityBackReferralEncountersModel();
         
-		var myFacilityToFacilityBackReferralEncountersObjectPromise = myFacilityToFacilityBackReferralEncountersObject.delete_facility_to_facility_back_referral_encounters_record(ColumnName,value_);
+        
+		var myFacilityToFacilityBackReferralEncountersObjectPromise = FacilityToFacilityBackReferralEncountersModel.delete_facility_to_facility_back_referral_encounters_record(ColumnName,value_);
 		    
 		   
 		   myFacilityToFacilityBackReferralEncountersObjectPromise.then(function(result) {

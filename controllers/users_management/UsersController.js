@@ -35,15 +35,15 @@ module.exports = class UsersController{
 	
 	
 	
-   insert_users(jsonObject_){
+   static insert_users(jsonObject_){
 	  return new Promise(function(resolve, reject) { 
 		 
 		 //var userAlreadyRegisteredResult;
 		 var TableName="users";
 		 var ColumnName="JobRefNo";
 		 var value_=jsonObject_.JobRefNo;
-		 const  myModelMaster=new ModelMaster();
-		 var myModelMasterPromise = myModelMaster.selectSpecific(TableName,ColumnName,value_);
+		 
+		 var myModelMasterPromise = ModelMaster.selectSpecific(TableName,ColumnName,value_);
 		  
 		  myModelMasterPromise.then(function(userAlreadyRegisteredResult) {
         
@@ -62,8 +62,8 @@ module.exports = class UsersController{
 	     jsonObject_["Salt"] = salt;
 	   
 	   
-	 const  myUsersObject=new UsersModel();
-     var myUsersObjectPromise = myUsersObject.insert_users(jsonObject_); 
+	 
+     var myUsersObjectPromise = UsersModel.insert_users(jsonObject_); 
      
 		  
 		   
@@ -88,7 +88,7 @@ module.exports = class UsersController{
 	
 	
 	
-	user_login(jsonObject_){
+	static user_login(jsonObject_){
 	   return new Promise(function(resolve, reject) { 
 		   
 		   
@@ -97,8 +97,8 @@ module.exports = class UsersController{
 		 var value_=jsonObject_.AttemptedUserEmail;
 		   
 		   
-	    const  myModelMaster=new ModelMaster();
-		var myModelMasterPromise = myModelMaster.selectSpecific(TableName,ColumnName,value_); 
+	    
+		var myModelMasterPromise = ModelMaster.selectSpecific(TableName,ColumnName,value_); 
 		   
 		   
 		myModelMasterPromise.then(function(userExistsResult) {
@@ -140,10 +140,10 @@ module.exports = class UsersController{
 	
 	
 	
-	get_all_users(){
+	static get_all_users(){
 	   return new Promise(function(resolve, reject) {  
-        const  myUsersObject=new UsersModel();
-        var myUsersObjectPromise = myUsersObject.get_all_users();
+        
+        var myUsersObjectPromise = UsersModel.get_all_users();
 		   
 		   
 		   myUsersObjectPromise.then(function(result) {
@@ -160,10 +160,10 @@ module.exports = class UsersController{
 	
 	
 	
-   get_specific_users(ColumnName,value_){
+   static get_specific_users(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-         const  myUsersObject=new UsersModel();
-        var myUsersObjectPromise = myUsersObject.get_specific_users(ColumnName,value_);
+         
+        var myUsersObjectPromise = UsersModel.get_specific_users(ColumnName,value_);
 		   
 		   
 		   myUsersObjectPromise.then(function(result) {
@@ -178,11 +178,11 @@ module.exports = class UsersController{
 	
 	
 	
-   batch_users_update(jsonObject_){
+   static batch_users_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-       const  myUsersObject=new UsersModel();
+       
         
-		var myUsersObjectPromise = myUsersObject.batch_users_update(jsonObject_);
+		var myUsersObjectPromise = UsersModel.batch_users_update(jsonObject_);
 		   
 		   
 		   myUsersObjectPromise.then(function(result) {
@@ -199,11 +199,11 @@ module.exports = class UsersController{
 	
 	
 	
-   individual_users_update(ColumnName,value_,jsonObject_){
+   static individual_users_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-        const  myUsersObject=new UsersModel();
         
-		var myUsersObjectPromise = myUsersObject.individual_users_update(ColumnName,value_,jsonObject_);
+        
+		var myUsersObjectPromise = UsersModel.individual_users_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myUsersObjectPromise.then(function(result) {
@@ -220,11 +220,11 @@ module.exports = class UsersController{
 	
 	
 	
-   delete_users_record(ColumnName,value_){
+   static delete_users_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myUsersObject=new UsersModel();
         
-		var myUsersObjectPromise = myUsersObject.delete_users_record(ColumnName,value_);
+        
+		var myUsersObjectPromise = UsersModel.delete_users_record(ColumnName,value_);
 		    
 		   
 		   myUsersObjectPromise.then(function(result) {

@@ -20,10 +20,10 @@ module.exports = class ClientEncountersController{
 	
 	
 	
-   insert_client_encounters(jsonObject_){
+   static insert_client_encounters(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myClientEncountersModelObject=new ClientEncountersModel();
-     var myClientEncountersModelObjectPromise = myClientEncountersModelObject.insert_client_encounters(jsonObject_);
+     
+     var myClientEncountersModelObjectPromise = ClientEncountersModel.insert_client_encounters(jsonObject_);
 		  
 		   
 		   myClientEncountersModelObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class ClientEncountersController{
 	
 	
 	
-   get_all_client_encounters(){
+   static get_all_client_encounters(){
 	   return new Promise(function(resolve, reject) {  
-        const  myClientEncountersModelObject=new ClientEncountersModel();
-        var myClientEncountersModelObjectPromise = myClientEncountersModelObject.get_all_client_encounters();
+        
+        var myClientEncountersModelObjectPromise = ClientEncountersModel.get_all_client_encounters();
 		   
 		   
 		   myClientEncountersModelObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class ClientEncountersController{
 	
 	
 	
-   get_specific_client_encounters(ColumnName,value_){
+   static get_specific_client_encounters(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-       const  myClientEncountersModelObject=new ClientEncountersModel();
-        var myClientEncountersModelObjectPromise = myClientEncountersModelObject.get_specific_client_encounters(ColumnName,value_);
+       
+        var myClientEncountersModelObjectPromise = ClientEncountersModel.get_specific_client_encounters(ColumnName,value_);
 		   
 		   
 		   myClientEncountersModelObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class ClientEncountersController{
 	
 	
 	
-   batch_client_encounters_update(jsonObject_){
+   static batch_client_encounters_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-        const  myClientEncountersModelObject=new ClientEncountersModel();
         
-		var myClientEncountersModelObjectPromise = myClientEncountersModelObject.batch_client_encounters_update(jsonObject_);
+        
+		var myClientEncountersModelObjectPromise = ClientEncountersModel.batch_client_encounters_update(jsonObject_);
 		   
 		   
 		   myClientEncountersModelObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class ClientEncountersController{
 	
 	
 	
-   individual_client_encounters_update(ColumnName,value_,jsonObject_){
+   static individual_client_encounters_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-       const  myClientEncountersModelObject=new ClientEncountersModel();
+       
         
-		var myClientEncountersModelObjectPromise = myClientEncountersModelObject.individual_client_encounters_update(ColumnName,value_,jsonObject_);
+		var myClientEncountersModelObjectPromise = ClientEncountersModel.individual_client_encounters_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myClientEncountersModelObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class ClientEncountersController{
 	
 	
 	
-   delete_client_encounters_record(ColumnName,value_){
+   static delete_client_encounters_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myClientEncountersModelObject=new ClientEncountersModel();
         
-		var myClientEncountersModelObjectPromise = myClientEncountersModelObject.delete_client_encounters_record(ColumnName,value_);
+        
+		var myClientEncountersModelObjectPromise = ClientEncountersModel.delete_client_encounters_record(ColumnName,value_);
 		    
 		   
 		   myClientEncountersModelObjectPromise.then(function(result) {

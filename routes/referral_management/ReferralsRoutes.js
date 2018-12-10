@@ -46,8 +46,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myReferralsControllerObject=new ReferralsController();
-          var myReferralsControllerObjectPromise = myReferralsControllerObject.insert_referrals(jsonObject_);
+	      
+          var myReferralsControllerObjectPromise = ReferralsController.insert_referrals(jsonObject_);
 	          
 		   
 		   myReferralsControllerObjectPromise.then(function(result) {
@@ -66,8 +66,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_referrals',urlencodedParser,function(request,response){
-    var myReferralsControllerObject=new ReferralsController();
-    var myReferralsControllerObjectPromise = myReferralsControllerObject.get_all_referrals();
+    
+    var myReferralsControllerObjectPromise = ReferralsController.get_all_referrals();
 	      
 		   
 		   myReferralsControllerObjectPromise.then(function(result) {
@@ -102,8 +102,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myReferralsControllerObject=new ReferralsController();
-     var myReferralsControllerObjectPromise = myReferralsControllerObject.batch_referrals_update(jsonObject_);
+     
+     var myReferralsControllerObjectPromise = ReferralsController.batch_referrals_update(jsonObject_);
 	   
 		   
 		   myReferralsControllerObjectPromise.then(function(result) {
@@ -127,10 +127,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myReferralsControllerObject=new ReferralsController();
+        
 
 
-        var myReferralsControllerObjectPromise = myReferralsControllerObject.get_specific_referrals(mKey,mValue);
+        var myReferralsControllerObjectPromise = ReferralsController.get_specific_referrals(mKey,mValue);
 	        
 		   
 		   myReferralsControllerObjectPromise.then(function(result) {
@@ -170,8 +170,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-                var myReferralsControllerObject=new ReferralsController();
-                var myReferralsControllerObjectPromise = myReferralsControllerObject.individual_referrals_update(column_name,value_,jsonObject_);
+               
+                var myReferralsControllerObjectPromise = ReferralsController.individual_referrals_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myReferralsControllerObjectPromise.then(function(result) {
@@ -195,8 +195,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-   var myReferralsControllerObject=new ReferralsController();
-    var myReferralsControllerObjectPromise = myReferralsControllerObject.delete_referrals_record(column_name,value_);
+   
+    var myReferralsControllerObjectPromise = ReferralsController.delete_referrals_record(column_name,value_);
 	      	        
 		   
 		   myReferralsControllerObjectPromise.then(function(result) {

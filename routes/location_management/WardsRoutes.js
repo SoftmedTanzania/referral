@@ -41,8 +41,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myWardsControllerObject=new WardsController();
-          var myWardsControllerObjectPromise = myWardsControllerObject.insert_wards(jsonObject_);
+	     
+          var myWardsControllerObjectPromise = WardsController.insert_wards(jsonObject_);
 	          
 		   
 		   myWardsControllerObjectPromise.then(function(result) {
@@ -61,8 +61,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_wards',urlencodedParser,function(request,response){
-    var myWardsControllerObject=new WardsController();
-    var myWardsControllerObjectPromise = myWardsControllerObject.get_all_wards();
+    
+    var myWardsControllerObjectPromise = WardsController.get_all_wards();
 	      
 		   
 		   myWardsControllerObjectPromise.then(function(result) {
@@ -93,8 +93,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-    var myWardsControllerObject=new WardsController();
-    var myWardsControllerObjectPromise = myWardsControllerObject.batch_wards_update(jsonObject_);
+    
+    var myWardsControllerObjectPromise = WardsController.batch_wards_update(jsonObject_);
 	   
 		   
 		   myWardsControllerObjectPromise.then(function(result) {
@@ -118,10 +118,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myWardsControllerObject=new WardsController();
+        
 
 
-        var myWardsControllerObjectPromise = myWardsControllerObject.get_specific_wards(mKey,mValue);
+        var myWardsControllerObjectPromise = WardsController.get_specific_wards(mKey,mValue);
 	        
 		   
 		   myWardsControllerObjectPromise.then(function(result) {
@@ -156,8 +156,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-         var myWardsControllerObject=new WardsController();
-         var myWardsControllerObjectPromise = myWardsControllerObject.individual_wards_update(column_name,value_,jsonObject_);
+         
+         var myWardsControllerObjectPromise = WardsController.individual_wards_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myWardsControllerObjectPromise.then(function(result) {
@@ -181,8 +181,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-    var myWardsControllerObject=new WardsController();
-    var myWardsControllerObjectPromise = myWardsControllerObject.delete_wards_record(column_name,value_);
+    
+    var myWardsControllerObjectPromise = WardsController.delete_wards_record(column_name,value_);
 	      	        
 		   
 		   myWardsControllerObjectPromise.then(function(result) {

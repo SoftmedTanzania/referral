@@ -20,10 +20,10 @@ module.exports = class ReferralServiceTypesController{
 	
 	
 	
-   insert_referral_service_types(jsonObject_){
+   static insert_referral_service_types(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myReferralServiceTypesObject=new ReferralServiceTypesModel();
-     var myReferralServiceTypesObjectPromise = myReferralServiceTypesObject.insert_referral_service_types(jsonObject_);
+     
+     var myReferralServiceTypesObjectPromise = ReferralServiceTypesModel.insert_referral_service_types(jsonObject_);
 		  
 		   
 		   myReferralServiceTypesObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class ReferralServiceTypesController{
 	
 	
 	
-   get_all_referral_service_types(){
+   static get_all_referral_service_types(){
 	   return new Promise(function(resolve, reject) {  
-        const  myReferralServiceTypesObject=new ReferralServiceTypesModel();
-        var myReferralServiceTypesObjectPromise = myReferralServiceTypesObject.get_all_referral_service_types();
+        
+        var myReferralServiceTypesObjectPromise = ReferralServiceTypesModel.get_all_referral_service_types();
 		   
 		   
 		   myReferralServiceTypesObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class ReferralServiceTypesController{
 	
 	
 	
-   get_specific_referral_service_types(ColumnName,value_){
+   static get_specific_referral_service_types(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-       const  myReferralServiceTypesObject=new ReferralServiceTypesModel();
-        var myReferralServiceTypesObjectPromise = myReferralServiceTypesObject.get_specific_referral_service_types(ColumnName,value_);
+       
+        var myReferralServiceTypesObjectPromise = ReferralServiceTypesModel.get_specific_referral_service_types(ColumnName,value_);
 		   
 		   
 		   myReferralServiceTypesObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class ReferralServiceTypesController{
 	
 	
 	
-   batch_referral_service_types_update(jsonObject_){
+   static batch_referral_service_types_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-        const  myReferralServiceTypesObject=new ReferralServiceTypesModel();
         
-		var myReferralServiceTypesObjectPromise = myReferralServiceTypesObject.batch_referral_service_types_update(jsonObject_);
+        
+		var myReferralServiceTypesObjectPromise = ReferralServiceTypesModel.batch_referral_service_types_update(jsonObject_);
 		   
 		   
 		   myReferralServiceTypesObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class ReferralServiceTypesController{
 	
 	
 	
-   individual_referral_service_types_update(ColumnName,value_,jsonObject_){
+   static individual_referral_service_types_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-       const  myReferralServiceTypesObject=new ReferralServiceTypesModel();
+       
         
-		var myReferralServiceTypesObjectPromise = myReferralServiceTypesObject.individual_referral_service_types_update(ColumnName,value_,jsonObject_);
+		var myReferralServiceTypesObjectPromise = ReferralServiceTypesModel.individual_referral_service_types_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myReferralServiceTypesObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class ReferralServiceTypesController{
 	
 	
 	
-   delete_referral_service_types_record(ColumnName,value_){
+   static delete_referral_service_types_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myReferralServiceTypesObject=new ReferralServiceTypesModel();
         
-		var myReferralServiceTypesObjectPromise = myReferralServiceTypesObject.delete_referral_service_types_record(ColumnName,value_);
+        
+		var myReferralServiceTypesObjectPromise = ReferralServiceTypesModel.delete_referral_service_types_record(ColumnName,value_);
 		    
 		   
 		   myReferralServiceTypesObjectPromise.then(function(result) {

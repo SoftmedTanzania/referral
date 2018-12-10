@@ -49,8 +49,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myClientEncountersControllerObject=new ClientEncountersController();
-          var myClientEncountersControllerObjectPromise = myClientEncountersControllerObject.insert_client_encounters(jsonObject_);
+	      
+          var myClientEncountersControllerObjectPromise = ClientEncountersController.insert_client_encounters(jsonObject_);
 	          
 		   
 		   myClientEncountersControllerObjectPromise.then(function(result) {
@@ -69,8 +69,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_client_encounters',urlencodedParser,function(request,response){
-    var myClientEncountersControllerObject=new ClientEncountersController();
-    var myClientEncountersControllerObjectPromise = myClientEncountersControllerObject.get_all_client_encounters();
+    
+    var myClientEncountersControllerObjectPromise = ClientEncountersController.get_all_client_encounters();
 	      
 		   
 		   myClientEncountersControllerObjectPromise.then(function(result) {
@@ -104,8 +104,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myClientEncountersControllerObject=new ClientEncountersController();
-     var myClientEncountersControllerObjectPromise = myClientEncountersControllerObject.batch_client_encounters_update(jsonObject_);
+     
+     var myClientEncountersControllerObjectPromise = ClientEncountersController.batch_client_encounters_update(jsonObject_);
 	   
 		   
 		   myClientEncountersControllerObjectPromise.then(function(result) {
@@ -129,10 +129,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myClientEncountersControllerObject=new ClientEncountersController();
+        
 
 
-        var myClientEncountersControllerObjectPromise = myClientEncountersControllerObject.get_specific_client_encounters(mKey,mValue);
+        var myClientEncountersControllerObjectPromise = ClientEncountersController.get_specific_client_encounters(mKey,mValue);
 	        
 		   
 		   myClientEncountersControllerObjectPromise.then(function(result) {
@@ -170,8 +170,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-                var myClientEncountersControllerObject=new ClientEncountersController();
-                var myClientEncountersControllerObjectPromise = myClientEncountersControllerObject.individual_client_encounters_update(column_name,value_,jsonObject_);
+                
+                var myClientEncountersControllerObjectPromise = ClientEncountersController.individual_client_encounters_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myClientEncountersControllerObjectPromise.then(function(result) {
@@ -195,8 +195,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-   var myClientEncountersControllerObject=new ClientEncountersController();
-    var myClientEncountersControllerObjectPromise = myClientEncountersControllerObject.delete_client_encounters_record(column_name,value_);
+   
+    var myClientEncountersControllerObjectPromise = ClientEncountersController.delete_client_encounters_record(column_name,value_);
 	      	        
 		   
 		   myClientEncountersControllerObjectPromise.then(function(result) {

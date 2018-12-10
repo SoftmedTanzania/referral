@@ -43,8 +43,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myTeamLeadTypesControllerObject=new TeamLeadTypesController();
-          var TeamLeadTypesControllerPromise = myTeamLeadTypesControllerObject.insert_team_lead_types(jsonObject_);
+	      
+          var TeamLeadTypesControllerPromise = TeamLeadTypesController.insert_team_lead_types(jsonObject_);
 	          
 		   
 		   TeamLeadTypesControllerPromise.then(function(result) {
@@ -63,8 +63,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_team_lead_types',urlencodedParser,function(request,response){
-    var myTeamLeadTypesControllerObject=new TeamLeadTypesController();
-    var myTeamLeadTypesControllerObjectPromise = myTeamLeadTypesControllerObject.get_all_team_lead_types();
+    
+    var myTeamLeadTypesControllerObjectPromise = TeamLeadTypesController.get_all_team_lead_types();
 	      
 		   
 		   myTeamLeadTypesControllerObjectPromise.then(function(result) {
@@ -93,8 +93,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myTeamLeadTypesControllerObject=new TeamLeadTypesController();
-     var myTeamLeadTypesControllerObjectPromise = myTeamLeadTypesControllerObject.batch_team_lead_types_update(jsonObject_);
+     
+     var myTeamLeadTypesControllerObjectPromise = TeamLeadTypesController.batch_team_lead_types_update(jsonObject_);
 	   
 		   
 		   myTeamLeadTypesControllerObjectPromise.then(function(result) {
@@ -118,10 +118,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-         var myTeamLeadTypesControllerObject=new TeamLeadTypesController();
+         
 
 
-        var myTeamLeadTypesControllerObjectPromise = myTeamLeadTypesControllerObject.get_specific_team_lead_types(mKey,mValue);
+        var myTeamLeadTypesControllerObjectPromise = TeamLeadTypesController.get_specific_team_lead_types(mKey,mValue);
 	        
 		   
 		   myTeamLeadTypesControllerObjectPromise.then(function(result) {
@@ -154,8 +154,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-         var myTeamLeadTypesControllerObject=new TeamLeadTypesController();
-         var myTeamLeadTypesControllerObjectPromise = myTeamLeadTypesControllerObject.individual_team_lead_types_update(column_name,value_,jsonObject_);
+         
+         var myTeamLeadTypesControllerObjectPromise = TeamLeadTypesController.individual_team_lead_types_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myTeamLeadTypesControllerObjectPromise.then(function(result) {
@@ -179,8 +179,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-    var myTeamLeadTypesControllerObject=new TeamLeadTypesController();
-    var myTeamLeadTypesControllerObjectPromise = myTeamLeadTypesControllerObject.delete_team_lead_types_record(column_name,value_);
+    
+    var myTeamLeadTypesControllerObjectPromise = TeamLeadTypesController.delete_team_lead_types_record(column_name,value_);
 	      	        
 		   
 		   myTeamLeadTypesControllerObjectPromise.then(function(result) {

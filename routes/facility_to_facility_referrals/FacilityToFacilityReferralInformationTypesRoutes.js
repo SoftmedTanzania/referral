@@ -41,8 +41,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myFacilityToFacilityReferralInformationTypesControllerObject=new FacilityToFacilityReferralInformationTypesController();
-          var FacilityToFacilityReferralInformationTypesControllerPromise = myFacilityToFacilityReferralInformationTypesControllerObject.insert_facility_to_facility_referral_information_types(jsonObject_);
+	      
+          var FacilityToFacilityReferralInformationTypesControllerPromise = FacilityToFacilityReferralInformationTypesController.insert_facility_to_facility_referral_information_types(jsonObject_);
 	          
 		   
 		   FacilityToFacilityReferralInformationTypesControllerPromise.then(function(result) {
@@ -61,8 +61,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_facility_to_facility_referral_information_types',urlencodedParser,function(request,response){
-   var myFacilityToFacilityReferralInformationTypesControllerObject=new FacilityToFacilityReferralInformationTypesController();
-    var myFacilityToFacilityReferralInformationTypesControllerObjectPromise = myFacilityToFacilityReferralInformationTypesControllerObject.get_all_facility_to_facility_referral_information_types();
+   
+    var myFacilityToFacilityReferralInformationTypesControllerObjectPromise = FacilityToFacilityReferralInformationTypesController.get_all_facility_to_facility_referral_information_types();
 	      
 		   
 		   myFacilityToFacilityReferralInformationTypesControllerObjectPromise.then(function(result) {
@@ -91,8 +91,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-      var myFacilityToFacilityReferralInformationTypesControllerObject=new FacilityToFacilityReferralInformationTypesController();
-      var myFacilityToFacilityReferralInformationTypesControllerObjectPromise = myFacilityToFacilityReferralInformationTypesControllerObject.batch_facility_to_facility_referral_information_types_update(jsonObject_);
+      
+      var myFacilityToFacilityReferralInformationTypesControllerObjectPromise = FacilityToFacilityReferralInformationTypesController.batch_facility_to_facility_referral_information_types_update(jsonObject_);
 	   
 		   
 		   myFacilityToFacilityReferralInformationTypesControllerObjectPromise.then(function(result) {
@@ -116,10 +116,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myFacilityToFacilityReferralInformationTypesControllerObject=new FacilityToFacilityReferralInformationTypesController();
+        
 
 
-        var myFacilityToFacilityReferralInformationTypesControllerObjectPromise = myFacilityToFacilityReferralInformationTypesControllerObject.get_specific_facility_to_facility_referral_information_types(mKey,mValue);
+        var myFacilityToFacilityReferralInformationTypesControllerObjectPromise = FacilityToFacilityReferralInformationTypesController.get_specific_facility_to_facility_referral_information_types(mKey,mValue);
 	        
 		   
 		   myFacilityToFacilityReferralInformationTypesControllerObjectPromise.then(function(result) {
@@ -152,8 +152,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-                var myFacilityToFacilityReferralInformationTypesControllerObject=new FacilityToFacilityReferralInformationTypesController();
-                var myFacilityToFacilityReferralInformationTypesControllerObjectPromise = myFacilityToFacilityReferralInformationTypesControllerObject.individual_facility_to_facility_referral_information_types_update(column_name,value_,jsonObject_);
+                
+                var myFacilityToFacilityReferralInformationTypesControllerObjectPromise = FacilityToFacilityReferralInformationTypesController.individual_facility_to_facility_referral_information_types_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myFacilityToFacilityReferralInformationTypesControllerObjectPromise.then(function(result) {
@@ -177,8 +177,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-    var myFacilityToFacilityReferralInformationTypesControllerObject=new FacilityToFacilityReferralInformationTypesController();
-    var myFacilityToFacilityReferralInformationTypesControllerObjectPromise = myFacilityToFacilityReferralInformationTypesControllerObject.delete_facility_to_facility_referral_information_types_record(column_name,value_);
+    
+    var myFacilityToFacilityReferralInformationTypesControllerObjectPromise = FacilityToFacilityReferralInformationTypesController.delete_facility_to_facility_referral_information_types_record(column_name,value_);
 	      	        
 		   
 		   myFacilityToFacilityReferralInformationTypesControllerObjectPromise.then(function(result) {

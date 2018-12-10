@@ -53,8 +53,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myClientRegistrationControllerObject=new ClientRegistrationController();
-          var myClientRegistrationControllerObjectPromise = myClientRegistrationControllerObject.insert_client_registration(jsonObject_);
+	      
+          var myClientRegistrationControllerObjectPromise = ClientRegistrationController.insert_client_registration(jsonObject_);
 	          
 		   
 		   myClientRegistrationControllerObjectPromise.then(function(result) {
@@ -73,8 +73,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_client_registration',urlencodedParser,function(request,response){
-    var myClientRegistrationControllerObject=new ClientRegistrationController();
-    var myClientRegistrationControllerObjectPromise = myClientRegistrationControllerObject.get_all_client_registration();
+    
+    var myClientRegistrationControllerObjectPromise = ClientRegistrationController.get_all_client_registration();
 	      
 		   
 		   myClientRegistrationControllerObjectPromise.then(function(result) {
@@ -113,8 +113,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myClientRegistrationControllerObject=new ClientRegistrationController();
-     var myClientRegistrationControllerObjectPromise = myClientRegistrationControllerObject.batch_client_registration_update(jsonObject_);
+     
+     var myClientRegistrationControllerObjectPromise = ClientRegistrationController.batch_client_registration_update(jsonObject_);
 	   
 		   
 		   myClientRegistrationControllerObjectPromise.then(function(result) {
@@ -138,10 +138,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myClientRegistrationControllerObject=new ClientRegistrationController();
+        
 
 
-        var myClientRegistrationControllerObjectPromise = myClientRegistrationControllerObject.get_specific_client_registration(mKey,mValue);
+        var myClientRegistrationControllerObjectPromise = ClientRegistrationController.get_specific_client_registration(mKey,mValue);
 	        
 		   
 		   myClientRegistrationControllerObjectPromise.then(function(result) {
@@ -184,8 +184,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-                var myClientRegistrationControllerObject=new ClientRegistrationController();
-                var myClientRegistrationControllerObjectPromise = myClientRegistrationControllerObject.individual_client_registration_update(column_name,value_,jsonObject_);
+                
+                var myClientRegistrationControllerObjectPromise = ClientRegistrationController.individual_client_registration_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myClientRegistrationControllerObjectPromise.then(function(result) {
@@ -209,8 +209,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-   var myClientRegistrationControllerObject=new ClientRegistrationController();
-    var myClientRegistrationControllerObjectPromise = myClientRegistrationControllerObject.delete_client_registration_record(column_name,value_);
+   
+    var myClientRegistrationControllerObjectPromise = ClientRegistrationController.delete_client_registration_record(column_name,value_);
 	      	        
 		   
 		   myClientRegistrationControllerObjectPromise.then(function(result) {

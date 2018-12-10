@@ -20,10 +20,10 @@ module.exports = class TeamLeadsController{
 	
 	
 	
-   insert_team_leads(jsonObject_){
+   static insert_team_leads(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myTeamLeadsObject=new TeamLeadsModel();
-     var myTeamLeadsObjectPromise = myTeamLeadsObject.insert_team_leads(jsonObject_);
+     
+     var myTeamLeadsObjectPromise = TeamLeadsModel.insert_team_leads(jsonObject_);
 		  
 		   
 		   myTeamLeadsObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class TeamLeadsController{
 	
 	
 	
-   get_all_team_leads(){
+   static get_all_team_leads(){
 	   return new Promise(function(resolve, reject) {  
-       const  myTeamLeadsObject=new TeamLeadsModel();
-        var myTeamLeadsObjectPromise = myTeamLeadsObject.get_all_team_leads();
+       
+        var myTeamLeadsObjectPromise = TeamLeadsModel.get_all_team_leads();
 		   
 		   
 		   myTeamLeadsObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class TeamLeadsController{
 	
 	
 	
-   get_specific_team_leads(ColumnName,value_){
+   static get_specific_team_leads(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-        const  myTeamLeadsObject=new TeamLeadsModel();
-        var myTeamLeadsObjectPromise = myTeamLeadsObject.get_specific_team_leads(ColumnName,value_);
+        
+        var myTeamLeadsObjectPromise = TeamLeadsModel.get_specific_team_leads(ColumnName,value_);
 		   
 		   
 		   myTeamLeadsObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class TeamLeadsController{
 	
 	
 	
-   batch_team_leads_update(jsonObject_){
+   static batch_team_leads_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-       const  myTeamLeadsObject=new TeamLeadsModel();
+       
         
-		var myTeamLeadsObjectPromise = myTeamLeadsObject.batch_team_leads_update(jsonObject_);
+		var myTeamLeadsObjectPromise = TeamLeadsModel.batch_team_leads_update(jsonObject_);
 		   
 		   
 		   myTeamLeadsObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class TeamLeadsController{
 	
 	
 	
-   individual_team_leads_update(ColumnName,value_,jsonObject_){
+   static individual_team_leads_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-       const  myTeamLeadsObject=new TeamLeadsModel();
+       
         
-		var myTeamLeadsObjectPromise = myTeamLeadsObject.individual_team_leads_update(ColumnName,value_,jsonObject_);
+		var myTeamLeadsObjectPromise = TeamLeadsModel.individual_team_leads_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myTeamLeadsObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class TeamLeadsController{
 	
 	
 	
-   delete_team_leads_record(ColumnName,value_){
+   static delete_team_leads_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myTeamLeadsObject=new TeamLeadsModel();
         
-		var myTeamLeadsObjectPromise = myTeamLeadsObject.delete_team_leads_record(ColumnName,value_);
+        
+		var myTeamLeadsObjectPromise = TeamLeadsModel.delete_team_leads_record(ColumnName,value_);
 		    
 		   
 		   myTeamLeadsObjectPromise.then(function(result) {

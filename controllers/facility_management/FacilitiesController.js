@@ -20,10 +20,10 @@ module.exports = class FacilitiesController{
 	
 	
 	
-   insert_facilities(jsonObject_){
+   static insert_facilities(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myFacilitiesObject=new FacilitiesModel();
-     var myFacilitiesObjectPromise = myFacilitiesObject.insert_facilities(jsonObject_);
+     
+     var myFacilitiesObjectPromise = FacilitiesModel.insert_facilities(jsonObject_);
 		  
 		   
 		   myFacilitiesObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class FacilitiesController{
 	
 	
 	
-   get_all_facilities(){
+   static get_all_facilities(){
 	   return new Promise(function(resolve, reject) {  
-        const  myFacilitiesObject=new FacilitiesModel();
-        var myFacilitiesObjectPromise = myFacilitiesObject.get_all_facilities();
+        
+        var myFacilitiesObjectPromise = FacilitiesModel.get_all_facilities();
 		   
 		   
 		   myFacilitiesObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class FacilitiesController{
 	
 	
 	
-   get_specific_facilities(ColumnName,value_){
+   static get_specific_facilities(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-       const  myFacilitiesObject=new FacilitiesModel();
-        var myFacilitiesObjectPromise = myFacilitiesObject.get_specific_facilities(ColumnName,value_);
+       
+        var myFacilitiesObjectPromise = FacilitiesModel.get_specific_facilities(ColumnName,value_);
 		   
 		   
 		   myFacilitiesObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class FacilitiesController{
 	
 	
 	
-   batch_facilities_update(jsonObject_){
+   static batch_facilities_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-       const  myFacilitiesObject=new FacilitiesModel();
+       
         
-		var myFacilitiesObjectPromise = myFacilitiesObject.batch_facilities_update(jsonObject_);
+		var myFacilitiesObjectPromise = FacilitiesModel.batch_facilities_update(jsonObject_);
 		   
 		   
 		   myFacilitiesObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class FacilitiesController{
 	
 	
 	
-   individual_facilities_update(ColumnName,value_,jsonObject_){
+   static individual_facilities_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-       const  myFacilitiesObject=new FacilitiesModel();
+       
         
-		var myFacilitiesObjectPromise = myFacilitiesObject.individual_facilities_update(ColumnName,value_,jsonObject_);
+		var myFacilitiesObjectPromise = FacilitiesModel.individual_facilities_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myFacilitiesObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class FacilitiesController{
 	
 	
 	
-   delete_facilities_record(ColumnName,value_){
+   static delete_facilities_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myFacilitiesObject=new FacilitiesModel();
         
-		var myFacilitiesObjectPromise = myFacilitiesObject.delete_facilities_record(ColumnName,value_);
+        
+		var myFacilitiesObjectPromise = FacilitiesModel.delete_facilities_record(ColumnName,value_);
 		    
 		   
 		   myFacilitiesObjectPromise.then(function(result) {

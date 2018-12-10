@@ -20,10 +20,10 @@ module.exports = class TeamsController{
 	
 	
 	
-   insert_teams(jsonObject_){
+   static insert_teams(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myTeamsObject=new TeamsModel();
-     var myTeamsObjectPromise = myTeamsObject.insert_teams(jsonObject_);
+     
+     var myTeamsObjectPromise = TeamsModel.insert_teams(jsonObject_);
 		  
 		   
 		   myTeamsObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class TeamsController{
 	
 	
 	
-   get_all_teams(){
+   static get_all_teams(){
 	   return new Promise(function(resolve, reject) {  
-       const  myTeamsObject=new TeamsModel();
-        var myTeamsObjectPromise = myTeamsObject.get_all_teams();
+      
+        var myTeamsObjectPromise = TeamsModel.get_all_teams();
 		   
 		   
 		   myTeamsObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class TeamsController{
 	
 	
 	
-   get_specific_teams(ColumnName,value_){
+   static get_specific_teams(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-        const  myTeamsObject=new TeamsModel();
-        var myTeamsObjectPromise = myTeamsObject.get_specific_teams(ColumnName,value_);
+        
+        var myTeamsObjectPromise = TeamsModel.get_specific_teams(ColumnName,value_);
 		   
 		   
 		   myTeamsObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class TeamsController{
 	
 	
 	
-   batch_teams_update(jsonObject_){
+   static batch_teams_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-        const  myTeamsObject=new TeamsModel();
         
-		var myTeamsObjectPromise = myTeamsObject.batch_teams_update(jsonObject_);
+        
+		var myTeamsObjectPromise = TeamsModel.batch_teams_update(jsonObject_);
 		   
 		   
 		   myTeamsObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class TeamsController{
 	
 	
 	
-   individual_teams_update(ColumnName,value_,jsonObject_){
+   static individual_teams_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-       const  myTeamsObject=new TeamsModel();
+       
         
-		var myTeamsObjectPromise = myTeamsObject.individual_teams_update(ColumnName,value_,jsonObject_);
+		var myTeamsObjectPromise = TeamsModel.individual_teams_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myTeamsObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class TeamsController{
 	
 	
 	
-   delete_teams_record(ColumnName,value_){
+   static delete_teams_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myTeamsObject=new TeamsModel();
         
-		var myTeamsObjectPromise = myTeamsObject.delete_teams_record(ColumnName,value_);
+        
+		var myTeamsObjectPromise = TeamsModel.delete_teams_record(ColumnName,value_);
 		    
 		   
 		   myTeamsObjectPromise.then(function(result) {

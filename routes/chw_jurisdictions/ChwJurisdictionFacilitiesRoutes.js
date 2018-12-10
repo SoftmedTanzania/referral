@@ -44,8 +44,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myChwJurisdictionFacilitiesControllerObject=new ChwJurisdictionFacilitiesController();
-          var myChwJurisdictionFacilitiesControllerObjectPromise = myChwJurisdictionFacilitiesControllerObject.insert_chw_jurisdiction_facilities(jsonObject_);
+	     
+          var myChwJurisdictionFacilitiesControllerObjectPromise = ChwJurisdictionFacilitiesController.insert_chw_jurisdiction_facilities(jsonObject_);
 	          
 		   
 		   myChwJurisdictionFacilitiesControllerObjectPromise.then(function(result) {
@@ -64,8 +64,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_chw_jurisdiction_facilities',urlencodedParser,function(request,response){
-    var myChwJurisdictionFacilitiesControllerObject=new ChwJurisdictionFacilitiesController();
-    var myChwJurisdictionFacilitiesControllerObjectPromise = myChwJurisdictionFacilitiesControllerObject.get_all_chw_jurisdiction_facilities();
+    
+    var myChwJurisdictionFacilitiesControllerObjectPromise = ChwJurisdictionFacilitiesController.get_all_chw_jurisdiction_facilities();
 	      
 		   
 		   myChwJurisdictionFacilitiesControllerObjectPromise.then(function(result) {
@@ -97,8 +97,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myChwJurisdictionFacilitiesControllerObject=new ChwJurisdictionFacilitiesController();
-     var myChwJurisdictionFacilitiesControllerObjectPromise = myChwJurisdictionFacilitiesControllerObject.batch_chw_jurisdiction_facilities_update(jsonObject_);
+     
+     var myChwJurisdictionFacilitiesControllerObjectPromise = ChwJurisdictionFacilitiesController.batch_chw_jurisdiction_facilities_update(jsonObject_);
 	   
 		   
 		   myChwJurisdictionFacilitiesControllerObjectPromise.then(function(result) {
@@ -122,10 +122,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-        var myChwJurisdictionFacilitiesControllerObject=new ChwJurisdictionFacilitiesController();
+        
 
 
-        var myChwJurisdictionFacilitiesControllerObjectObjectPromise = myChwJurisdictionFacilitiesControllerObject.get_specific_chw_jurisdiction_facilities(mKey,mValue);
+        var myChwJurisdictionFacilitiesControllerObjectObjectPromise = ChwJurisdictionFacilitiesController.get_specific_chw_jurisdiction_facilities(mKey,mValue);
 	        
 		   
 		   myChwJurisdictionFacilitiesControllerObjectObjectPromise.then(function(result) {
@@ -160,8 +160,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-         var myChwJurisdictionFacilitiesControllerObject=new ChwJurisdictionFacilitiesController();
-         var myChwJurisdictionFacilitiesControllerObjectPromise = myChwJurisdictionFacilitiesControllerObject.individual_chw_jurisdiction_facilities_update(column_name,value_,jsonObject_);
+         
+         var myChwJurisdictionFacilitiesControllerObjectPromise = ChwJurisdictionFacilitiesController.individual_chw_jurisdiction_facilities_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myChwJurisdictionFacilitiesControllerObjectPromise.then(function(result) {
@@ -185,8 +185,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-   var myChwJurisdictionFacilitiesControllerObject=new ChwJurisdictionFacilitiesController();
-    var myChwJurisdictionFacilitiesControllerObjectPromise = myChwJurisdictionFacilitiesControllerObject.delete_chw_jurisdiction_facilities_record(column_name,value_);
+   
+    var myChwJurisdictionFacilitiesControllerObjectPromise = ChwJurisdictionFacilitiesController.delete_chw_jurisdiction_facilities_record(column_name,value_);
 	      	        
 		   
 		   myChwJurisdictionFacilitiesControllerObjectPromise.then(function(result) {

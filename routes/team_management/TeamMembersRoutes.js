@@ -44,8 +44,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-	      var myTeamMembersControllerObject=new TeamMembersController();
-          var myTeamMembersControllerObjectPromise = myTeamMembersControllerObject.insert_team_members(jsonObject_);
+	      
+          var myTeamMembersControllerObjectPromise = TeamMembersController.insert_team_members(jsonObject_);
 	          
 		   
 		   myTeamMembersControllerObjectPromise.then(function(result) {
@@ -64,8 +64,8 @@ router.use(function timeLog(req, res, next) {
 
 
    router.post('/get_all_team_members',urlencodedParser,function(request,response){
-    var myTeamMembersControllerObject=new TeamMembersController();
-    var myTeamMembersControllerObjectPromise = myTeamMembersControllerObject.get_all_team_members();
+    
+    var myTeamMembersControllerObjectPromise = TeamMembersController.get_all_team_members();
 	      
 		   
 		   myTeamMembersControllerObjectPromise.then(function(result) {
@@ -97,8 +97,8 @@ router.use(function timeLog(req, res, next) {
       
         };
 	
-     var myTeamMembersControllerObject=new TeamMembersController();
-     var myTeamMembersControllerObjectPromise = myTeamMembersControllerObject.batch_team_members_update(jsonObject_);
+     
+     var myTeamMembersControllerObjectPromise = TeamMembersController.batch_team_members_update(jsonObject_);
 	   
 		   
 		   myTeamMembersControllerObjectPromise.then(function(result) {
@@ -122,10 +122,10 @@ router.use(function timeLog(req, res, next) {
         //var mValue=parseInt(request.query.search_value, 10);
         var mValue=request.body.search_value;
    
-         var myTeamMembersControllerObject=new TeamMembersController();
+         
 
 
-        var myTeamMembersControllerObjectPromise = myTeamMembersControllerObject.get_specific_team_members(mKey,mValue);
+        var myTeamMembersControllerObjectPromise = TeamMembersController.get_specific_team_members(mKey,mValue);
 	        
 		   
 		   myTeamMembersControllerObjectPromise.then(function(result) {
@@ -161,8 +161,8 @@ router.use(function timeLog(req, res, next) {
       
            };
 	
-         var myTeamMembersControllerObject=new TeamMembersController();
-         var myTeamMembersControllerObjectPromise = myTeamMembersControllerObject.individual_team_members_update(column_name,value_,jsonObject_);
+         
+         var myTeamMembersControllerObjectPromise = TeamMembersController.individual_team_members_update(column_name,value_,jsonObject_);
 	         	        
 		   
 		   myTeamMembersControllerObjectPromise.then(function(result) {
@@ -186,8 +186,8 @@ router.use(function timeLog(req, res, next) {
     //var mValue=parseInt(request.body.search_value, 10);
     var value_=request.body.search_value;
 	
-    var myTeamMembersControllerObject=new TeamMembersController();
-    var myTeamMembersControllerObjectPromise = myTeamMembersControllerObject.delete_teams_record(column_name,value_);
+    
+    var myTeamMembersControllerObjectPromise = TeamMembersController.delete_teams_record(column_name,value_);
 	      	        
 		   
 		   myTeamMembersControllerObjectPromise.then(function(result) {

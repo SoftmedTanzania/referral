@@ -20,10 +20,10 @@ module.exports = class BackReferralProgressInformationController{
 	
 	
 	
-   insert_back_referral_progress_information(jsonObject_){
+   static insert_back_referral_progress_information(jsonObject_){
 	 return new Promise(function(resolve, reject) {  
-     const  myBackReferralProgressInformationObject=new BackReferralProgressInformationModel();
-     var myBackReferralProgressInformationObjectPromise = myBackReferralProgressInformationObject.insert_back_referral_progress_information(jsonObject_);
+     
+     var myBackReferralProgressInformationObjectPromise = BackReferralProgressInformationModel.insert_back_referral_progress_information(jsonObject_);
 		  
 		   
 		   myBackReferralProgressInformationObjectPromise.then(function(result) {
@@ -40,10 +40,10 @@ module.exports = class BackReferralProgressInformationController{
 	
 	
 	
-   get_all_back_referral_progress_information(){
+   static get_all_back_referral_progress_information(){
 	   return new Promise(function(resolve, reject) {  
-        const  myBackReferralProgressInformationObject=new BackReferralProgressInformationModel();
-        var myBackReferralProgressInformationObjectPromise = myBackReferralProgressInformationObject.get_all_back_referral_progress_information();
+        
+        var myBackReferralProgressInformationObjectPromise = BackReferralProgressInformationModel.get_all_back_referral_progress_information();
 		   
 		   
 		   myBackReferralProgressInformationObjectPromise.then(function(result) {
@@ -60,10 +60,10 @@ module.exports = class BackReferralProgressInformationController{
 	
 	
 	
-   get_specific_back_referral_progress_information(ColumnName,value_){
+   static get_specific_back_referral_progress_information(ColumnName,value_){
 	   return new Promise(function(resolve, reject) {  
-       const  myBackReferralProgressInformationObject=new BackReferralProgressInformationModel();
-        var myBackReferralProgressInformationObjectPromise = myBackReferralProgressInformationObject.get_specific_back_referral_progress_information(ColumnName,value_);
+       
+        var myBackReferralProgressInformationObjectPromise = BackReferralProgressInformationModel.get_specific_back_referral_progress_information(ColumnName,value_);
 		   
 		   
 		   myBackReferralProgressInformationObjectPromise.then(function(result) {
@@ -78,11 +78,11 @@ module.exports = class BackReferralProgressInformationController{
 	
 	
 	
-   batch_back_referral_progress_information_update(jsonObject_){
+   static batch_back_referral_progress_information_update(jsonObject_){
 	   return new Promise(function(resolve, reject) {  
-        const  myBackReferralProgressInformationObject=new BackReferralProgressInformationModel();
         
-		var myBackReferralProgressInformationObjectPromise = myBackReferralProgressInformationObject.batch_back_referral_progress_information_update(jsonObject_);
+        
+		var myBackReferralProgressInformationObjectPromise = BackReferralProgressInformationModel.batch_back_referral_progress_information_update(jsonObject_);
 		   
 		   
 		   myBackReferralProgressInformationObjectPromise.then(function(result) {
@@ -99,11 +99,11 @@ module.exports = class BackReferralProgressInformationController{
 	
 	
 	
-   individual_back_referral_progress_information_update(ColumnName,value_,jsonObject_){
+   static individual_back_referral_progress_information_update(ColumnName,value_,jsonObject_){
 	   return new Promise(function(resolve, reject) { 
-      const  myBackReferralProgressInformationObject=new BackReferralProgressInformationModel();
+      
         
-		var myBackReferralProgressInformationObjectPromise = myBackReferralProgressInformationObject.individual_back_referral_progress_information_update(ColumnName,value_,jsonObject_);
+		var myBackReferralProgressInformationObjectPromise = BackReferralProgressInformationModel.individual_back_referral_progress_information_update(ColumnName,value_,jsonObject_);
 		   
 		   
 		   myBackReferralProgressInformationObjectPromise.then(function(result) {
@@ -120,11 +120,11 @@ module.exports = class BackReferralProgressInformationController{
 	
 	
 	
-   delete_back_referral_progress_information_record(ColumnName,value_){
+   static delete_back_referral_progress_information_record(ColumnName,value_){
 	   return new Promise(function(resolve, reject) { 
-        const  myBackReferralProgressInformationObject=new BackReferralProgressInformationModel();
         
-		var myBackReferralProgressInformationObjectPromise = myBackReferralProgressInformationObject.delete_back_referral_progress_information_record(ColumnName,value_);
+        
+		var myBackReferralProgressInformationObjectPromise = BackReferralProgressInformationModel.delete_back_referral_progress_information_record(ColumnName,value_);
 		    
 		   
 		   myBackReferralProgressInformationObjectPromise.then(function(result) {
