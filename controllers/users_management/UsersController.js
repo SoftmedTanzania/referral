@@ -123,7 +123,7 @@ module.exports = class UsersController{
 				  {
 					  
 					  var response_object = {
-                                    error: false, UserId: userExistsResult[0].UserId, RoleId: userExistsResult[0].RoleId, FirstName: userExistsResult[0].FirstName, MiddleName: userExistsResult[0].MiddleName, SurName: userExistsResult[0].SurName, JobRefNo: userExistsResult[0].JobRefNo  
+                                    error: false, UserId: userExistsResult[0].UserId, RoleId: userExistsResult[0].RoleId, FirstName: userExistsResult[0].FirstName, MiddleName: userExistsResult[0].MiddleName, SurName: userExistsResult[0].SurName, JobRefNo: userExistsResult[0].JobRefNo, WardId: userExistsResult[0].WardId  
                                     };
 					  
 				   
