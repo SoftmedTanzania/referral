@@ -94,7 +94,7 @@ module.exports = class UsersController{
 		   
 	    var TableName="users";
 		 var ColumnName="JobRefNo";
-		 var value_=jsonObject_.AttemptedUserEmail;
+		 var value_=jsonObject_.AttemptedJobRefNo;
 		   
 		   
 	    
@@ -107,26 +107,37 @@ module.exports = class UsersController{
 			
 			
 			if(userExistsResult.length === 0){
-			  var myResponse="There is no user account by this Job Reference Number";
-			  resolve(myResponse);
+			  
+			  var error_msg="There is no user account by this Job Reference Number";
+			  var response_object = {error: true, error_msg:error_msg};
+			  resolve(response_object);
 			
 			}else{
 				 
-		          var loginResponse;
+		         // var loginResponse = [];
 		          var hash = crypto.createHmac('sha512', userExistsResult[0].Salt); /** Hashing algorithm sha512 */
 		          hash.update(jsonObject_.AttemptedPassword);
 	              var Attempted_encrypted_Password = hash.digest('hex');
 				
 				  if(Attempted_encrypted_Password === userExistsResult[0].EncryptedPassword)
 				  {
-					  loginResponse="Login was succesful";
+					  
+					  var response_object = {
+                                    error: false, UserId: userExistsResult[0].UserId, RoleId: userExistsResult[0].RoleId, FirstName: userExistsResult[0].FirstName, MiddleName: userExistsResult[0].MiddleName, SurName: userExistsResult[0].SurName, JobRefNo: userExistsResult[0].JobRefNo  
+                                    };
+					  
 				   
 				  }else{
-				       loginResponse="Login failed";
+					  
+					   var error_msg="Login failed";
+					   var response_object = {error: true, error_msg:error_msg};
+				       
 					  
 				  }
 				
-				  resolve(loginResponse);
+				
+				  //loginResponse.push(response_object);
+				  resolve(response_object);
 				
 			     }
 			
@@ -156,6 +167,11 @@ module.exports = class UsersController{
 	 })
     }		
 	
+	
+	
+	
+	
+
 	
 	
 	

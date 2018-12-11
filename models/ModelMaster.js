@@ -252,6 +252,33 @@ batch_program() is a special function that handles batch jobs.
    }
 	
 	
+
+	
+	
+	
+	
+/*SON/2018-11-06 00:29 - DEVELOPMENT
+	
+The batch_update() makes a similar update on all
+records of the table you pass to it.Pass it the 
+table name and the key-value pair of the updates
+to make.
+
+*/	
+	static two_table_inner_join(TableOne,TableTwo,JoiningKey,SearchColumn,SearchValue) {
+	return new Promise(function(resolve, reject) {	
+
+        con.query('SELECT * FROM '+TableOne+' INNER JOIN '+TableTwo+' ON '+TableOne+'.'+JoiningKey+' = '+TableTwo+'.'+JoiningKey+' WHERE '+TableTwo+'.'+SearchColumn+'='+SearchValue,function (err, result) {
+            if (err){reject(err);}
+                   else {
+				        
+                        resolve(result);
+                    }
+        });
+		
+	})
+
+   }	
 	
 
 }

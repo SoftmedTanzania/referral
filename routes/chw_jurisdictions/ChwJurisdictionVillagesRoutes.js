@@ -82,6 +82,25 @@ router.use(function timeLog(req, res, next) {
 
 
 
+router.post('/inner_join_villages_with_chw_jurisdiction_villages',urlencodedParser,function(request,response){
+    var UserId=request.body.UserId;
+    var myChwJurisdictionVillagesControllerObjectPromise = ChwJurisdictionVillagesController.inner_join_villages_with_chw_jurisdiction_villages(UserId);
+	      
+		   
+		   myChwJurisdictionVillagesControllerObjectPromise.then(function(result) {
+        
+           response.send(result);
+           }, function(err) {
+			   console.log(err);
+           response.send("An error occurred");
+           })
+
+   });
+
+
+
+
+
 
    router.post('/update_chw_jurisdiction_villages',urlencodedParser,function(request,response){
 	   

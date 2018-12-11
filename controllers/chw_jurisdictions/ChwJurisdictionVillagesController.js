@@ -7,7 +7,7 @@ passes the calls down to the "ChwJurisdictionVillagesModel" class
 */
 
 
-
+const ModelMaster=require('../../models/ModelMaster.js');
 const ChwJurisdictionVillagesModel = require('../../models/chw_jurisdictions/ChwJurisdictionVillagesModel.js');
 
 
@@ -54,7 +54,37 @@ module.exports = class ChwJurisdictionVillagesController{
            })
 		   
 	 })
+    }	
+	
+	
+	
+	
+	
+	static inner_join_villages_with_chw_jurisdiction_villages(SearchValue){
+	   return new Promise(function(resolve, reject) {  
+          var TableOne="villages";
+		  var TableTwo="chw_jurisdiction_villages";
+		  var JoiningKey="VillageId";
+		  var SearchColumn="UserId";
+		   
+		   
+		   
+          var myModelMasterPromise = ModelMaster.two_table_inner_join(TableOne,TableTwo,JoiningKey,SearchColumn,SearchValue);
+		   
+		   
+		   myModelMasterPromise.then(function(result) {
+           
+		   var object_response={result:result};
+           resolve(object_response);
+           }, function(err) {
+           reject(err);
+           })
+		   
+	 })
     }		
+			
+	
+	
 	
 	
 	
