@@ -259,16 +259,14 @@ batch_program() is a special function that handles batch jobs.
 	
 /*SON/2018-11-06 00:29 - DEVELOPMENT
 	
-The batch_update() makes a similar update on all
-records of the table you pass to it.Pass it the 
-table name and the key-value pair of the updates
-to make.
+The two_table_inner_join() is used to conduct
+an inner join query between two tables
 
 */	
 	static two_table_inner_join(TableOne,TableTwo,JoiningKey,SearchColumn,SearchValue) {
 	return new Promise(function(resolve, reject) {	
 
-        con.query('SELECT * FROM '+TableOne+' INNER JOIN '+TableTwo+' ON '+TableOne+'.'+JoiningKey+' = '+TableTwo+'.'+JoiningKey+' WHERE '+TableTwo+'.'+SearchColumn+'='+SearchValue,function (err, result) {
+        con.query('SELECT * FROM '+TableOne+' INNER JOIN '+TableTwo+' ON '+TableOne+'.'+JoiningKey+' = '+TableTwo+'.'+JoiningKey+' WHERE '+TableTwo+'.'+SearchColumn+'= '+ mysql.escape(SearchValue),function (err, result) {
             if (err){reject(err);}
                    else {
 				        
@@ -278,7 +276,36 @@ to make.
 		
 	})
 
+   }
+	
+	
+	
+	
+	
+/*SON/2018-11-06 00:29 - DEVELOPMENT
+	
+batch_program() is a special function that handles batch jobs.
+
+*/	
+	
+   static concatenate_two_query_results(){
+	return new Promise(function(resolve, reject) {
+	if (err) {reject(err);}
+       con.query("SELECT * FROM users", function (err, result, fields) {
+       if (err) throw err;
+	   for (var i = 0; i < result.length; i++) {
+		  
+        con.query("SELECT * FROM users WHERE users.id = "+result[i].id, function (err, result) {
+         if (err) {reject(err);}
+         resolve(result);
+          });
+         }
+     });
+
+	})
    }	
+	
+	
 	
 
 }

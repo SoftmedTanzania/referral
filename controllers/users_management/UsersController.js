@@ -92,13 +92,15 @@ module.exports = class UsersController{
 	   return new Promise(function(resolve, reject) { 
 		   
 		   
-	    var TableName="users";
-		 var ColumnName="JobRefNo";
-		 var value_=jsonObject_.AttemptedJobRefNo;
+	     var TableOne="wards";
+		 var TableTwo="users";
+		 var JoiningKey="WardId";
+		 var SearchColumn="JobRefNo";
+		 var SearchValue=jsonObject_.AttemptedJobRefNo;
 		   
 		   
 	    
-		var myModelMasterPromise = ModelMaster.selectSpecific(TableName,ColumnName,value_); 
+		var myModelMasterPromise = ModelMaster.two_table_inner_join(TableOne,TableTwo,JoiningKey,SearchColumn,SearchValue); 
 		   
 		   
 		myModelMasterPromise.then(function(userExistsResult) {
@@ -123,7 +125,7 @@ module.exports = class UsersController{
 				  {
 					  
 					  var response_object = {
-                                    error: false, UserId: userExistsResult[0].UserId, RoleId: userExistsResult[0].RoleId, FirstName: userExistsResult[0].FirstName, MiddleName: userExistsResult[0].MiddleName, SurName: userExistsResult[0].SurName, JobRefNo: userExistsResult[0].JobRefNo, WardId: userExistsResult[0].WardId  
+                                    error: false, UserId: userExistsResult[0].UserId, RoleId: userExistsResult[0].RoleId, FirstName: userExistsResult[0].FirstName, MiddleName: userExistsResult[0].MiddleName, SurName: userExistsResult[0].SurName, JobRefNo: userExistsResult[0].JobRefNo, WardId: userExistsResult[0].WardId, WardName: userExistsResult[0].WardName, WardRefNo: userExistsResult[0].WardRefNo 
                                     };
 					  
 				   
