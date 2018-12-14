@@ -25,7 +25,7 @@ router.use(function timeLog(req, res, next) {
 
 
 
-   router.post('/add_client_registration', urlencodedParser,function(request,response){
+   router.post('/client_registration', urlencodedParser,function(request,response){
 	   
 	  
 	   
@@ -40,11 +40,15 @@ router.use(function timeLog(req, res, next) {
 			SurName:request.body.SurName,
 			PhoneNumber:request.body.PhoneNumber,
 			Email:request.body.Email,
-			UniqueId:request.body.UniqueId,
 			PhysicalAddress:request.body.PhysicalAddress,
 			DOB:request.body.DOB,
 			Gender:request.body.Gender,
 			VillageId:request.body.VillageId,
+			VillageName:request.body.VillageName,
+			WardId:request.body.WardId,
+			WardName:request.body.WardName,
+			VillageRefNo:request.body.VillageRefNo,
+			WardRefNo:request.body.WardRefNo,
 			IsAChildOf:request.body.IsAChildOf
 			
 			
