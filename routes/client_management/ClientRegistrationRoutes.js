@@ -27,7 +27,8 @@ router.use(function timeLog(req, res, next) {
 
    router.post('/client_registration', urlencodedParser,function(request,response){
 	   
-	  
+	  var date = new Date();
+	   date.setHours(date.getHours()+0);
 	   
         var	jsonObject_ = {
          
@@ -49,7 +50,8 @@ router.use(function timeLog(req, res, next) {
 			WardName:request.body.WardName,
 			VillageRefNo:request.body.VillageRefNo,
 			WardRefNo:request.body.WardRefNo,
-			IsAChildOf:request.body.IsAChildOf
+			IsAChildOf:request.body.IsAChildOf,
+			RegistrationDate:date
 			
 			
 			
@@ -117,7 +119,8 @@ router.use(function timeLog(req, res, next) {
 			WardName:request.body.WardName,
 			VillageRefNo:request.body.VillageRefNo,
 			WardRefNo:request.body.WardRefNo,
-			IsAChildOf:request.body.IsAChildOf
+			IsAChildOf:request.body.IsAChildOf,
+			RegistrationDate:date
 		
       
         };
@@ -193,7 +196,8 @@ router.use(function timeLog(req, res, next) {
 			WardName:request.body.WardName,
 			VillageRefNo:request.body.VillageRefNo,
 			WardRefNo:request.body.WardRefNo,
-			IsAChildOf:request.body.IsAChildOf
+			IsAChildOf:request.body.IsAChildOf,
+			RegistrationDate:date
 		
       
            };
