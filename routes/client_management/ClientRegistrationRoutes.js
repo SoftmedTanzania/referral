@@ -34,7 +34,7 @@ router.use(function timeLog(req, res, next) {
 		    
 			
 			
-			
+			UserId:request.body.UserId,
 			FirstName:request.body.FirstName,
 			MiddleName:request.body.MiddleName,
 			SurName:request.body.SurName,
