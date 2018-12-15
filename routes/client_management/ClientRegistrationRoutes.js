@@ -102,16 +102,21 @@ router.use(function timeLog(req, res, next) {
 	
     var	jsonObject_ = {
          
-		    FirstName:request.body.FirstName,
+		    UserId:request.body.UserId,
+			FirstName:request.body.FirstName,
 			MiddleName:request.body.MiddleName,
 			SurName:request.body.SurName,
 			PhoneNumber:request.body.PhoneNumber,
 			Email:request.body.Email,
-			UniqueId:request.body.UniqueId,
 			PhysicalAddress:request.body.PhysicalAddress,
 			DOB:request.body.DOB,
 			Gender:request.body.Gender,
 			VillageId:request.body.VillageId,
+			VillageName:request.body.VillageName,
+			WardId:request.body.WardId,
+			WardName:request.body.WardName,
+			VillageRefNo:request.body.VillageRefNo,
+			WardRefNo:request.body.WardRefNo,
 			IsAChildOf:request.body.IsAChildOf
 		
       
@@ -173,16 +178,21 @@ router.use(function timeLog(req, res, next) {
 	
           var	jsonObject_ = {
          
-		    FirstName:request.body.FirstName,
+		    UserId:request.body.UserId,
+			FirstName:request.body.FirstName,
 			MiddleName:request.body.MiddleName,
 			SurName:request.body.SurName,
 			PhoneNumber:request.body.PhoneNumber,
 			Email:request.body.Email,
-			UniqueId:request.body.UniqueId,
 			PhysicalAddress:request.body.PhysicalAddress,
 			DOB:request.body.DOB,
 			Gender:request.body.Gender,
 			VillageId:request.body.VillageId,
+			VillageName:request.body.VillageName,
+			WardId:request.body.WardId,
+			WardName:request.body.WardName,
+			VillageRefNo:request.body.VillageRefNo,
+			WardRefNo:request.body.WardRefNo,
 			IsAChildOf:request.body.IsAChildOf
 		
       
