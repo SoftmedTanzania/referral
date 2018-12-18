@@ -7,7 +7,7 @@ passes the calls down to the "FacilityStaffModel" class
 */
 
 
-
+const ModelMaster=require('../../models/ModelMaster.js');
 const FacilityStaffModel = require('../../models/facility_management/FacilityStaffModel.js');
 
 
@@ -73,7 +73,34 @@ module.exports = class FacilityStaffController{
            reject(err);
            })
 	 })
-    }	
+    }
+	
+	
+	
+	static inner_join_facility_with_facility_staff(SearchValue){
+	   return new Promise(function(resolve, reject) {  
+          var TableOne="facilities";
+		  var TableTwo="facility_staff";
+		  var JoiningKey="FacilityId";
+		  var SearchColumn="UserId";
+		   
+		   
+		   
+          var myModelMasterPromise = ModelMaster.two_table_inner_join(TableOne,TableTwo,JoiningKey,SearchColumn,SearchValue);
+		   
+		   
+		   myModelMasterPromise.then(function(result) {
+           
+		   var object_response={result:result};
+           resolve(object_response);
+           }, function(err) {
+           reject(err);
+           })
+		   
+	 })
+    }		
+	
+	
 			
 	
 	

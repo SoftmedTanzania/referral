@@ -139,6 +139,25 @@ router.use(function timeLog(req, res, next) {
 
 
 
+router.post('/inner_join_facility_with_facility_staff',urlencodedParser,function(request,response){
+        var SearchValue=request.body.UserId;
+       
+        var myFacilityStaffControllerObjectPromise = FacilityStaffController.inner_join_facility_with_facility_staff(SearchValue)
+	        
+		   
+		   myFacilityStaffControllerObjectPromise.then(function(result) {
+        
+           response.send(result);
+           }, function(err) {
+           response.send("An error occurred");
+			   console.log(err);
+           })
+	        
+
+     });
+
+
+
 
 
 
