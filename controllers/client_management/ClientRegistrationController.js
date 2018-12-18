@@ -48,7 +48,8 @@ module.exports = class ClientRegistrationController{
 		   
 		   myClientRegistrationObjectPromise.then(function(result) {
         
-           resolve(result);
+           var object_response={result:result};
+           resolve(object_response);
            }, function(err) {
            reject(err);
            })
